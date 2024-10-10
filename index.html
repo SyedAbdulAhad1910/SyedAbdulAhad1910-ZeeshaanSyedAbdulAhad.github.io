@@ -10,6 +10,7 @@
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMgOk6Lw1qO3o7urE+qS/G+xLUF2p6cpTFnKCaR" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
         * {
             margin: 0;
@@ -17,32 +18,48 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #0a192f;
             color: #ccd6f6;
-            line-height: 1.6;
         }
 
+        /* Header Section */
         header {
             text-align: center;
-            padding: 2rem;
+            padding: 100px 20px;
             background-color: #0a192f;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: #64ffda;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             max-width: 800px;
-            margin: 20px auto;
             color: #8892b0;
         }
 
-        /* Social Media Icons */
+        img {
+            display: block;
+            margin: 20px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Social Icons */
         .icons {
             margin-top: 20px;
         }
@@ -50,86 +67,66 @@
         .icons a {
             color: #64ffda;
             margin: 0 15px;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            display: inline-block;
         }
 
         .icons a:hover {
             color: #00bfa5;
         }
 
+        /* Navbar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0a192f;
+            padding: 10px 20px;
+            z-index: 1000;
+            text-align: center;
+            border-bottom: 1px solid #64ffda;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #00bfa5;
+        }
+
         /* Section Styles */
         section {
-            margin: 50px auto;
+            padding: 100px 0;
             max-width: 1000px;
-            padding: 20px;
+            margin: auto;
         }
 
         h2 {
             font-size: 2.5rem;
             color: #64ffda;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            line-height: 2;
+        .section-content {
+            text-align: center;
         }
 
-        li {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        a {
-            color: #64ffda;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #00bfa5;
-            text-decoration: underline;
-        }
-
-        /* Profile Image */
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-        }
-
-        /* Button Links for Projects */
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 10px;
-            font-size: 1rem;
-            color: #0a192f;
-            background-color: #64ffda;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .button:hover {
-            background-color: #00bfa5;
-        }
-
-        /* Skills Section */
-        .skills i {
-            color: #64ffda;
-            margin-right: 10px;
-            font-size: 1.5rem;
-        }
-
-        .skills img {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-        }
-
-        /* Cards for Projects */
         .card {
             background-color: #112240;
             padding: 20px;
@@ -137,21 +134,21 @@
             margin-bottom: 20px;
         }
 
-        .card h3 {
-            font-size: 1.8rem;
-            color: #ccd6f6;
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: #8892b0;
-        }
-
-        /* Project Images */
-        .project-image {
+        .card img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
+        }
+
+        /* Button Links for Icons */
+        .icon-link {
+            color: #64ffda;
+            font-size: 2rem;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .icon-link:hover {
+            color: #00bfa5;
         }
 
         /* Contact Form */
@@ -200,35 +197,6 @@
             color: #8892b0;
             font-size: 0.9rem;
         }
-
-        /* Navbar */
-        nav {
-            background-color: #0a192f;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            color: #64ffda;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-
-        nav ul li a:hover {
-            color: #00bfa5;
-        }
     </style>
 </head>
 
@@ -241,8 +209,6 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#volunteering">Volunteering & Leadership</a></li>
-            <li><a href="#how-i-can-help">How I Can Help</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -250,175 +216,100 @@
     <!-- Header Section -->
     <header>
         <h1>Syed Abdul Ahad</h1>
+        <img src="img.jpg" alt="Profile Image">
         <p>Business Analyst | Financial Analyst | Consultant</p>
         <div class="icons">
-            <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:syedbadulahad1910@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/SyedAbdulAhad1910" target="_blank" class="icon-link">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank" class="icon-link">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:syedbadulahad1910@gmail.com" target="_blank" class="icon-link">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <img src="img.jpg" alt="Profile Image">
-        <p>Dedicated professional with a passion for delivering data-driven insights and solutions in business and
-            financial analysis. With a strong foundation in financial modeling, reporting, and stakeholder engagement, I
-            am looking to leverage my skills to grow as a business analyst, financial analyst, or consultant.</p>
+        <div class="section-content">
+            <p>Dedicated professional with a passion for delivering data-driven insights and solutions in business and
+                financial analysis. With a strong foundation in financial modeling, reporting, and stakeholder
+                engagement, I am looking to leverage my skills to grow as a business analyst, financial analyst, or
+                consultant.</p>
+        </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
-        <div class="card">
-            <h3>Blue Bells Technical Services (Jun 2024 – Aug 2024)</h3>
-            <p><strong>Financial Analyst Intern</strong></p>
-            <ul>
-                <li>Developed detailed financial reports using Excel and pivot tables, providing actionable insights that
-                    contributed to a 10% reduction in operational costs.</li>
-                <li>Assisted in the integration of new financial systems ensuring seamless transition and minimal
-                    disruption to operations.</li>
-                <li>Monitored adherence to internal controls and financial policies, recommending improvements as
-                    needed.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Metro Tax Solutions (Jan 2024 - Apr 2024)</h3>
-            <p><strong>Staff Accountant Intern</strong></p>
-            <ul>
-                <li>Spearheaded collaboration across functional teams to file over 500 tax returns, achieving a 98%
-                    accuracy rate and ensuring adherence to stringent deadlines.</li>
-                <li>Monitored changes in tax legislation and CRA guidelines, adapting client strategies to maintain
-                    compliance and optimize tax benefits.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Cambrian College (May 2023 - Jun 2023)</h3>
-            <p><strong>Research Associate</strong></p>
-            <ul>
-                <li>Led a team of four in a comprehensive competitive analysis for a client, identifying key strengths and
-                    opportunities relative to competitors through meticulous data analysis, resulting in a 25% increase
-                    in sales and enhanced customer retention.</li>
-                <li>Conducted research on compliance issues and developed solutions to improve business practices.</li>
-            </ul>
+        <div class="section-content">
+            <div class="card">
+                <h3>Blue Bells Technical Services (Jun 2024 – Aug 2024)</h3>
+                <p><strong>Financial Analyst Intern</strong></p>
+                <ul>
+                    <li>Developed detailed financial reports using Excel and pivot tables, providing actionable insights
+                        that contributed to a 10% reduction in operational costs.</li>
+                    <li>Assisted in the integration of new financial systems ensuring seamless transition and minimal
+                        disruption to operations.</li>
+                </ul>
+            </div>
+            <!-- Add more experiences -->
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <div class="card">
-            <h3>Bank Loan Report (September 2024)</h3>
-            <img src="bank-loan-report-image.jpg" alt="Bank Loan Report" class="project-image">
-            <p><strong>SQL, Power BI</strong></p>
-            <ul>
-                <li>Created a comprehensive bank loan report by leveraging SQL for ETL processes and Power BI for data
-                    visualization, enhancing insights for stakeholders.</li>
-            </ul>
-            <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" class="button">View on
-                GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Ecommerce Dashboard (August 2024)</h3>
-            <img src="ecommerce-dashboard-image.jpg" alt="Ecommerce Dashboard" class="project-image">
-            <p><strong>Power BI</strong></p>
-            <ul>
-                <li>Developed an interactive e-commerce project dashboard using Power BI, integrating real-time sales
-                    data, customer analytics, and inventory metrics, which facilitated data-driven decision-making.</li>
-            </ul>
-            <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank"
-                class="button">View on GitHub</a>
-        </div>
-        <div class="card">
-            <h3>Sales Dashboard (July 2024)</h3>
-            <img src="sales-dashboard-image.jpg" alt="Sales Dashboard" class="project-image">
-            <p><strong>Tableau</strong></p>
-            <ul>
-                <li>Designed a real-time sales performance dashboard on Tableau to provide actionable insights into sales
-                    operations, leading to a 6% reduction in report generation time.</li>
-            </ul>
-            <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1"
-                target="_blank" class="button">View on Tableau</a>
+        <div class="section-content">
+            <div class="card">
+                <h3>Bank Loan Report (September 2024)</h3>
+                <img src="bank-loan-report-image.jpg" alt="Bank Loan Report">
+                <p><strong>SQL, Power BI</strong></p>
+                <ul>
+                    <li>Created a comprehensive bank loan report by leveraging SQL for ETL processes and Power BI for
+                        data visualization, enhancing insights for stakeholders.</li>
+                </ul>
+                <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" class="icon-link">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Add more projects -->
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li><strong>Technical Skills:</strong> Financial Analysis, Accounting, Tax, Financial Reporting, Financial
-                Modeling, Data Analysis, Data Visualization</li>
-            <li><strong>Tools:</strong>
-                <i class="fas fa-database"></i> SQL,
-                <i class="fas fa-file-excel"></i> Excel,
-                <i class="fas fa-chart-bar"></i> Power BI,
-                <i class="fas fa-chart-line"></i> Tableau
-            </li>
-        </ul>
-    </section>
-
-    <!-- Volunteering & Leadership Section -->
-    <section id="volunteering">
-        <h2>Leadership & Volunteering</h2>
-        <div class="card">
-            <h3>Finance Student Association (Jul 2018 - Feb 2019)</h3>
-            <p><strong>Member</strong></p>
+        <div class="section-content">
             <ul>
-                <li>Contributed to a 30% increase in event attendance by organizing and promoting professional
-                    development workshops, networking events, and community service projects.</li>
+                <li><i class="fas fa-database"></i> SQL</li>
+                <li><i class="fas fa-file-excel"></i> Excel</li>
+                <li><i class="fas fa-chart-bar"></i> Power BI</li>
+                <li><i class="fas fa-chart-line"></i> Tableau</li>
             </ul>
         </div>
-        <div class="card">
-            <h3>BCG Strategy Consulting Virtual Experience (June 2024)</h3>
-            <p><strong>Consultant</strong></p>
-            <ul>
-                <li>Worked on strategy simulation, including competitive analysis and client presentation, gaining
-                    insights into strategy consulting processes and problem-solving techniques.</li>
-            </ul>
-        </div>
-        <div class="card">
-            <h3>Main Square Muslim Community</h3>
-            <p><strong>Volunteer</strong></p>
-            <ul>
-                <li>Served food and helped in preparation for various community events, contributing to community
-                    engagement and service efforts.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- How I Can Help Section -->
-    <section id="how-i-can-help">
-        <h2>How Can I Help Your Company?</h2>
-        <p>Here are three ways I can add value to your organization in the roles of Business Analyst, Financial Analyst,
-            or Consultant:</p>
-        <ul>
-            <li><strong>Strategic Data Analysis:</strong> My expertise in data analysis allows me to identify patterns,
-                trends, and actionable insights, which support strategic decisions, optimize processes, and drive
-                business performance.</li>
-            <li><strong>Financial Insights and Reporting:</strong> With a solid foundation in financial analysis and
-                reporting, I can evaluate financial data, create insightful reports, and provide recommendations that
-                improve financial health and operational efficiency.</li>
-            <li><strong>Cross-Functional Collaboration:</strong> I bring experience working with diverse teams to
-                achieve project goals. I can bridge gaps between departments to align on objectives, communicate
-                effectively with stakeholders, and enhance organizational outcomes.</li>
-        </ul>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <div class="section-content">
+            <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
