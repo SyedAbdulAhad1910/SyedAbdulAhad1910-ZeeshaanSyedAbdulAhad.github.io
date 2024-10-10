@@ -4,37 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Abdul Ahad's Portfolio</title>
+    <title>Syed Abdul Ahad | Finance & Business Analyst</title>
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMgOk6Lw1qO3o7urE+qS/G+xLUF2p6cpTFnKCaR" crossorigin="anonymous">
     <style>
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-image: url('https://cdn.pixabay.com/photo/2020/04/02/21/47/finance-4990730_1280.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a192f;
+            color: #ccd6f6;
             line-height: 1.6;
         }
 
         header {
             text-align: center;
-            padding: 50px 20px;
-            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            background-color: #0a192f;
         }
 
         h1 {
-            font-size: 3rem;
-            color: #58a6ff;
+            font-size: 3.5rem;
+            color: #64ffda;
         }
 
         p {
             font-size: 1.2rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 20px auto;
+            color: #8892b0;
         }
 
         /* Icons */
@@ -43,13 +46,13 @@
         }
 
         .icons a {
-            color: #58a6ff;
+            color: #64ffda;
             margin: 0 15px;
             font-size: 2rem;
         }
 
         .icons a:hover {
-            color: #1f6feb;
+            color: #00bfa5;
         }
 
         /* Section Styles */
@@ -57,13 +60,11 @@
             margin: 50px auto;
             max-width: 1000px;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
         }
 
         h2 {
-            font-size: 2rem;
-            color: #58a6ff;
+            font-size: 2.5rem;
+            color: #64ffda;
             margin-bottom: 20px;
         }
 
@@ -79,12 +80,12 @@
         }
 
         a {
-            color: #58a6ff;
+            color: #64ffda;
             text-decoration: none;
         }
 
         a:hover {
-            color: #1f6feb;
+            color: #00bfa5;
             text-decoration: underline;
         }
 
@@ -93,8 +94,8 @@
             display: block;
             margin: 20px auto;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
         }
 
         /* Button Links for Projects */
@@ -103,206 +104,203 @@
             padding: 10px 20px;
             margin-top: 10px;
             font-size: 1rem;
-            color: white;
-            background-color: #58a6ff;
+            color: #0a192f;
+            background-color: #64ffda;
             text-decoration: none;
             border-radius: 5px;
         }
 
         .button:hover {
-            background-color: #1f6feb;
+            background-color: #00bfa5;
         }
 
-        /* Icons for tools under Skills */
+        /* Skills Section */
         .skills i {
-            color: #58a6ff;
+            color: #64ffda;
             margin-right: 10px;
             font-size: 1.5rem;
+        }
+
+        .skills img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        /* Cards for Projects */
+        .card {
+            background-color: #112240;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #ccd6f6;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #8892b0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin: 50px 0;
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #0a192f;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #64ffda;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        nav ul li a:hover {
+            color: #00bfa5;
         }
     </style>
 </head>
 
 <body>
 
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Header Section -->
     <header>
         <h1>Syed Abdul Ahad</h1>
-        <p>Motivated finance professional with diverse experience in financial analysis, accounting, tax compliance, and
-            financial reporting. Proven ability to deliver actionable insights and improve operational efficiency through
-            financial modeling and data analysis.</p>
-
-        <!-- Social Media Icons -->
+        <p>Financial Analyst | Business Analyst | Data-Driven Strategist</p>
         <div class="icons">
-            <a href="https://github.com/SyedAbdulAhad1910" target="_blank" title="GitHub Profile"><i
-                    class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank" title="LinkedIn Profile"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="mailto:syedbadulahad1910@gmail.com" target="_blank" title="Email Me"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:syedbadulahad1910@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
 
-    <!-- Key Competencies Section -->
-    <section id="competencies">
-        <h2>Key Competencies</h2>
-        <ul>
-            <li>Financial Analysis & Reporting</li>
-            <li>Stakeholder Management</li>
-            <li>Data Analysis & Visualization</li>
-            <li>Strategic Problem Solving</li>
-            <li>Project Management</li>
-            <li>Financial Modeling</li>
-        </ul>
-    </section>
-
-    <!-- About Me Section -->
+    <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
-        <img src="img.jpg" alt="Profile Image" style="width: 300px; height: 300px; border-radius: 10px;">
+        <img src="img.jpg" alt="Profile Image">
+        <p>Highly motivated finance professional with robust academic credentials and diverse internship experience in
+            financial analysis, accounting, tax compliance, and financial reporting. Proven ability to deliver actionable
+            insights and improve operational efficiency through detailed financial modeling and data analysis, ensuring
+            adherence to financial policies and regulations.</p>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
-        <ul>
-            <li>
-                <h3>Blue Bells Technical Services (Jun 2024 – Aug 2024)</h3>
-                <p><strong>Financial Analyst Intern</strong></p>
-                <ul>
-                    <li>Developed detailed financial reports using Excel and pivot tables, providing actionable insights that contributed to a 10% reduction in operational costs.</li>
-                    <li>Assisted in the integration of new financial systems ensuring seamless transition and minimal disruption to operations.</li>
-                    <li>Monitored adherence to internal controls and financial policies, recommending improvements as needed.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Metro Tax Solutions (Jan 2024 - Apr 2024)</h3>
-                <p><strong>Staff Accountant Intern</strong></p>
-                <ul>
-                    <li>Spearheaded collaboration across functional teams to file over 500 tax returns, achieving a 98% accuracy rate and ensuring adherence to stringent deadlines.</li>
-                    <li>Monitored changes in tax legislation and CRA guidelines, adapting client strategies to maintain compliance and optimize tax benefits.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Cambrian College (May 2023 - Jun 2023)</h3>
-                <p><strong>Research Associate</strong></p>
-                <ul>
-                    <li>Led a team of four in a comprehensive competitive analysis for a client, identifying key strengths and opportunities relative to competitors through meticulous data analysis, resulting in a 25% increase in sales and enhanced customer retention.</li>
-                    <li>Conducted research on compliance issues and developed solutions to improve business practices.</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="card">
+            <h3>Blue Bells Technical Services (Jun 2024 – Aug 2024)</h3>
+            <p><strong>Financial Analyst Intern</strong></p>
+            <ul>
+                <li>Developed detailed financial reports using Excel and pivot tables, providing actionable insights that
+                    contributed to a 10% reduction in operational costs.</li>
+                <li>Assisted in the integration of new financial systems ensuring seamless transition and minimal
+                    disruption to operations.</li>
+                <li>Monitored adherence to internal controls and financial policies, recommending improvements as
+                    needed.</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Metro Tax Solutions (Jan 2024 - Apr 2024)</h3>
+            <p><strong>Staff Accountant Intern</strong></p>
+            <ul>
+                <li>Spearheaded collaboration across functional teams to file over 500 tax returns, achieving a 98%
+                    accuracy rate and ensuring adherence to stringent deadlines.</li>
+                <li>Monitored changes in tax legislation and CRA guidelines, adapting client strategies to maintain
+                    compliance and optimize tax benefits.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Bank Loan Report (September 2024)</h3>
-                <p><strong>SQL, Power BI</strong></p>
-                <ul>
-                    <li>Created a comprehensive bank loan report by leveraging SQL for ETL processes and Power BI for data visualization, enhancing insights for stakeholders.</li>
-                </ul>
-                <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" class="button">View on
-                    GitHub</a>
-            </li>
-            <li>
-                <h3>Ecommerce Dashboard (August 2024)</h3>
-                <p><strong>Power BI</strong></p>
-                <ul>
-                    <li>Developed an interactive e-commerce project dashboard using Power BI, integrating real-time sales data, customer analytics, and inventory metrics, which facilitated data-driven decision-making.</li>
-                </ul>
-                <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank" class="button">View on GitHub</a>
-            </li>
-            <li>
-                <h3>Sales Dashboard (July 2024)</h3>
-                <p><strong>Tableau</strong></p>
-                <ul>
-                    <li>Designed a real-time sales performance dashboard on Tableau to provide actionable insights into sales operations, leading to a 6% reduction in report generation time.</li>
-                </ul>
-                <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1" target="_blank" class="button">View on Tableau</a>
-            </li>
-            <li>
-                <h3>Financial Statement Analysis Project (Apr 2020 - Sep 2020)</h3>
-                <p><strong>MS Excel</strong></p>
-                <ul>
-                    <li>Uncovered key financial trends by leveraging advanced Excel functionalities to analyze and synthesize data, driving a 15% boost in profitability.</li>
-                    <li>Reviewed balance sheets, income statements, and cash flow statements to detect and rectify discrepancies, ensuring financial integrity and accuracy.</li>
-                </ul>
-            </li>
-        </ul>
+        <div class="card">
+            <h3>Bank Loan Report (September 2024)</h3>
+            <p><strong>SQL, Power BI</strong></p>
+            <ul>
+                <li>Created a comprehensive bank loan report by leveraging SQL for ETL processes and Power BI for data
+                    visualization, enhancing insights for stakeholders.</li>
+            </ul>
+            <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" class="button">View on
+                GitHub</a>
+        </div>
+        <div class="card">
+            <h3>Ecommerce Dashboard (August 2024)</h3>
+            <p><strong>Power BI</strong></p>
+            <ul>
+                <li>Developed an interactive e-commerce project dashboard using Power BI, integrating real-time sales
+                    data, customer analytics, and inventory metrics, which facilitated data-driven decision-making.</li>
+            </ul>
+            <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank"
+                class="button">View on GitHub</a>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <h2>Skills</h2>
         <ul>
-            <li><strong>Technical Skills:</strong> Financial Analysis, Accounting, Tax, Financial Reporting, Financial Modeling, Data Analysis, Data Visualization</li>
+            <li><strong>Technical Skills:</strong> Financial Analysis, Accounting, Tax, Financial Reporting, Financial
+                Modeling, Data Analysis, Data Visualization</li>
             <li><strong>Tools:</strong>
-                <i class="fas fa-database" title="SQL"></i> SQL,
-                <i class="fas fa-file-excel" title="Excel"></i> Excel,
-                <i class="fas fa-chart-bar" title="Power BI"></i> Power BI,
-                <i class="fas fa-chart-line" title="Tableau"></i> Tableau
+                <i class="fas fa-database"></i> SQL,
+                <i class="fas fa-file-excel"></i> Excel,
+                <i class="fas fa-chart-bar"></i> Power BI,
+                <i class="fas fa-chart-line"></i> Tableau
             </li>
         </ul>
     </section>
 
-    <!-- Leadership and Extracurricular Section -->
-    <section id="leadership">
-        <h2>Leadership / Extracurricular</h2>
-        <ul>
-            <li>
-                <h3>Finance Student Association (Jul 2018 - Feb 2019)</h3>
-                <p><strong>Member</strong></p>
-                <ul>
-                    <li>Contributed to a 30% increase in event attendance by organizing and promoting professional development workshops, networking events, and community service projects.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>KPMG Audit Virtual Experience (Mar 2023)</h3>
-                <p><strong>Audit Associate</strong></p>
-                <ul>
-                    <li>Executed testing procedures on internal controls to verify compliance with auditing standards and enhance operational reliability.</li>
-                    <li>Engaged in a virtual audit simulation to acquire practical skills in audit procedures and methodologies.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>PwC Tax Virtual Experience (May 2023)</h3>
-                <p><strong>Tax Associate</strong></p>
-                <ul>
-                    <li>Adapted quickly to a dynamic virtual environment, simulating real-world tax consulting scenarios to hone problem-solving and analytical skills.</li>
-                    <li>Investigated complex tax laws and regulations, delivering optimized tax strategies that ensured client compliance and financial efficiency.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>BCG Strategy Consulting Virtual Experience (June 2024)</h3>
-                <p><strong>Consultant</strong></p>
-                <ul>
-                    <li>Worked on strategy simulation, including competitive analysis and client presentation, gaining insights into strategy consulting processes and problem-solving techniques.</li>
-                </ul>
-            </li>
-        </ul>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to connect with me on LinkedIn or shoot me an email!</p>
+        <div class="icons">
+            <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:syedbadulahad1910@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 
-    <!-- Certification Section -->
-    <section id="certification">
-        <h2>Certification</h2>
-        <ul>
-            <li>Corporate Finance Foundations</li>
-        </ul>
-    </section>
-
-    <!-- How I Can Help Section -->
-    <section id="how-i-can-help">
-        <h2>How Can I Help Your Company?</h2>
-        <p>Here are three ways I can add value to your organization in the roles of Business Analyst, Financial Analyst, or Consultant:</p>
-        <ul>
-            <li><strong>Strategic Data Analysis:</strong> My expertise in data analysis allows me to identify patterns, trends, and actionable insights, which support strategic decisions, optimize processes, and drive business performance.</li>
-            <li><strong>Financial Insights and Reporting:</strong> With a solid foundation in financial analysis and reporting, I can evaluate financial data, create insightful reports, and provide recommendations that improve financial health and operational efficiency.</li>
-            <li><strong>Cross-Functional Collaboration:</strong> I bring experience working with diverse teams to achieve project goals. I can bridge gaps between departments to align on objectives, communicate effectively with stakeholders, and enhance organizational outcomes.</li>
-        </ul>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
+    </footer>
 
 </body>
 
 </html>
-
