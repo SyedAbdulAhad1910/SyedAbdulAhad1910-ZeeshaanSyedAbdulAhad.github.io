@@ -11,7 +11,9 @@
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #0d1117;
+            background-image: url('https://cdn.pixabay.com/photo/2020/04/02/21/47/finance-4990730_1280.jpg');
+            background-size: cover;
+            background-attachment: fixed;
             color: white;
             margin: 0;
             padding: 0;
@@ -21,7 +23,7 @@
         header {
             text-align: center;
             padding: 50px 20px;
-            background-color: #161b22;
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         h1 {
@@ -55,6 +57,8 @@
             margin: 50px auto;
             max-width: 1000px;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
         }
 
         h2 {
@@ -108,6 +112,13 @@
         .button:hover {
             background-color: #1f6feb;
         }
+
+        /* Icons for tools under Skills */
+        .skills i {
+            color: #58a6ff;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 
@@ -116,8 +127,8 @@
     <!-- Header Section -->
     <header>
         <h1>Syed Abdul Ahad</h1>
-        <p>Motivated finance professional with diverse experience in financial analysis, data analysis, business requirements,
-            financial reporting, data visualization. Proven ability to deliver actionable insights and improve operational efficiency through
+        <p>Motivated finance professional with diverse experience in financial analysis, accounting, tax compliance, and
+            financial reporting. Proven ability to deliver actionable insights and improve operational efficiency through
             financial modeling and data analysis.</p>
 
         <!-- Social Media Icons -->
@@ -222,12 +233,16 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="skills">
         <h2>Skills</h2>
         <ul>
             <li><strong>Technical Skills:</strong> Financial Analysis, Accounting, Tax, Financial Reporting, Financial Modeling, Data Analysis, Data Visualization</li>
-            <li><strong>Tools:</strong> Tableau, Microsoft Office (Word, Excel, PowerPoint, Outlook), Power BI, Adobe</li>
-            <li><strong>Languages:</strong> SQL</li>
+            <li><strong>Tools:</strong>
+                <i class="fas fa-database" title="SQL"></i> SQL,
+                <i class="fas fa-file-excel" title="Excel"></i> Excel,
+                <i class="fas fa-chart-bar" title="Power BI"></i> Power BI,
+                <i class="fas fa-chart-line" title="Tableau"></i> Tableau
+            </li>
         </ul>
     </section>
 
@@ -290,3 +305,4 @@
 </body>
 
 </html>
+
