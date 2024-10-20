@@ -1,103 +1,373 @@
-                <div class="item">Data Analysis & Visualization</div>
-                <div class="item">Strategic Problem Solving</div>
-                <div class="item">Project Management</div>
-                <div class="item">Financial Modeling</div>
-                <div class="item">SQL</div>
-                <div class="item">Tableau</div>
-                <div class="item">Microsoft Office Suite</div>
-                <div class="item">Power BI</div>
-                <div class="item">Python (Basic)</div>
+              <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed Abdul Ahad - Business and Financial Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50c878;
+            --background-color: #f0f4f8;
+            --text-color: #333;
+            --accent-color: #ff6b6b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4757;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .experience h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience p {
+            margin-bottom: 1rem;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <h1>Syed Abdul Ahad</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Business and Financial Analyst</h1>
+                <p>Transforming data into actionable insights for strategic decision-making</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>I am a results-driven Business and Financial Analyst with a strong background in data analysis, financial modeling, and business process improvement. My expertise lies in leveraging data to deliver actionable insights, optimize business performance, and support strategic decision-making.</p>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills & Expertise</h2>
+            <div class="skills">
+                <div class="skill">Financial Analysis & Reporting</div>
+                <div class="skill">Stakeholder Management</div>
+                <div class="skill">Data Analysis & Visualization</div>
+                <div class="skill">Strategic Problem Solving</div>
+                <div class="skill">Project Management</div>
+                <div class="skill">Financial Modeling</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Tableau</div>
+                <div class="skill">Microsoft Office</div>
+                <div class="skill">Power BI</div>
+                <div class="skill">Adobe</div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="container show">
+        <section id="experience" class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <h3>Financial Analyst Intern</h3>
+                <p><strong>Blue Bells Technical Services</strong> | Jun 2024 – Aug 2024</p>
+                <ul>
+                    <li>Developed detailed financial reports using Excel and pivot tables, providing actionable insights that contributed to a 10% reduction in operational costs.</li>
+                    <li>Assisted in the integration of new financial systems ensuring seamless transition and minimal disruption to operations.</li>
+                    <li>Monitored adherence to internal controls and financial policies, recommending improvements as needed.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Staff Accountant Intern</h3>
+                <p><strong>Metro Tax Solutions</strong> | Jan 2024 - Apr 2024</p>
+                <ul>
+                    <li>Spearheaded collaboration across functional teams to file over 500 tax returns, achieving a 98% accuracy rate and ensuring adherence to stringent deadlines.</li>
+                    <li>Monitored changes in tax legislation and CRA guidelines, adapting client strategies to maintain compliance and optimize tax benefits.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Research Associate</h3>
+                <p><strong>Cambrian College</strong> | May 2023 - Jun 2023</p>
+                <ul>
+                    <li>Led a team of four in a comprehensive competitive analysis for a client, identifying key strengths and opportunities relative to competitors through meticulous data analysis, resulting in a 25% increase in sales and enhanced customer retention.</li>
+                    <li>Conducted research on compliance issues and developed solutions to improve business practices.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
             <h2>Academic Projects</h2>
             <div class="projects">
-                <div class="item">
-                    <h3>Bank Loan Report</h3>
-                    <p>Developed a detailed bank loan report using SQL and Power BI, automating data extraction and visualization to enhance decision-making processes.</p>
-                    <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank">View Project</a>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300x200.png?text=Bank+Loan+Report" alt="Bank Loan Report">
+                    <div class="project-content">
+                        <h3>Bank Loan Report</h3>
+                        <p>Created a comprehensive bank loan report using SQL and Power BI, enhancing stakeholder insights.</p>
+                        <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank">View Project</a>
+                    </div>
                 </div>
-                <div class="item">
-                    <h3>Ecommerce Dashboard</h3>
-                    <p>Created a dashboard simulating real-time sales and customer data analysis using Power BI, optimizing marketing strategies and pricing decisions.</p>
-                    <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank">View Project</a>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300x200.png?text=Ecommerce+Dashboard" alt="Ecommerce Dashboard">
+                    <div class="project-content">
+                        <h3>Ecommerce Dashboard</h3>
+                        <p>Developed an interactive e-commerce dashboard using Power BI, integrating real-time sales data and customer analytics.</p>
+                        <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank">View Project</a>
+                    </div>
                 </div>
-                <div class="item">
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Designed a Tableau dashboard to track sales performance across regions, reducing manual reporting time by 6% and enhancing performance comparisons.</p>
-                    <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1" target="_blank">View Dashboard</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Additional Courses Section -->
-        <section id="courses" class="container show">
-            <h2>Additional Courses</h2>
-            <div class="courses">
-                <div class="item">Financial Analyst Masterclass </div>
-                <div class="item">Excel Skills for Business </div>
-                <div class="item">Data Analysis  (Udemy)</div>
-                <div class="item">Power BI Data Visualization </div>
-                <div class="item">SQL </div>
-            </div>
-        </section>
-
-        <!-- Extracurriculars Section -->
-        <section id="extracurriculars" class="container show">
-            <h2>Extracurriculars & Leadership</h2>
-            <div class="experience">
-                <div class="item">
-                    <h3>Finance Student Association Member</h3>
-                    <p>Collaborated with faculty and industry experts to deliver financial analysis training, improving student engagement by 30%.</p>
-                </div>
-                <div class="item">
-                    <h3>Main Square Muslim Community Volunteer</h3>
-                    <p>Volunteered in community services such as event preparation and food distribution for the underprivileged.</p>
+                <div class="project">
+                    <img src="https://via.placeholder.com/300x200.png?text=Sales+Dashboard" alt="Sales Dashboard">
+                    <div class="project-content">
+                        <h3>Sales Dashboard</h3>
+                        <p>Designed a real-time sales performance dashboard on Tableau, leading to a 6% reduction in report generation time.</p>
+                        <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1" target="_blank">View Dashboard</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-      <!-- How I Can Help Your Company Section -->
-<section id="how-i-can-help" class="container show">
-    <h2>How I Can Help Your Company</h2>
-    <div class="reasons">
-        <div class="item">
-            <h3>1. Data-Driven Decision Making</h3>
-            <p>I specialize in leveraging tools like Power BI, SQL, and Excel to transform raw data into actionable insights, enabling better business decisions and improving overall performance.</p>
-        </div>
-        <div class="item">
-            <h3>2. Streamlining Financial Processes</h3>
-            <p>With my experience in financial analysis and project management, I can help streamline your financial reporting, budgeting, and forecasting processes to save time and reduce operational costs.</p>
-        </div>
-        <div class="item">
-            <h3>3. Delivering Results through Collaboration</h3>
-            <p>I thrive in collaborative environments, working across departments to ensure projects are delivered on time and within budget while meeting key performance goals.</p>
-        </div>
-    </div>
-</section>
-
-
-        <!-- Contact Section -->
-        <section id="contact" class="container show">
+        <section id="contact" class="container">
             <h2>Get in Touch</h2>
             <form action="https://formspree.io/f/meoqjbba" method="POST">
                 <input type="email" name="email" placeholder="Your email" required>
                 <textarea name="message" placeholder="Your message" required></textarea>
                 <button type="submit" class="cta-button">Send Message</button>
             </form>
-            <div class="social-links">
-                <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 
@@ -112,16 +382,35 @@
             });
         });
 
-        // Section fade-in on scroll
-        const sections = document.querySelectorAll('section');
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + window.innerHeight;
-            sections.forEach(section => {
-                if (scrollPos > section.offsetTop) {
-                    section.classList.add('show');
+        // Add animation to skills on scroll
+        const skills = document.querySelectorAll('.skill');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.5s ease forwards';
                 }
             });
+        }, { threshold: 0.5 });
+
+        skills.forEach(skill => {
+            observer.observe(skill);
         });
+
+        // Add this CSS for the fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
