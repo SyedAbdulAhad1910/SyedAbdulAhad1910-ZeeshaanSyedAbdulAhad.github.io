@@ -1,294 +1,461 @@
-      <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Abdul Ahad - Portfolio</title>
+    <title>Syed Abdul Ahad - Business and Financial Analyst</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom right, #2c3e50, #34495e);
-            color: #fff;
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --accent-color: #e74c3c;
+            --text-color: #ecf0f1;
+            --background-color: #2c3e50;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         header {
-            background: linear-gradient(135deg, #4a90e2, #50c878);
-            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        header h1 {
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.1)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(44, 62, 80, 0.9);
+            padding: 20px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
             font-size: 4rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(90deg, #3498db, #9b59b6);
-            -webkit-background-clip: text;
-            color: transparent;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
-        header p {
+        .tagline {
             font-size: 1.5rem;
+            margin-bottom: 30px;
         }
 
         .cta-button {
-            margin-top: 20px;
             display: inline-block;
             padding: 15px 30px;
-            background-color: #e74c3c;
-            color: #fff;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            transition: background 0.3s ease;
+            background-color: var(--accent-color);
+            color: var(--text-color);
             text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-button:hover {
             background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
 
         section {
-            padding: 80px 20px;
-            text-align: center;
+            padding: 100px 0;
         }
 
         h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 50px;
-            background: linear-gradient(90deg, #3498db, #9b59b6);
-            -webkit-background-clip: text;
-            color: transparent;
+            text-align: center;
+            color: var(--primary-color);
         }
 
-        .skills,
-        .projects,
-        .experience {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .item {
-            background: #2c3e50;
-            padding: 30px;
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            width: 300px;
-            text-align: left;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            padding: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .item:hover {
-            transform: scale(1.05);
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        .item h3 {
+        .card h3 {
             font-size: 1.5rem;
-            color: #3498db;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
         }
 
-        .item p {
+        .card p {
             font-size: 1rem;
-            color: #bdc3c7;
+            color: var(--text-color);
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .project-link:hover {
+            color: #c0392b;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
 
         footer {
-            background: #2c3e50;
-            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.2);
             text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-links {
+            margin-top: 20px;
         }
 
         .social-links a {
-            color: white;
-            font-size: 2rem;
-            margin: 0 15px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
         .social-links a:hover {
-            color: #3498db;
-            transform: scale(1.1);
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .tagline {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
     </style>
 </head>
-
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#help-company">How I Can Help</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <header>
-        <div>
+        <div class="hero">
             <h1>Syed Abdul Ahad</h1>
-            <p>Business and Financial Analyst – Turning data into actionable insights</p>
+            <p class="tagline">Business and Financial Analyst | Data-Driven Decision Maker</p>
             <a href="#contact" class="cta-button">Get in Touch</a>
         </div>
+        <div id="particles-js"></div>
     </header>
 
     <main>
-        <!-- About Section -->
         <section id="about">
-            <h2>About Me</h2>
-            <p>I am a results-driven Business and Financial Analyst with expertise in data analysis, financial modeling, and business process improvement. Passionate about leveraging data to deliver actionable insights, optimize business performance, and support
-                strategic decision-making.</p>
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a results-driven Business and Financial Analyst with a strong background in data analysis, financial modeling, and business process improvement. My expertise lies in leveraging data to deliver actionable insights, optimize business performance, and support strategic decision-making. With a keen eye for detail and a passion for solving complex problems, I strive to drive growth and efficiency in every project I undertake.</p>
+            </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills">
-            <h2>Skills & Expertise</h2>
-            <div class="skills">
-                <div class="item">
-                    <h3>Financial Analysis & Reporting</h3>
-                    <p>Proficient in analyzing financial data to enhance decision-making processes.</p>
-                </div>
-                <div class="item">
-                    <h3>Data Visualization</h3>
-                    <p>Skilled in creating dynamic dashboards in Power BI and Tableau.</p>
-                </div>
-                <div class="item">
-                    <h3>SQL & Excel</h3>
-                    <p>Advanced knowledge in querying databases and performing complex calculations.</p>
-                </div>
-                <div class="item">
-                    <h3>Project Management</h3>
-                    <p>Experienced in managing cross-functional projects and delivering results on time.</p>
-                </div>
-                <div class="item">
-                    <h3>Forecasting & Financial Modeling</h3>
-                    <p>Capable of delivering accurate financial forecasts and building financial models to support business decisions.</p>
-                </div>
-                <div class="item">
-                    <h3>Risk Management</h3>
-                    <p>Experienced in identifying and managing business risks to ensure operational efficiency.</p>
+            <div class="container">
+                <h2>Skills & Expertise</h2>
+                <div class="grid">
+                    <div class="card">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        <h3>Financial Analysis & Reporting</h3>
+                        <p>Proficient in analyzing financial data and creating comprehensive reports to enhance decision-making processes.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-chart-bar skill-icon"></i>
+                        <h3>Data Visualization</h3>
+                        <p>Skilled in creating dynamic and insightful dashboards using Power BI and Tableau.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h3>SQL & Excel</h3>
+                        <p>Advanced knowledge in querying databases and performing complex calculations to extract valuable insights.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-tasks skill-icon"></i>
+                        <h3>Project Management</h3>
+                        <p>Experienced in managing cross-functional projects and delivering results on time and within budget.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-calculator skill-icon"></i>
+                        <h3>Financial Modeling</h3>
+                        <p>Capable of building sophisticated financial models to support strategic business decisions and forecasting.</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-alt skill-icon"></i>
+                        <h3>Risk Management</h3>
+                        <p>Skilled in identifying, assessing, and mitigating financial and operational risks to ensure business continuity.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience">
-                <div class="item">
-                    <h3>Financial Analyst Intern</h3>
-                    <p>Blue Bells Technical Services | Jun 2024 – Aug 2024</p>
-                    <p>Developed detailed financial reports using Excel and Power BI, leading to a 25% increase in reporting accuracy.</p>
-                </div>
-                <div class="item">
-                    <h3>Staff Accountant Intern</h3>
-                    <p>Metro Tax Solutions | Jan 2024 – Apr 2024</p>
-                    <p>Streamlined tax return processing, resulting in a 98% accuracy rate and 15% reduction in audit discrepancies.</p>
-                </div>
-                <div class="item">
-                    <h3>Research Associate</h3>
-                    <p>Cambrian College | May 2023 – Jun 2023</p>
-                    <p>Led a comprehensive market analysis, which increased client sales by 25%. Collaborated with clients to deliver actionable business insights.</p>
+            <div class="container">
+                <h2>Professional Experience</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Financial Analyst Intern</h3>
+                        <p>Blue Bells Technical Services | Jun 2024 – Aug 2024</p>
+                        <p>Developed detailed financial reports using Excel and pivot tables, providing actionable insights that contributed to a 10% reduction in operational costs.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Staff Accountant Intern</h3>
+                        <p>Metro Tax Solutions | Jan 2024 - Apr 2024</p>
+                        <p>Spearheaded collaboration across functional teams to file over 500 tax returns, achieving a 98% accuracy rate and ensuring adherence to stringent deadlines.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Research Associate</h3>
+                        <p>Cambrian College | May 2023 - Jun 2023</p>
+                        <p>Led a team of four in a comprehensive competitive analysis for a client, identifying key strengths and opportunities relative to competitors through meticulous data analysis, resulting in a 25% increase in sales.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects">
-            <h2>Academic Projects</h2>
-            <div class="projects">
-                <div class="item">
-                    <h3>Bank Loan Report</h3>
-                    <p>Developed a comprehensive report using SQL and Power BI to enhance stakeholder insights.</p>
-                    <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank">View Project</a>
-                </div>
-                <div class="item">
-                    <h3>Ecommerce Dashboard</h3>
-                    <p>Created a dynamic ecommerce dashboard in Power BI to track customer insights and sales performance.</p>
-                    <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank">View Project</a>
-                </div>
-                <div class="item">
-                    <h3>Sales Performance Dashboard</h3>
-                    <p>Designed a real-time sales performance dashboard in Tableau, reducing manual report generation time by 6%.</p>
-                    <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1" target="_blank">View Dashboard</a>
-                </div>
-                <div class="item">
-                    <h3>Financial Statement Analysis</h3>
-                    <p>Conducted detailed financial statement analysis to uncover key business insights, boosting profitability by 15%.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- How I Can Help Section -->
-        <section id="how-i-can-help">
-            <h2>How I Can Help Your Company</h2>
-            <div class="skills">
-                <div class="item">
-                    <h3>1. Data-Driven Decision Making</h3>
-                    <p>I leverage tools like SQL, Power BI, and Excel to transform raw data into actionable insights, enabling informed business decisions.</p>
-                </div>
-                <div class="item">
-                    <h3>2. Business Process Improvement</h3>
-                    <p>I specialize in streamlining business processes, identifying bottlenecks, and implementing strategies that reduce costs and improve efficiency.</p>
-                </div>
-                <div class="item">
-                    <h3>3. Financial Modeling & Forecasting</h3>
-                    <p>With my expertise in financial modeling and forecasting, I can help your company build robust financial strategies and mitigate risks.</p>
+            <div class="container">
+                <h2>Academic Projects</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Bank Loan Report</h3>
+                        <p>Created a comprehensive bank loan report using SQL for ETL processes and Power BI for data visualization, enhancing insights for stakeholders.</p>
+                        <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Ecommerce Dashboard</h3>
+                        <p>Developed an interactive e-commerce project dashboard using Power BI, integrating real-time sales data, customer analytics, and inventory metrics.</p>
+                        <a href="https://github.com/SyedAbdulAhad1910/ECommerce-Dashboard/tree/main" target="_blank" class="project-link">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Sales Dashboard</h3>
+                        <p>Designed a real-time sales performance dashboard on Tableau to provide actionable insights into sales operations, leading to a 6% reduction in report generation time.</p>
+                        <a href="https://public.tableau.com/app/profile/syed.abdul.ahad1491/viz/SalesDashboard_17225029962930/Dashboard1" target="_blank" class="project-link">View Dashboard</a>
+                    </div>
+                    <div class="card">
+                        <h3>Financial Statement Analysis</h3>
+                        <p>Conducted a comprehensive financial statement analysis project, uncovering key financial trends and providing recommendations that led to a 15% boost in profitability.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Extracurriculars Section -->
-        <section id="extracurriculars">
-            <h2>Extracurriculars & Leadership</h2>
-            <div class="experience">
-                <div class="item">
-                    <h3>Finance Student Association</h3>
-                    <p>Member | Jul 2018 – Feb 2019</p>
-                    <p>Organized and promoted financial workshops, improving student engagement and networking opportunities.</p>
-                </div>
-                <div class="item">
-                    <h3>Main Square Muslim Community</h3>
-                    <p>Volunteer | 2022</p>
-                    <p>Helped organize community events and provided food services to the underprivileged.</p>
-                </div>
-                <div class="item">
-                    <h3>PwC Tax Virtual Experience</h3>
-                    <p>May 2023</p>
-                    <p>Completed a virtual tax consulting experience, analyzing tax laws and optimizing strategies for client compliance and efficiency.</p>
-                </div>
-                <div class="item">
-                    <h3>KPMG Audit Virtual Experience</h3>
-                    <p>Mar 2023</p>
-                    <p>Executed audit procedures to verify compliance with auditing standards, gaining practical skills in internal controls and operations.</p>
-                </div>
-                <div class="item">
-                    <h3>BCG Strategy Consulting Virtual Experience</h3>
-                    <p>Apr 2023</p>
-                    <p>Worked on real-world strategy consulting cases, gaining insights into solving complex business problems and optimizing business strategies.</p>
+        <section id="help-company">
+            <div class="animated-bg"></div>
+            <div class="container">
+                <h2>How I Can Help Your Company</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Data-Driven Decision Making</h3>
+                        <p>I leverage advanced data analysis techniques and tools like SQL, Power BI, and Excel to transform complex data into actionable insights, enabling informed business decisions that optimize performance.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Financial Modeling & Risk Assessment</h3>
+                        <p>With my expertise in financial modeling and forecasting, I can help your company build robust financial strategies, assess potential risks, and develop performance-driven plans for sustainable growth.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Process Optimization & Efficiency</h3>
+                        <p>I specialize in analyzing workflows, identifying bottlenecks, and implementing strategic solutions to streamline operations, reduce costs, and improve overall business efficiency.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
-            <h2>Get in Touch</h2>
-            <form action="https://formspree.io/f/meoqjbba" method="POST">
-                <input type="email" name="email" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
-            <div class="social-links">
-                <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form action="https://formspree.io/f/meoqjbba" method="POST">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" placeholder="Your message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i  class="fab fa-linkedin"></i></a>
+                    <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
+        </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
-
 </html>
-
