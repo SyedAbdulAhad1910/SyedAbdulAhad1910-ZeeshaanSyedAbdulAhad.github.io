@@ -3,573 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Abdul Ahad - Financial & Business Analyst Portfolio</title>
+    <title>Syed Abdul Ahad - Business & Financial Analyst Portfolio</title>
     <style>
-        /* CSS Reset */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Custom Properties */
         :root {
             --color-primary: #0a192f;
-            --color-secondary: #112240;
-            --color-accent: #64ffda;
-            --color-text: #8892b0;
-            --color-text-light: #ccd6f6;
-            --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-            --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-            --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-            --color-gradient: linear-gradient(120deg, var(--color-accent), #4a00e0);
+            --color-secondary: #64ffda;
+            --color-accent: #112240;
+            --color-text: #ccd6f6;
+            --color-background: #0a192f;
+            --font-sans: 'Poppins', sans-serif;
         }
-
-        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: var(--font-sans);
-            background-color: var(--color-primary);
+            background-color: var(--color-background);
             color: var(--color-text);
             line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                linear-gradient(to bottom, rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)),
-                url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Cg fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Cpath opacity=".5" d="M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z"/%3E%3Cpath d="M6 5V0H5v5H0v1h5v94h1V6h94V5H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
-            background-attachment: fixed;
         }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--color-gradient);
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--color-text-light);
-            font-weight: 600;
-            line-height: 1.1;
-        }
-
-        h1 { font-size: 4rem; }
-        h2 { font-size: 2.5rem; }
-        h3 { font-size: 2rem; }
-
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        a:hover {
-            color: var(--color-text-light);
-        }
-
-        /* Header Styles */
         header {
+            background-color: var(--color-accent);
+            padding: 20px;
+            text-align: center;
             position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
-            background-color: rgba(10, 25, 47, 0.85);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            transition: var(--transition);
+            z-index: 1000;
         }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--color-text-light);
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 100px;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-        }
-
-        .hero h1 {
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--color-accent);
-            border: 1px solid var(--color-accent);
-            border-radius: 4px;
-            padding: 1.25rem 1.75rem;
-            font-size: 0.9rem;
-            font-family: var(--font-mono);
-            line-height: 1;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .cta-button:hover {
-            background-color: rgba(100, 255, 218, 0.1);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 100px 0;
-        }
-
-        .section-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            white-space: nowrap;
-        }
-
-        .section-title::before {
-            content: "< ";
-            color: var(--color-accent);
-            margin-right: 10px;
-        }
-
-        .section-title::after {
-            content: " />";
-            color: var(--color-accent);
-            margin-left: 10px;
-        }
-
-
-        /* About Section */
-        .about-content {
-            display: grid;
-            grid-template-columns: 3fr 2fr;
-            gap: 50px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-        }
-
-        .skills-list {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(140px, 200px));
-            gap: 0 10px;
-            padding: 0;
-            margin: 20px 0 0 0;
-            overflow: hidden;
-            list-style: none;
-        }
-
-        .skills-list li {
-            position: relative;
-            margin-bottom: 10px;
-            padding-left: 20px;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-        }
-
-        .skills-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--color-accent);
-            font-size: 0.9rem;
-            line-height: 12px;
-        }
-
-        /* Experience Section */
-        .experience-item {
-            margin-bottom: 50px;
-        }
-
-        .experience-title {
-            font-size: 1.25rem;
-            color: var(--color-text-light);
-        }
-
-        .experience-company {
-            color: var(--color-accent);
-        }
-
-        .experience-date {
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-            color: var(--color-text);
-        }
-
-        .experience-description {
-            margin-top: 15px;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 15px;
-            position: relative;
-        }
-
-        .project-card {
-            position: relative;
-            overflow: hidden;
-            background-color: var(--color-secondary);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-content {
-            padding: 2rem 1.75rem;
-        }
-
-        .project-title {
-            margin-bottom: 10px;
-        }
-
-        .project-description {
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .project-tech-list {
-            display: flex;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-            margin: 25px 0 10px;
-            padding: 0;
-            list-style: none;
-        }
-
-        .project-tech-list li {
-            margin-right: 15px;
-            font-family: var(--font-mono);
-            font-size: 0.8rem;
-            color: var(--color-text);
-        }
-
-        /* Contact Section */
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            padding: 20px 0;
-            text-align: center;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-        }
-
-        /* How I Can Help Section */
-        .help-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .help-item {
-            background: rgba(17, 34, 64, 0.7);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: var(--transition);
-        }
-
-        .help-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px -15px var(--color-accent);
-        }
-
-        .help-item h3 {
-            color: var(--color-accent);
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
+        nav ul {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 20px;
+            list-style: none;
         }
-
-        .contact-item {
+        nav ul li a {
+            color: var(--color-text);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--color-secondary);
+        }
+        .hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('hero-background.jpg') center/cover no-repeat;
+            height: 100vh;
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--color-text-light);
-            transition: var(--transition);
+            text-align: center;
+            color: var(--color-text);
         }
-
-        .contact-item:hover {
-            color: var(--color-accent);
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
-
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 50px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            .help-content {
-                grid-template-columns: 1fr;
-            }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
         }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 25px;
-            }
-
-            h1 { font-size: 3rem; }
-            h2 { font-size: 2rem; }
-            h3 { font-size: 1.5rem; }
+        .btn {
+            padding: 12px 24px;
+            background-color: var(--color-secondary);
+            color: #0a192f;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #52e4b9;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--color-secondary);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background-color: var(--color-accent);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: var(--color-secondary);
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: var(--color-text);
+        }
+        footer {
+            text-align: center;
+            background-color: var(--color-accent);
+            padding: 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="container">
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#how-i-can-help">How I Can Help</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <h1>Hi, I'm Syed Abdul Ahad</h1>
-                <p>I'm a Financial & Business Analyst specializing in data-driven decision making and process optimization.</p>
-                <a href="#contact" class="cta-button">Get In Touch</a>
-            </div>
-        </section>
+    <section class="hero">
+        <div>
+            <h1>Syed Abdul Ahad</h1>
+            <p>Business & Financial Analyst | Turning Data into Actionable Insights</p>
+            <a href="#contact" class="btn">Connect with Me</a>
+        </div>
+    </section>
 
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Hello! I'm Syed Abdul Ahad, a Business Analytics postgraduate student at Humber College with a strong background in Finance from ICFAI Business School. I'm passionate about leveraging data to drive business growth and optimize financial strategies.</p>
-                        <p>My journey in the world of finance and analytics has equipped me with a unique skill set that combines financial acumen with cutting-edge data analysis techniques. I thrive on transforming complex datasets into actionable insights that help organizations make informed decisions and achieve their goals.</p>
-                        <p>Here are a few technologies I've been working with recently:</p>
-                    </div>
-                    <ul class="skills-list">
-                        <li>Financial Analysis</li>
-                        <li>Data Analysis</li>
-                        <li>Financial Modeling</li>
-                        <li>Power BI (DAX)</li>
-                        <li>SQL</li>
-                        <li>Tableau</li>
-                        <li>Business Process Improvement</li>
-                        <li>Strategic Planning</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a dedicated and results-oriented Business and Financial Analyst with hands-on experience in data analysis, financial modeling, and process improvement. I have a strong foundation in using tools like SQL, Power BI, and Excel to drive business decisions and improve performance.
+        </p>
+    </section>
 
-        <section id="how-i-can-help">
-            <div class="container">
-                <h2 class="section-title">How I Can Help Your Company</h2>
-                <div class="help-content">
-                    <div class="help-item">
-                        <h3>Financial Insights & Strategy</h3>
-                        <p>Leverage my expertise in financial analysis and modeling to provide actionable insights that drive strategic decision-making and improve profitability.</p>
-                    </div>
-                    <div class="help-item">
-                        <h3>Data-Driven Solutions</h3>
-                        <p>Utilize my skills in SQL, Power BI, and Tableau to transform raw data into compelling visualizations and reports that uncover hidden trends and opportunities.</p>
-                    </div>
-                    <div class="help-item">
-                        <h3>Process Optimization</h3>
-                        <p>Apply my experience in business process improvement to streamline operations, reduce costs, and enhance overall efficiency across your organization.</p>
-                    </div>
-                </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Technical Skills</h3>
+                <p>SQL, Power BI, Tableau, Advanced Excel</p>
             </div>
-        </section>
-
-        <section id="experience">
-            <div class="container">
-                <h2 class="section-title">Where I've Worked</h2>
-                <div class="experience-item">
-                    <h3 class="experience-title">
-                        <span class="experience-position">Financial Analyst Intern</span>
-                        <span class="experience-company">@ Blue Bells Technical Services</span>
-                    </h3>
-                    <p class="experience-date">June 2024 - August 2024</p>
-                    <ul class="experience-description">
-                        <li>Developed interactive dashboards improving financial reporting accuracy by 25% and reducing report preparation time by 40%.</li>
-                        <li>Conducted in-depth financial statement analysis, identifying key areas for cost optimization.</li>
-                        <li>Collaborated with cross-functional teams to streamline financial processes and enhance data integrity.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3 class="experience-title">
-                        <span class="experience-position">Staff Accountant Intern</span>
-                        <span class="experience-company">@ Metro Tax Solutions</span>
-                    </h3>
-                    <p class="experience-date">January 2024 - April 2024</p>
-                    <ul class="experience-description">
-                        <li>Streamlined reconciliation processes for 50+ accounts, reducing discrepancies by 15% and audit costs by 5%.</li>
-                        <li>Assisted in the preparation of financial statements and tax returns for diverse clients.</li>
-                        <li>Implemented new Excel models to automate routine accounting tasks, increasing overall efficiency.</li>
-                    </ul>
-                </div>
-                <div class="experience-item">
-                    <h3 class="experience-title">
-                        <span class="experience-position">Research Associate</span>
-                        <span class="experience-company">@ Cambrian College</span>
-                    </h3>
-                    <p class="experience-date">May 2023 - June 2023</p>
-                    <ul class="experience-description">
-                        <li>Led market analysis and implementation of growth strategy that improved operational efficiency by 13%.</li>
-                        <li>Conducted comprehensive research on industry trends and competitor strategies.</li>
-                        <li>Presented findings to key stakeholders, providing actionable recommendations for business development.</li>
-                    </ul>
-                </div>
+            <div class="card">
+                <h3>Financial Analysis</h3>
+                <p>Budgeting, Forecasting, Risk Assessment, Financial Modeling</p>
             </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2 class="section-title">Some Things I've Built</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Customer Churn Analysis</h3>
-                            <p class="project-description">Advanced data analysis project utilizing SQL and Tableau for customer retention optimization. Identified key factors influencing churn and developed predictive models.</p>
-                            <ul class="project-tech-list">
-                                <li>MS Excel</li>
-                                <li>SQL</li>
-                                <li>Tableau</li>
-                            </ul>
-                            <a href="https://github.com/SyedAbdulAhad1910/Customer-Churn-Project" target="_blank" rel="noopener noreferrer">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Bank Loan Analysis Dashboard</h3>
-                            <p class="project-description">Comprehensive loan analysis system with interactive visualizations and real-time metrics. Improved loan approval process efficiency by 30%.</p>
-                            <ul class="project-tech-list">
-                                <li>MS Excel</li>
-                                <li>SQL</li>
-                                <li>Power BI</li>
-                            </ul>
-                            <a  href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" target="_blank" rel="noopener noreferrer">View Project</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Risk Assessment Project</h3>
-                            <p class="project-description">Developed a risk identification framework, uncovering 15 high-impact risks across a large-scale organization, and presented mitigation strategies to senior management.</p>
-                            <ul class="project-tech-list">
-                                <li>MS Excel</li>
-                                <li>Word</li>
-                                <li>PowerPoint</li>
-                            </ul>
-                            <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="card">
+                <h3>Data Analysis</h3>
+                <p>Data Visualization, Business Intelligence, Data Cleaning & Transformation</p>
             </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="contact-content">
-                    <p>I'm currently seeking new opportunities in financial analysis and business intelligence. Whether you have a question, a potential opportunity, or just want to connect, I'd love to hear from you!</p>
-                    <div class="contact-info">
-                        <a href="mailto:syedabdulahad1910@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            syedabdulahad1910@gmail.com
-                        </a>
-                        <a href="tel:+17059884170" class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            (705) 988-4170
-                        </a>
-                        <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/SyedAbdulAhad1910" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <i class="fab fa-github"></i>
-                            GitHub
-                        </a>
-                    </div>
-                    <a href="mailto:syedabdulahad1910@gmail.com" class="cta-button">Let's Connect</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>Designed & Built by Syed Abdul Ahad</p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/SyedAbdulAhad1910" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <p>Critical Thinking, Problem Solving, Communication, Team Collaboration</p>
             </div>
         </div>
+    </section>
+
+    <section id="projects">
+        <h2>Key Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Customer Churn Analysis</h3>
+                <p>Performed data analysis using SQL and created dashboards in Tableau to improve client retention strategies.</p>
+            </div>
+            <div class="card">
+                <h3>Financial Performance Dashboard</h3>
+                <p>Developed an interactive Power BI dashboard for tracking key financial metrics, enabling data-driven decisions.</p>
+            </div>
+            <div class="card">
+                <h3>Market Research & Strategy</h3>
+                <p>Conducted comprehensive market analysis to support strategic initiatives, increasing sales by 13%.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you're looking for an analytically-driven, proactive Business or Financial Analyst to join your team, feel free to reach out!</p>
+        <a href="mailto:syedabdulahad1910@gmail.com" class="btn">Email Me</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
