@@ -6,12 +6,12 @@
     <title>Syed Abdul Ahad - Business & Financial Analyst Portfolio</title>
     <style>
         :root {
-            --color-primary: #2c3e50;
-            --color-secondary: #e74c3c;
-            --color-accent: #3498db;
-            --color-background: #ecf0f1;
-            --color-text: #2c3e50;
-            --font-primary: 'Poppins', sans-serif;
+            --color-primary: #0d1b2a;
+            --color-secondary: #1b263b;
+            --color-accent: #415a77;
+            --color-highlight: #e0e1dd;
+            --color-text: #ffffff;
+            --font-primary: 'Roboto', sans-serif;
         }
         * {
             margin: 0;
@@ -20,22 +20,21 @@
         }
         body {
             font-family: var(--font-primary);
-            background-color: var(--color-background);
+            background-color: var(--color-primary);
             color: var(--color-text);
             line-height: 1.6;
         }
         header {
-            background-color: var(--color-primary);
+            background-color: var(--color-secondary);
             padding: 20px;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            color: white;
         }
         header h1 {
-            color: var(--color-secondary);
+            color: var(--color-highlight);
         }
         nav ul {
             display: flex;
@@ -44,23 +43,24 @@
             list-style: none;
         }
         nav ul li a {
-            color: white;
+            color: var(--color-text);
             text-decoration: none;
             padding: 5px 15px;
             transition: background 0.3s;
         }
         nav ul li a:hover {
-            background-color: var(--color-secondary);
+            background-color: var(--color-accent);
             border-radius: 5px;
         }
         .hero {
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('hero-image.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('hero-background.jpg') center/cover no-repeat;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: var(--color-highlight);
             padding-top: 60px;
         }
         .hero h2 {
@@ -73,15 +73,16 @@
         }
         .btn {
             display: inline-block;
-            background-color: var(--color-secondary);
-            color: white;
+            background-color: var(--color-accent);
+            color: var(--color-text);
             padding: 12px 24px;
             border-radius: 5px;
             text-decoration: none;
+            font-weight: bold;
             transition: background 0.3s;
         }
         .btn:hover {
-            background-color: var(--color-accent);
+            background-color: var(--color-highlight);
         }
         section {
             padding: 80px 20px;
@@ -90,7 +91,7 @@
         }
         h2 {
             text-align: center;
-            color: var(--color-secondary);
+            color: var(--color-highlight);
             margin-bottom: 40px;
         }
         .grid {
@@ -99,12 +100,11 @@
             gap: 30px;
         }
         .card {
-            background-color: var(--color-primary);
+            background-color: var(--color-secondary);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
-            color: white;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -115,16 +115,16 @@
             margin-bottom: 15px;
         }
         .card h3 {
-            color: var(--color-secondary);
+            color: var(--color-accent);
         }
         footer {
-            background-color: var(--color-primary);
+            background-color: var(--color-secondary);
             padding: 20px;
             text-align: center;
-            color: white;
+            color: var(--color-text);
         }
         .icons a {
-            color: var(--color-secondary);
+            color: var(--color-highlight);
             margin: 0 15px;
             font-size: 2rem;
             transition: color 0.3s;
@@ -134,11 +134,11 @@
         }
         .help-section {
             background-color: var(--color-accent);
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
+            color: var(--color-text);
+            padding: 60px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -166,7 +166,7 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am an experienced Business and Financial Analyst who specializes in using data-driven insights to solve business challenges. With skills in SQL, Power BI, advanced Excel, and financial modeling, I bring strategic thinking and a proactive approach to every project.
+            I am an experienced Business and Financial Analyst specializing in turning complex data into clear insights to solve business challenges. With expertise in SQL, Power BI, advanced Excel, and financial modeling, I bring a strategic mindset and proactive approach to every project.
         </p>
     </section>
 
@@ -198,13 +198,11 @@
             <div class="card">
                 <h3>Financial Analyst Intern</h3>
                 <p>Blue Bells Technical Services | June 2024 - Aug 2024</p>
-                <img src="work-exp1.jpg" alt="Work Experience Image">
                 <p>Developed Power BI dashboards, improved reporting accuracy, and identified key financial trends to drive strategic decisions.</p>
             </div>
             <div class="card">
                 <h3>Staff Accountant Intern</h3>
                 <p>Metro Tax Solutions | Jan 2024 - Apr 2024</p>
-                <img src="work-exp2.jpg" alt="Work Experience Image">
                 <p>Led a team processing 500+ tax returns, improving financial accuracy and client relations through data analysis.</p>
             </div>
         </div>
@@ -214,17 +212,17 @@
         <h2>Projects</h2>
         <div class="grid">
             <div class="card">
-                <img src="bank-loan-report.png" alt="Bank Loan Report Project">
+                <img src="/mnt/data/SyedAbdulAhadResume.png" alt="Bank Loan Report Project">
                 <h3>Bank Loan Report</h3>
                 <p>Developed a comprehensive report analyzing loan data trends and providing actionable insights through Power BI.</p>
             </div>
             <div class="card">
-                <img src="customer-churn.png" alt="Customer Churn Project">
+                <img src="/mnt/data/image.png" alt="Customer Churn Project">
                 <h3>Customer Churn Prevention</h3>
                 <p>Performed detailed data analysis using SQL and visualized churn trends with Tableau to improve customer retention.</p>
             </div>
             <div class="card">
-                <img src="financial-statement-analysis.png" alt="Financial Statement Analysis">
+                <img src="/mnt/data/image.png" alt="Financial Statement Analysis">
                 <h3>Financial Statement Analysis</h3>
                 <p>Conducted in-depth financial statement analysis to identify key profitability and liquidity trends, providing strategic insights.</p>
             </div>
@@ -232,17 +230,25 @@
     </section>
 
     <section id="how-i-can-help" class="help-section">
-    <h2>How I Can Help Your Company</h2>
-    <p>
-        I bring a results-driven mindset, leveraging my experience in data analysis, financial modeling, and business intelligence to drive impactful changes. Here’s how I can add value to your team:
-    </p>
-    <ul style="list-style-type: none; padding: 0; margin-top: 20px; color: #f0f0f0;">
-        <li>🔹 <strong>Data-Driven Decisions:</strong> Provide actionable insights by analyzing complex data sets and visualizing trends to optimize business strategies.</li>
-        <li>🔹 <strong>Process Optimization:</strong> Identify inefficiencies and implement solutions that improve workflow and increase productivity.</li>
-        <li>🔹 <strong>Strategic Financial Analysis:</strong> Utilize financial modeling and forecasting to support informed decision-making and boost company growth.</li>
-    </ul>
-</section>
-
+        <h2>How I Can Help Your Company</h2>
+        <p>
+            I am committed to making data-driven solutions that empower your company’s growth. Here’s how I add value:
+        </p>
+        <div class="grid">
+            <div class="card">
+                <h3>Strategic Insights</h3>
+                <p>Transform complex data into strategic insights that guide decision-making, align with business goals, and uncover growth opportunities.</p>
+            </div>
+            <div class="card">
+                <h3>Process Optimization</h3>
+                <p>Identify and eliminate inefficiencies by implementing process improvements that streamline workflows and boost productivity.</p>
+            </div>
+            <div class="card">
+                <h3>Advanced Reporting</h3>
+                <p>Deliver detailed and interactive dashboards that provide real-time analytics for informed decisions, using Power BI and Tableau.</p>
+            </div>
+        </div>
+    </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
