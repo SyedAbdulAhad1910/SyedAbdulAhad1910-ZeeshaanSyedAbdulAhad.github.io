@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syed Abdul Ahad - Business & Financial Analyst Portfolio</title>
-    <meta name="description" content="Portfolio of Syed Abdul Ahad, a skilled Business and Financial Analyst specializing in data analysis, financial modeling, and reporting using SQL, Power BI, and Excel.">
+    <meta name="description" content="Portfolio of Syed Abdul Ahad, Business & Financial Analyst specializing in data analysis, financial modeling, and interactive data visualizations.">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         :root {
-            --color-primary: #0d1b2a;
-            --color-secondary: #1b263b;
-            --color-accent: #e94560;
-            --color-highlight: #66fcf1;
-            --color-text: #ffffff;
+            --color-primary: #0a192f;
+            --color-secondary: #112240;
+            --color-accent: #64ffda;
+            --color-highlight: #e94560;
+            --color-text: #ccd6f6;
             --font-primary: 'Poppins', sans-serif;
         }
         * {
@@ -38,7 +38,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         header h1 {
-            color: var(--color-highlight);
+            color: var(--color-accent);
             font-size: 2.5rem;
             font-weight: 600;
         }
@@ -56,56 +56,41 @@
             transition: background 0.3s;
         }
         nav ul li a:hover {
-            background-color: var(--color-accent);
+            background-color: var(--color-highlight);
             border-radius: 5px;
         }
         .hero {
-            background: linear-gradient(rgba(13, 27, 42, 0.8), rgba(13, 27, 42, 0.8)), url('hero-background.jpg') center/cover no-repeat;
+            background: url('path/to/hero-image.jpg') center/cover no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: var(--color-highlight);
+            color: var(--color-accent);
             padding-top: 80px;
         }
         .hero h2 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
             animation: fadeInUp 1s;
         }
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 30px;
             animation: fadeInUp 1.5s;
         }
-        .btn {
-            display: inline-block;
-            background-color: var(--color-accent);
-            color: var(--color-text);
-            padding: 12px 24px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s, transform 0.3s;
-            animation: fadeInUp 2s;
-        }
-        .btn:hover {
-            background-color: var(--color-highlight);
-            transform: translateY(-5px);
-        }
         section {
-            padding: 100px 20px;
+            padding: 80px 20px;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
         }
         h2 {
             text-align: center;
-            color: var(--color-highlight);
+            color: var(--color-accent);
             margin-bottom: 40px;
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
         .grid {
             display: grid;
@@ -116,7 +101,7 @@
             background-color: var(--color-secondary);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s;
         }
         .card:hover {
@@ -128,48 +113,47 @@
             margin-bottom: 15px;
         }
         .card h3 {
-            color: var(--color-accent);
+            color: var(--color-highlight);
             margin-bottom: 10px;
         }
         .card p {
             font-size: 1rem;
         }
-        .skills-bar {
+        .contact-form {
             background-color: var(--color-secondary);
-            border-radius: 5px;
-            overflow: hidden;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
             margin: 10px 0;
-        }
-        .skills-bar .bar {
-            height: 20px;
-            background-color: var(--color-accent);
-            width: 0;
-            animation: growBar 2s forwards;
-        }
-        footer {
-            background-color: var(--color-secondary);
-            padding: 20px;
-            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: #233554;
             color: var(--color-text);
-            position: relative;
+        }
+        .contact-form button {
+            background-color: var(--color-highlight);
+            color: var(--color-text);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: var(--color-accent);
         }
         .icons a {
-            color: var(--color-highlight);
+            color: var(--color-accent);
             margin: 0 15px;
             font-size: 2rem;
             transition: color 0.3s;
         }
         .icons a:hover {
-            color: var(--color-accent);
-        }
-        .help-section {
-            background-color: var(--color-accent);
-            color: var(--color-text);
-            padding: 80px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            margin-top: 40px;
-            text-align: center;
+            color: var(--color-highlight);
         }
         .testimonial-section {
             margin-top: 40px;
@@ -177,7 +161,7 @@
         .testimonial {
             font-style: italic;
             background-color: var(--color-secondary);
-            border-left: 5px solid var(--color-highlight);
+            border-left: 5px solid var(--color-accent);
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 5px;
@@ -185,23 +169,9 @@
         }
         .testimonial-author {
             text-align: right;
-            color: var(--color-accent);
+            color: var(--color-highlight);
             font-weight: bold;
             margin-top: 10px;
-        }
-        .download-resume {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: var(--color-highlight);
-            color: var(--color-text);
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        .download-resume:hover {
-            background-color: var(--color-accent);
         }
         @keyframes fadeInUp {
             from {
@@ -213,11 +183,6 @@
                 transform: translateY(0);
             }
         }
-        @keyframes growBar {
-            to {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -227,7 +192,7 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#work-experience">Work Experience</a></li>
+                <li><a href="#work-experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#how-i-can-help">How I Can Help</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
@@ -239,8 +204,6 @@
     <section class="hero">
         <h2>Business & Financial Analyst</h2>
         <p>Transforming data into actionable insights to drive growth and efficiency.</p>
-        <a href="#contact" class="btn">Let's Connect</a>
-        <a href="path/to/your/resume.pdf" class="download-resume" download>Download My Resume</a>
     </section>
 
     <section id="about">
@@ -248,7 +211,6 @@
         <p>
             I am an experienced Business and Financial Analyst specializing in turning complex data into clear insights to solve business challenges. With expertise in SQL, Power BI, advanced Excel, and financial modeling, I bring a strategic mindset and proactive approach to every project.
         </p>
-        <iframe src="path/to/your/introduction-video.mp4" width="100%" height="400px" style="margin-top: 20px; border: none;"></iframe>
     </section>
 
     <section id="skills">
@@ -257,36 +219,24 @@
             <div class="card">
                 <h3>Technical Skills</h3>
                 <p>SQL, Power BI, Tableau, Advanced Excel</p>
-                <div class="skills-bar">
-                    <div class="bar" style="width: 90%;"></div>
-                </div>
             </div>
             <div class="card">
                 <h3>Data Analysis</h3>
                 <p>Data visualization, data modeling, data cleaning</p>
-                <div class="skills-bar">
-                    <div class="bar" style="width: 85%;"></div>
-                </div>
             </div>
             <div class="card">
                 <h3>Financial Analysis</h3>
                 <p>Budgeting, forecasting, financial modeling</p>
-                <div class="skills-bar">
-                    <div class="bar" style="width: 88%;"></div>
-                </div>
             </div>
             <div class="card">
                 <h3>Soft Skills</h3>
                 <p>Critical thinking, problem-solving, communication</p>
-                <div class="skills-bar">
-                    <div class="bar" style="width: 95%;"></div>
-                </div>
             </div>
         </div>
     </section>
 
     <section id="work-experience">
-        <h2>Work Experience</h2>
+        <h2>Experience</h2>
         <div class="grid">
             <div class="card">
                 <h3>Financial Analyst Intern</h3>
@@ -310,17 +260,17 @@
         <h2>Projects</h2>
         <div class="grid">
             <div class="card">
-                <img src="bank_loan_project.jpg" alt="Bank Loan Report Project">
+                <img src="path/to/bank-loan-report.png" alt="Bank Loan Report Project">
                 <h3>Bank Loan Report</h3>
                 <p>Developed a comprehensive report analyzing loan data trends and providing actionable insights through Power BI.</p>
             </div>
             <div class="card">
-                <img src="Customer_churn.jpg" alt="Customer Churn Project">
+                <img src="path/to/customer-churn.png" alt="Customer Churn Project">
                 <h3>Customer Churn Prevention</h3>
                 <p>Performed detailed data analysis using SQL and visualized churn trends with Tableau to improve customer retention.</p>
             </div>
             <div class="card">
-                <img src="Financial_analysis_project.jpg" alt="Financial Statement Analysis">
+                <img src="path/to/financial-statement-analysis.png" alt="Financial Statement Analysis">
                 <h3>Financial Statement Analysis</h3>
                 <p>Conducted detailed financial statement analysis to identify key profitability and liquidity trends and provided strategic insights.</p>
             </div>
@@ -351,17 +301,17 @@
     <section id="testimonials" class="testimonial-section">
         <h2>Testimonials</h2>
         <div class="testimonial">
-            <p>"Syed's exceptional ability to get the job done be it reconciliation, financial statement preparation and his leadership abilities in working across cross-functional teams was just as good. His attention to detail and commitment to maintaining financial accuracy were key assets to our organization."</p>
+            <p>"Syed's exceptional ability to get the job done be it reconciliation processes, preparing financial statements, providing effective tax strategies and his leadership abilties in working with cross-functional teams was just as good. His attention to detail and commitment to maintaining financial accuracy were key assets to our organization."</p>
             <p class="testimonial-author">- Supervisor, Metro Tax Solutions</p>
         </div>
     </section>
 
     <section id="contact">
         <h2>Contact Me</h2>
-        <form>
+        <form class="contact-form">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <textarea placeholder="Your Message" rows="6" required></textarea>
             <button type="submit">Send Message</button>
         </form>
         <div class="icons" style="margin-top: 20px; text-align: center;">
