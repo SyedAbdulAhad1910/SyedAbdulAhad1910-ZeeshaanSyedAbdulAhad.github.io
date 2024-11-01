@@ -6,12 +6,12 @@
     <title>Syed Abdul Ahad - Business & Financial Analyst Portfolio</title>
     <style>
         :root {
-            --color-primary: #0a192f;
-            --color-secondary: #64ffda;
-            --color-accent: #112240;
-            --color-text: #ccd6f6;
-            --color-background: #0a192f;
-            --font-sans: 'Poppins', sans-serif;
+            --color-primary: #1f2833;
+            --color-secondary: #66fcf1;
+            --color-accent: #45a29e;
+            --color-background: #0b0c10;
+            --color-text: #c5c6c7;
+            --font-primary: 'Segoe UI', sans-serif;
         }
         * {
             margin: 0;
@@ -19,46 +19,51 @@
             box-sizing: border-box;
         }
         body {
-            font-family: var(--font-sans);
+            font-family: var(--font-primary);
             background-color: var(--color-background);
             color: var(--color-text);
             line-height: 1.6;
         }
         header {
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
             padding: 20px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: fixed;
             width: 100%;
             z-index: 1000;
         }
+        header h1 {
+            color: var(--color-secondary);
+            font-size: 1.8rem;
+        }
         nav ul {
             display: flex;
-            justify-content: center;
-            gap: 20px;
             list-style: none;
+            gap: 20px;
         }
         nav ul li a {
             color: var(--color-text);
             text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: bold;
+            font-size: 1rem;
             transition: color 0.3s;
         }
         nav ul li a:hover {
             color: var(--color-secondary);
         }
         .hero {
-            background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('hero-background.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(31, 40, 51, 0.8), rgba(31, 40, 51, 0.8)), url('hero-image.jpg') center/cover no-repeat;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: var(--color-text);
+            color: var(--color-secondary);
         }
-        .hero h1 {
-            font-size: 3.5rem;
+        .hero h2 {
+            font-size: 3rem;
             margin-bottom: 20px;
         }
         .hero p {
@@ -66,27 +71,26 @@
             margin-bottom: 30px;
         }
         .btn {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-background);
             padding: 12px 24px;
-            background-color: var(--color-secondary);
-            color: #0a192f;
-            text-decoration: none;
             border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
             transition: background 0.3s;
         }
         .btn:hover {
-            background-color: #52e4b9;
+            background-color: var(--color-secondary);
         }
         section {
             padding: 60px 20px;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+        h3 {
             color: var(--color-secondary);
+            margin-bottom: 15px;
         }
         .grid {
             display: grid;
@@ -94,7 +98,7 @@
             gap: 30px;
         }
         .card {
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -103,27 +107,53 @@
         .card:hover {
             transform: translateY(-5px);
         }
-        .card h3 {
-            color: var(--color-secondary);
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: var(--color-text);
-        }
         footer {
             text-align: center;
-            background-color: var(--color-accent);
+            background-color: var(--color-primary);
             padding: 20px;
-            margin-top: 40px;
+            color: var(--color-text);
+        }
+        .icons a {
+            color: var(--color-secondary);
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        .icons a:hover {
+            color: var(--color-accent);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: var(--color-background);
+            color: var(--color-text);
+        }
+        form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--color-accent);
+            color: var(--color-background);
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background-color: var(--color-secondary);
         }
     </style>
 </head>
 <body>
     <header>
+        <h1>Syed Abdul Ahad</h1>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#work-experience">Work Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -131,68 +161,92 @@
     </header>
 
     <section class="hero">
-        <div>
-            <h1>Syed Abdul Ahad</h1>
-            <p>Business & Financial Analyst | Turning Data into Actionable Insights</p>
-            <a href="#contact" class="btn">Connect with Me</a>
-        </div>
+        <h2>Business & Financial Analyst</h2>
+        <p>Leveraging data to deliver strategic insights and drive impactful decisions.</p>
+        <a href="#contact" class="btn">Let's Collaborate</a>
     </section>
 
     <section id="about">
         <h2>About Me</h2>
         <p>
-            I am a dedicated and results-oriented Business and Financial Analyst with hands-on experience in data analysis, financial modeling, and process improvement. I have a strong foundation in using tools like SQL, Power BI, and Excel to drive business decisions and improve performance.
+            I am a passionate Business and Financial Analyst with a proven track record of using data-driven insights to solve complex business problems. With expertise in SQL, Power BI, and advanced Excel, I strive to help organizations make informed decisions that foster growth and efficiency.
         </p>
+        <img src="about-image.gif" alt="About me image" style="width:100%; border-radius:10px; margin-top:20px;">
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <div class="grid">
             <div class="card">
-                <h3>Technical Skills</h3>
+                <h3>Technical Proficiency</h3>
                 <p>SQL, Power BI, Tableau, Advanced Excel</p>
             </div>
             <div class="card">
-                <h3>Financial Analysis</h3>
-                <p>Budgeting, Forecasting, Risk Assessment, Financial Modeling</p>
+                <h3>Data Analysis</h3>
+                <p>Data visualization, data cleaning, data modeling</p>
             </div>
             <div class="card">
-                <h3>Data Analysis</h3>
-                <p>Data Visualization, Business Intelligence, Data Cleaning & Transformation</p>
+                <h3>Financial Analysis</h3>
+                <p>Financial modeling, forecasting, risk assessment</p>
             </div>
             <div class="card">
                 <h3>Soft Skills</h3>
-                <p>Critical Thinking, Problem Solving, Communication, Team Collaboration</p>
+                <p>Communication, teamwork, problem-solving</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Financial Analyst Intern</h3>
+                <p>Blue Bells Technical Services | June 2024 - Aug 2024</p>
+                <p>Developed Power BI dashboards, improved reporting accuracy, and identified key financial trends.</p>
+            </div>
+            <div class="card">
+                <h3>Staff Accountant Intern</h3>
+                <p>Metro Tax Solutions | Jan 2024 - Apr 2024</p>
+                <p>Led a team to process over 500 tax returns and increased portfolio accuracy.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Key Projects</h2>
+        <h2>Projects</h2>
         <div class="grid">
             <div class="card">
                 <h3>Customer Churn Analysis</h3>
-                <p>Performed data analysis using SQL and created dashboards in Tableau to improve client retention strategies.</p>
+                <p>Performed data analysis using SQL and created Tableau dashboards to enhance retention strategies.</p>
             </div>
             <div class="card">
                 <h3>Financial Performance Dashboard</h3>
-                <p>Developed an interactive Power BI dashboard for tracking key financial metrics, enabling data-driven decisions.</p>
-            </div>
-            <div class="card">
-                <h3>Market Research & Strategy</h3>
-                <p>Conducted comprehensive market analysis to support strategic initiatives, increasing sales by 13%.</p>
+                <p>Developed interactive dashboards using Power BI to monitor and optimize financial KPIs.</p>
             </div>
         </div>
+        <img src="project-summary.gif" alt="Project demo GIF" style="width:100%; border-radius:10px; margin-top:20px;">
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>If you're looking for an analytically-driven, proactive Business or Financial Analyst to join your team, feel free to reach out!</p>
-        <a href="mailto:syedabdulahad1910@gmail.com" class="btn">Email Me</a>
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="icons" style="margin-top: 20px; text-align: center;">
+            <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
     </footer>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
