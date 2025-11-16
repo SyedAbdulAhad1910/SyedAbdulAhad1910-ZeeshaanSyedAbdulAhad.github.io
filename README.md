@@ -1,6 +1,6 @@
 # Syed Abdul Ahad
 
-**Financial & Business Analyst | Data-Driven Insights | Strategic Decision Making**
+**Financial & Risk Analyst | Data-Driven Insights | Strategic Decision Making**
 
 With a strong foundation in financial analysis, business process improvement, and consulting, I specialize in transforming data into actionable insights. Skilled in SQL, Excel, Power BI, and Tableau, I strive to help organizations optimize performance and drive growth.
 
