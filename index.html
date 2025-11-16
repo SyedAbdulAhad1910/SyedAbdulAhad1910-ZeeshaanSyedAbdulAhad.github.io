@@ -3,1400 +3,836 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Abdul Ahad | Financial & Business Analyst</title>
-    <meta name="description" content="Portfolio of Syed Abdul Ahad - Financial Risk Analyst specializing in data analysis, risk management, and financial modeling.">
+    <title>Syed Abdul Ahad - AML & Financial Risk Analyst</title>
+    <meta name="description" content="AML Financial Analyst with 1+ years of experience in financial crime investigations at TD Bank. Specializing in compliance frameworks, transaction monitoring, and regulatory risk assessment.">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
-        :root {
-            --color-primary: #1a2c42;
-            --color-secondary: #2a4365;
-            --color-accent: #3182ce;
-            --color-accent-light: #63b3ed;
-            --color-highlight: #e53e3e;
-            --color-text: #2d3748;
-            --color-text-light: #718096;
-            --color-background: #ffffff;
-            --color-background-alt: #f7fafc;
-            --color-border: #e2e8f0;
-            --font-primary: 'Montserrat', sans-serif;
-            --font-secondary: 'Playfair Display', serif;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        :root {
+            --background: #fcfcfd;
+            --foreground: #1a1a2e;
+            --card: #ffffff;
+            --card-foreground: #1a1a2e;
+            --primary: #1e3a8a;
+            --primary-foreground: #ffffff;
+            --secondary: #f1f5f9;
+            --secondary-foreground: #1a1a2e;
+            --muted: #f8fafc;
+            --muted-foreground: #64748b;
+            --accent: #f1f5f9;
+            --accent-foreground: #1a1a2e;
+            --border: #e2e8f0;
+            --ring: #1e3a8a;
+            --radius: 0.75rem;
+        }
+
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 80px;
         }
-        
+
         body {
-            font-family: var(--font-primary);
-            color: var(--color-text);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
             line-height: 1.6;
-            background-color: var(--color-background);
         }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: var(--font-secondary);
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        a {
-            text-decoration: none;
-            color: var(--color-accent);
-            transition: color 0.3s ease;
-        }
-        
-        a:hover {
-            color: var(--color-accent-light);
-        }
-        
+
         .container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.5rem;
         }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--color-accent);
-            color: white;
-            border-radius: 4px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-        }
-        
-        .btn:hover {
-            background-color: var(--color-accent-light);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-        
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--color-accent);
-            color: var(--color-accent);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--color-accent);
-            color: white;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: var(--color-primary);
+
+        /* Navigation */
+        nav {
             position: fixed;
-            width: 100%;
             top: 0;
+            width: 100%;
+            background: rgba(252, 252, 253, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
             z-index: 1000;
-            box-shadow: var(--shadow);
-            transition: all 0.3s ease;
         }
-        
-        header.scrolled {
-            padding: 10px 0;
-            background-color: rgba(26, 44, 66, 0.95);
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-family: var(--font-secondary);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: white;
-        }
-        
-        .logo span {
-            color: var(--color-accent-light);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            color: white;
-            font-weight: 500;
-            position: relative;
-            padding: 5px 0;
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--color-accent-light);
-            transition: width 0.3s ease;
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(26, 44, 66, 0.8), rgba(26, 44, 66, 0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            color: white;
-            position: relative;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            animation: fadeInUp 1.2s ease;
-        }
-        
-        .hero-btns {
-            display: flex;
-            gap: 15px;
-            animation: fadeInUp 1.4s ease;
-        }
-        
-        .hero-image {
-            position: absolute;
-            right: 10%;
-            bottom: 0;
-            width: 350px;
-            height: 450px;
-            border-radius: 10px 10px 0 0;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            animation: fadeIn 1.5s ease;
-        }
-        
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background-color: var(--color-background-alt);
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--color-primary);
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--color-accent);
-        }
-        
-        .section-title p {
-            color: var(--color-text-light);
-            font-size: 1.1rem;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        
-        .about-image {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 100%;
-            height: 100%;
-            border: 5px solid var(--color-accent);
-            border-radius: 10px;
-            z-index: -1;
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 10px;
-        }
-        
-        .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-        }
-        
-        .about-text .btn {
-            margin-top: 20px;
-        }
-        
-        /* Stats Section */
-        .stats {
-            padding: 80px 0;
-            background-color: var(--color-primary);
-            color: white;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 30px 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .stat-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--color-accent-light);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            font-family: var(--font-secondary);
-        }
-        
-        .stat-text {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        
-        /* Skills Section */
-        .skills {
-            padding: 100px 0;
-            background-color: var(--color-background);
-        }
-        
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        
-        .skill-category {
-            background-color: var(--color-background-alt);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-        
-        .skill-category:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--color-primary);
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-category h3 i {
-            margin-right: 10px;
-            color: var(--color-accent);
-        }
-        
-        .skill-item {
-            margin-bottom: 20px;
-        }
-        
-        .skill-info {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-        }
-        
-        .skill-bar {
-            height: 8px;
-            background-color: var(--color-border);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background-color: var(--color-accent);
-            border-radius: 4px;
-            transition: width 1.5s ease;
-        }
-        
-        /* Experience Section */
-        .experience {
-            padding: 100px 0;
-            background-color: var(--color-background-alt);
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 800px;
+
+        .nav-content {
+            max-width: 1280px;
             margin: 0 auto;
-        }
-        
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--color-accent);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            margin-bottom: 30px;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border: 4px solid var(--color-accent);
-            border-radius: 50%;
-            top: 15px;
-            z-index: 1;
-        }
-        
-        .left {
-            left: 0;
-        }
-        
-        .right {
-            left: 50%;
-        }
-        
-        .left::after {
-            right: -10px;
-        }
-        
-        .right::after {
-            left: -10px;
-        }
-        
-        .timeline-content {
-            padding: 25px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-        
-        .timeline-content::after {
-            content: '';
-            position: absolute;
-            border-width: 10px;
-            border-style: solid;
-            top: 15px;
-        }
-        
-        .left .timeline-content::after {
-            border-color: transparent white transparent transparent;
-            right: -20px;
-        }
-        
-        .right .timeline-content::after {
-            border-color: transparent transparent transparent white;
-            left: -20px;
-        }
-        
-        .timeline-date {
-            display: inline-block;
-            padding: 5px 15px;
-            background-color: var(--color-accent);
-            color: white;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        
-        .timeline-title {
-            margin-bottom: 5px;
-            color: var(--color-primary);
-            font-size: 1.3rem;
-        }
-        
-        .timeline-company {
-            color: var(--color-text-light);
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-        
-        .timeline-desc {
-            margin-bottom: 15px;
-        }
-        
-        .timeline-achievements {
-            list-style-type: none;
-        }
-        
-        .timeline-achievements li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 8px;
-        }
-        
-        .timeline-achievements li::before {
-            content: '\f00c';
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: var(--color-accent);
-        }
-        
-        /* Projects Section */
-        .projects {
-            padding: 100px 0;
-            background-color: var(--color-background);
-        }
-        
-        .projects-filter {
+            padding: 0 1.5rem;
             display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
         }
-        
-        .filter-btn {
-            padding: 8px 20px;
-            margin: 5px;
-            background-color: transparent;
-            border: 2px solid var(--color-accent);
-            color: var(--color-accent);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
+
+        .nav-logo {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--foreground);
         }
-        
-        .filter-btn.active, .filter-btn:hover {
-            background-color: var(--color-accent);
-            color: white;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .project-image {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
-        }
-        
-        .project-content {
-            padding: 25px;
-        }
-        
-        .project-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--color-primary);
-        }
-        
-        .project-desc {
-            margin-bottom: 20px;
-            color: var(--color-text-light);
-        }
-        
-        .project-tags {
+
+        .nav-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
+            align-items: center;
+            gap: 2rem;
         }
-        
-        .project-tag {
-            padding: 5px 12px;
-            background-color: var(--color-background-alt);
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: var(--color-text-light);
+
+        .nav-links a {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: color 0.2s;
         }
-        
-        .project-link {
+
+        .nav-links a:hover {
+            color: var(--foreground);
+        }
+
+        .btn {
             display: inline-flex;
             align-items: center;
-            color: var(--color-accent);
+            gap: 0.5rem;
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
             font-weight: 500;
+            border-radius: calc(var(--radius) - 2px);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: none;
         }
-        
-        .project-link i {
-            margin-left: 5px;
-            transition: transform 0.3s ease;
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
         }
-        
-        .project-link:hover i {
-            transform: translateX(5px);
+
+        .btn-primary:hover {
+            opacity: 0.9;
         }
-        
-        /* Achievements Section */
-        .achievements {
-            padding: 100px 0;
-            background-color: var(--color-background-alt);
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--foreground);
+            border: 1px solid var(--border);
         }
-        
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
+
+        .btn-outline:hover {
+            background-color: var(--accent);
         }
-        
-        .achievement-card {
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--color-accent);
+
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
         }
-        
-        .achievement-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-md);
+
+        /* Sections */
+        section {
+            padding: 5rem 1.5rem;
         }
-        
-        .achievement-icon {
-            width: 60px;
-            height: 60px;
-            background-color: var(--color-background-alt);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            color: var(--color-accent);
-            font-size: 1.5rem;
+
+        .section-header {
+            margin-bottom: 3rem;
         }
-        
-        .achievement-title {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--color-primary);
-        }
-        
-        .achievement-desc {
-            color: var(--color-text-light);
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 100px 0;
-            background-color: var(--color-background);
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial-slide {
-            background-color: white;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-            text-align: center;
-            display: none;
-        }
-        
-        .testimonial-slide.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .testimonial-quote {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 30px;
-            position: relative;
-            padding: 0 30px;
-        }
-        
-        .testimonial-quote::before, .testimonial-quote::after {
-            content: '\201C';
-            font-family: var(--font-secondary);
-            font-size: 4rem;
-            position: absolute;
-            color: var(--color-accent);
-            opacity: 0.3;
-            line-height: 0;
-        }
-        
-        .testimonial-quote::before {
-            top: 15px;
-            left: 0;
-        }
-        
-        .testimonial-quote::after {
-            content: '\201D';
-            bottom: -10px;
-            right: 0;
-        }
-        
-        .testimonial-author {
+
+        .section-label {
+            font-size: 0.875rem;
             font-weight: 600;
-            color: var(--color-primary);
-            margin-bottom: 5px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
         }
-        
-        .testimonial-position {
-            color: var(--color-text-light);
-            font-size: 0.9rem;
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--foreground);
+            line-height: 1.2;
         }
-        
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
+
+        /* Hero Section */
+        .hero {
+            padding-top: 8rem;
+            padding-bottom: 5rem;
         }
-        
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: var(--color-border);
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
         }
-        
-        .testimonial-dot.active {
-            background-color: var(--color-accent);
+
+        @media (min-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        
-        .testimonial-arrows {
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            background-color: rgba(30, 58, 138, 0.1);
+            color: var(--primary);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pulse-dot {
+            position: relative;
+            display: inline-flex;
+            height: 8px;
+            width: 8px;
+        }
+
+        .pulse-dot::before {
+            content: '';
             position: absolute;
-            top: 50%;
             width: 100%;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            pointer-events: none;
-        }
-        
-        .testimonial-arrow {
-            width: 40px;
-            height: 40px;
-            background-color: white;
+            height: 100%;
+            background-color: var(--primary);
             border-radius: 50%;
+            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+
+        .pulse-dot::after {
+            content: '';
+            position: relative;
+            display: inline-flex;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+        }
+
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 3.75rem;
+            }
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--muted-foreground);
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--foreground);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+
+        .card-hover:hover {
+            border-color: var(--primary);
+        }
+
+        .card-icon {
+            height: 48px;
+            width: 48px;
+            border-radius: calc(var(--radius) - 4px);
+            background-color: rgba(30, 58, 138, 0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: var(--shadow);
-            cursor: pointer;
-            pointer-events: auto;
-            transition: all 0.3s ease;
+            margin-bottom: 1rem;
         }
-        
-        .testimonial-arrow:hover {
-            background-color: var(--color-accent);
-            color: white;
+
+        .card-icon svg {
+            color: var(--primary);
         }
-        
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background-color: var(--color-background-alt);
+
+        .card-stat {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
         }
-        
-        .contact-container {
+
+        .card-label {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+        }
+
+        /* About Section */
+        .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
         }
-        
-        .contact-info {
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+
+        @media (min-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-        
-        .contact-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: var(--color-primary);
+
+        .about-text {
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
         }
-        
-        .contact-detail {
+
+        .info-card {
+            border-left: 4px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card h4 {
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 25px;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
         }
-        
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background-color: var(--color-background-alt);
-            border-radius: 50%;
+
+        .info-list svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: var(--primary);
+        }
+
+        /* Experience Section */
+        .experience-list {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            color: var(--color-accent);
-            font-size: 1.2rem;
+            flex-direction: column;
+            gap: 2rem;
         }
-        
-        .contact-text h4 {
-            margin-bottom: 5px;
-            color: var(--color-primary);
+
+        .experience-card {
+            border: 2px solid var(--border);
         }
-        
-        .contact-text p, .contact-text a {
-            color: var(--color-text-light);
+
+        .experience-card.current {
+            border-color: var(--primary);
         }
-        
-        .contact-social {
+
+        .experience-header {
             display: flex;
-            gap: 15px;
-            margin-top: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background-color: var(--color-background-alt);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-accent);
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            background-color: var(--color-accent);
-            color: white;
-            transform: translateY(-5px);
-        }
-        
-        .contact-form {
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-        
-        .contact-form h3 {
+
+        .experience-title {
             font-size: 1.5rem;
-            margin-bottom: 30px;
-            color: var(--color-primary);
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
         }
-        
-        .form-group {
-            margin-bottom: 20px;
+
+        .experience-company {
+            font-size: 1.125rem;
+            color: var(--muted-foreground);
         }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
             font-weight: 500;
-            color: var(--color-primary);
+            border-radius: calc(var(--radius) - 4px);
         }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--color-border);
-            border-radius: 5px;
-            font-family: var(--font-primary);
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+
+        .badge-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
         }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--color-accent);
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
         }
-        
-        textarea.form-control {
-            resize: vertical;
-            min-height: 150px;
+
+        .badge-outline {
+            background-color: transparent;
+            border: 1px solid var(--border);
+            color: var(--foreground);
         }
-        
-        /* Footer */
-        footer {
-            background-color: var(--color-primary);
-            color: white;
-            padding: 30px 0;
+
+        .experience-date {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            margin-top: 0.25rem;
+        }
+
+        .experience-list-items {
+            list-style: none;
+        }
+
+        .experience-list-items li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .experience-list-items .icon-wrapper {
+            flex-shrink: 0;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background-color: rgba(30, 58, 138, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .experience-list-items .icon-wrapper svg {
+            color: var(--primary);
+            width: 12px;
+            height: 12px;
+        }
+
+        .experience-list-items strong {
+            color: var(--foreground);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .project-card {
+            border: 2px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-section {
+            margin-bottom: 0.75rem;
+        }
+
+        .project-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-section-title {
+            font-weight: 600;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .project-section p {
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-icon {
+            height: 40px;
+            width: 40px;
+            border-radius: calc(var(--radius) - 4px);
+            background-color: rgba(30, 58, 138, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-icon svg {
+            color: var(--primary);
+            width: 20px;
+            height: 20px;
+        }
+
+        .skill-title {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--foreground);
+        }
+
+        .skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Leadership Section */
+        .leadership-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .leadership-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .leadership-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: 0.25rem;
+        }
+
+        .leadership-meta {
+            color: var(--muted-foreground);
+            margin-bottom: 1rem;
+        }
+
+        .leadership-description {
+            color: var(--muted-foreground);
+        }
+
+        .leadership-description strong {
+            color: var(--foreground);
+        }
+
+        /* CTA Section */
+        .cta {
             text-align: center;
         }
-        
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .footer-logo {
-            font-family: var(--font-secondary);
-            font-size: 1.8rem;
+
+        .cta-title {
+            font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
+            color: var(--foreground);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
-        
-        .footer-logo span {
-            color: var(--color-accent-light);
+
+        .cta-description {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
-        
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 3rem 1.5rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
         .footer-text {
-            margin-bottom: 20px;
-            opacity: 0.8;
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
         }
-        
+
         .footer-links {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 1.5rem;
         }
-        
+
         .footer-links a {
-            color: white;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
+            font-size: 0.875rem;
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: color 0.2s;
         }
-        
+
         .footer-links a:hover {
-            opacity: 1;
+            color: var(--foreground);
         }
-        
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
+
+        /* Background colors */
+        .bg-muted {
+            background-color: var(--muted);
         }
-        
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-social a:hover {
-            background-color: var(--color-accent);
-            transform: translateY(-5px);
-        }
-        
-        .footer-bottom {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.6;
-            font-size: 0.9rem;
-        }
-        
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .hero-image {
-                width: 300px;
-                height: 400px;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .skills-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                padding: 15px 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--color-primary);
-                padding: 20px 0;
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-                transition: clip-path 0.4s ease;
-            }
-            
-            nav.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                box-shadow: var(--shadow);
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .hero-content {
-                text-align: center;
-                margin: 0 auto;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-btns {
-                justify-content: center;
-            }
-            
-            .hero-image {
+
+        /* Mobile menu */
+        @media (max-width: 767px) {
+            .nav-links {
                 display: none;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .about-image {
-                order: -1;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item::after {
-                left: 21px;
-            }
-            
-            .right {
-                left: 0;
-            }
-            
-            .left .timeline-content::after {
-                border-color: transparent transparent transparent white;
-                left: -20px;
-                right: auto;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .btn {
-                width: 100%;
-            }
-            
-            .projects-filter {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .filter-btn {
-                width: 80%;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
-            <div class="header-container">
-                <a href="#" class="logo">Syed<span>Ahad</span></a>
-                <button class="mobile-menu-btn" id="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="nav-logo">Syed Abdul Ahad</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <button class="btn btn-primary" onclick="downloadResume()">
+                    <i data-lucide="download" style="width: 16px; height: 16px;"></i>
+                    Resume
                 </button>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Financial & Business Analyst</h1>
-                <p>Transforming complex financial data into strategic business insights that drive growth and mitigate risk.</p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn">View My Work</a>
-                    <a href="Syed_Abdul_Ahad_RESUME.pdf" class="btn btn-outline" download>Download Resume</a>
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for opportunities
+                    </div>
+                    <h1 class="hero-title">AML & Financial Risk Analyst</h1>
+                    <p class="hero-description">
+                        Specializing in compliance frameworks, transaction monitoring, and regulatory risk assessment. Currently protecting $50M+ in corporate transactions at TD Bank through data-driven AML investigations.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#experience" class="btn btn-primary btn-lg">
+                            View Experience
+                            <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="mailto:abdulahad.syed19@outlook.com" class="btn btn-outline btn-lg">
+                            <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
+                        </a>
+                        <a href="https://github.com/syedabdulahad" target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="github" style="width: 20px; height: 20px;"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-15%20at%2010.09.39%20PM-2-mRI5JFZ2lzGfr7wNMO0Xb9X8EuPwnV.jpeg" alt="Syed Abdul Ahad">
+                <div class="stats-grid">
+                    <div class="card card-hover">
+                        <div class="card-icon">
+                            <i data-lucide="shield" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <div class="card-stat">1000+</div>
+                        <div class="card-label">AML Alerts Investigated</div>
+                    </div>
+                    <div class="card card-hover">
+                        <div class="card-icon">
+                            <i data-lucide="trending-up" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <div class="card-stat">$50M+</div>
+                        <div class="card-label">Transactions Analyzed</div>
+                    </div>
+                    <div class="card card-hover">
+                        <div class="card-icon">
+                            <i data-lucide="bar-chart-3" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <div class="card-stat">25%</div>
+                        <div class="card-label">Governance Improvement</div>
+                    </div>
+                    <div class="card card-hover">
+                        <div class="card-icon">
+                            <i data-lucide="database" style="width: 24px; height: 24px;"></i>
+                        </div>
+                        <div class="card-stat">800+</div>
+                        <div class="card-label">Client Accounts Managed</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section id="about" class="bg-muted">
         <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>Get to know my background and expertise</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                As a financial risk analyst with a passion for data-driven decision making, I've dedicated my career to bridging the gap between complex financial data and actionable business insights. My journey began with a foundation in international accounting and finance, which I've since enhanced through specialized education in project management and risk assessment. Working across diverse financial environments has taught me that numbers tell stories that can transform business strategies when properly interpreted. 
-
-
-As a financial risk analyst with a passion for data-driven decision making, I've dedicated my career to bridging the gap between complex financial data and actionable business insights. My journey began with a foundation in international accounting and finance, which I've since enhanced through specialized education in project management and risk assessment. Working across diverse financial environments has taught me that numbers tell stories that can transform business strategies when properly interpreted. I find genuine satisfaction in untangling complex financial challenges and developing frameworks that not only mitigate risk but create opportunities for growth.
-
-Beyond technical expertise, I bring a methodical yet creative approach to financial problem-solving. Having worked with organizations ranging from tax firms to technical services companies, I've developed a keen understanding of how financial decisions ripple through an entire business ecosystem. My hands-on experience with compliance risk assessments, financial forecasting, and data visualization has reinforced my belief that effective financial analysis is both an art and a science. I'm constantly expanding my technical skillset and seeking new ways to transform raw data into strategic advantage for the organizations I serve.
-                    
-                   
-                <div class="about-image">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-04-15%20at%2010.09.39%20PM-IkquTbwJDy5qsZWi0QjGQjx35PaHrv.jpeg" alt="Syed Abdul Ahad">
+            <div class="about-grid">
+                <div>
+                    <div class="section-label">About Me</div>
+                    <h3 class="section-title">Turning Complex Financial Data Into Actionable Risk Intelligence</h3>
+                    <p class="about-text">
+                        I'm an AML Financial Analyst with over 1 year of hands-on experience in financial crime investigations at TD Bank through Protiviti. My expertise lies in leveraging advanced analytics tools like SQL, Power BI, and Excel to monitor transactions, screen for suspicious activities, and file STRs to FINTRAC.
+                    </p>
+                    <p class="about-text">
+                        With a strong foundation in compliance frameworks and regulatory requirements, I've successfully evaluated $50M+ in corporate transactions, investigated 1000+ alerts, and reduced false positive rates by 15% through data-driven analysis.
+                    </p>
+                    <p class="about-text">
+                        I hold postgraduate degrees in Project Management (Risk Management) and International Business (Finance) from George Brown College and Cambrian College, complemented by my Bachelor of Commerce from Loyola College.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div>
+                    <div class="card info-card">
+                        <h4>Core Competencies</h4>
+                        <ul class="info-list">
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>Risk Assessment Frameworks & Compliance Controls</span>
+                            </li>
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>AML/CTF Investigations & Transaction Monitoring</span>
+                            </li>
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>SQL, Power BI, Tableau & Advanced Excel Analytics</span>
+                            </li>
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>Financial Modeling & Forecasting</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="stat-number">25%</div>
-                    <div class="stat-text">Improved Financial Forecasting Accuracy</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="stat-number">10%</div>
-                    <div class="stat-text">Reduced Credit Default Exposure</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="fas fa-tachometer-alt"></i>
-                    </div>
-                    <div class="stat-number">20%</div>
-                    <div class="stat-text">Faster Transaction Processing</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <i class="fas fa-coins"></i>
-                    </div>
-                    <div class="stat-number">15%</div>
-                    <div class="stat-text">Increased Working Capital Efficiency</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Skills</h2>
-                <p>Expertise that drives results</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-pie"></i> Financial Analysis</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Financial Modeling</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Risk Assessment</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Forecasting</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Variance Analysis</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Data Analytics</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>SQL</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Power BI</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Tableau</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Advanced Excel</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Risk Management</h3>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Compliance Risk</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Credit Risk</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Operational Risk</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-info">
-                            <span>Internal Controls</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
+                    <div class="card info-card">
+                        <h4>Education Highlights</h4>
+                        <ul class="info-list">
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>Postgraduate, Project Management (Risk) - George Brown</span>
+                            </li>
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>Postgraduate, International Business (Finance) - Cambrian</span>
+                            </li>
+                            <li>
+                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+                                <span>Bachelor of Commerce, Int'l Accounting - Loyola College</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1404,588 +840,479 @@ Beyond technical expertise, I bring a methodical yet creative approach to financ
     </section>
 
     <!-- Experience Section -->
-    <section class="experience" id="experience">
+    <section id="experience">
         <div class="container">
-            <div class="section-title">
-                <h2>Work Experience</h2>
-                <p>My professional journey</p>
+            <div class="section-header">
+                <div class="section-label">Work Experience</div>
+                <h3 class="section-title">Building Robust Financial Crime Defenses</h3>
             </div>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Nov 2024 - Present</div>
-                        <h3 class="timeline-title">Financial Risk Analyst</h3>
-                        <p class="timeline-company">Protiviti, Toronto, Ontario</p>
-                        <p class="timeline-desc">Leading compliance risk assessments and developing credit risk models to optimize capital allocation and enhance governance practices.</p>
-                        <ul class="timeline-achievements">
-                            <li>Improved governance practices by 25% through enhanced risk controls</li>
-                            <li>Reduced transaction processing time by 20% with automation</li>
-                            <li>Decreased credit default exposure by 10% with data-driven models</li>
-                        </ul>
+            
+            <div class="experience-list">
+                <!-- Current Role -->
+                <div class="card experience-card current">
+                    <div class="experience-header">
+                        <div>
+                            <h4 class="experience-title">AML Analyst</h4>
+                            <p class="experience-company">Protiviti - TD Bank</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <span class="badge badge-primary">Current</span>
+                            <p class="experience-date">Nov 2024 - Present</p>
+                            <p class="experience-date">Toronto, Ontario</p>
+                        </div>
                     </div>
+                    <ul class="experience-list-items">
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="shield"></i>
+                            </div>
+                            <span>Led cross-functional teams in structured compliance risk assessments, evaluating over <strong>$50M</strong> in corporate transactions and presenting findings to senior leadership, resulting in a <strong>25% improvement</strong> in governance practices.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <span>Utilized <strong>SQL</strong> to extract and analyze transactional data, developing complex queries that flagged high-risk transaction patterns, leading to the identification of <strong>25+ suspicious activity cases</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="bar-chart-3"></i>
+                            </div>
+                            <span>Investigated <strong>1000+ alerts</strong> from Transaction Monitoring and Name Screening systems (PEPs, Adverse Media, Sanctions), using Power BI dashboards to identify money laundering patterns and reducing false positives by <strong>15%</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <span>Interpreted and assessed the impact of new <strong>FINTRAC</strong> guidelines on existing frameworks, developing implementation strategies that ensured <strong>100% compliance</strong> for a portfolio of 800+ client accounts.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jun 2024 - Aug 2024</div>
-                        <h3 class="timeline-title">Financial Analyst Intern</h3>
-                        <p class="timeline-company">Blue Bells Technical Services, Hyderabad, India</p>
-                        <p class="timeline-desc">Developed risk-adjusted financial forecasting models and enhanced liquidity risk analysis to improve working capital efficiency.</p>
-                        <ul class="timeline-achievements">
-                            <li>Reduced variance errors by 25% through improved forecasting</li>
-                            <li>Increased working capital efficiency by 15%</li>
-                            <li>Achieved 10% decrease in operational expenses</li>
-                        </ul>
+
+                <!-- Financial Analyst Intern -->
+                <div class="card experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h4 class="experience-title">Financial Analyst Intern</h4>
+                            <p class="experience-company">Blue Bells Technical Services</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <p class="experience-date">Jun 2024 - Aug 2024</p>
+                            <p class="experience-date">Hyderabad, India</p>
+                        </div>
                     </div>
+                    <ul class="experience-list-items">
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Built risk-adjusted financial models in Excel simulating 3 distinct market scenarios, enabling leadership to make data-driven decisions that reduced forecast variance by <strong>$2.5M</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Conducted liquidity analysis using advanced ratio techniques on a $15M balance sheet, identifying inefficiencies and implementing solutions that improved working capital by <strong>15%</strong>.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Jan 2024 - Apr 2024</div>
-                        <h3 class="timeline-title">Staff Accountant Intern</h3>
-                        <p class="timeline-company">Metro Tax Solutions, Toronto, Ontario</p>
-                        <p class="timeline-desc">Managed financial reconciliations and ensured compliance with CRA tax regulations across multiple client accounts.</p>
-                        <ul class="timeline-achievements">
-                            <li>Improved reporting accuracy by 12%</li>
-                            <li>Ensured error-free submissions for 30+ client tax filings</li>
-                            <li>Reduced financial discrepancies by 8% with automated checks</li>
-                        </ul>
+
+                <!-- Staff Accountant Intern -->
+                <div class="card experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h4 class="experience-title">Staff Accountant Intern</h4>
+                            <p class="experience-company">Metro Tax Solutions</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <p class="experience-date">Jan 2024 - Apr 2024</p>
+                            <p class="experience-date">Toronto, Ontario</p>
+                        </div>
                     </div>
+                    <ul class="experience-list-items">
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Developed standardized MS Excel templates with data validation rules to review financial transactions, ensuring error-free submissions for <strong>30+ client tax filings</strong> and saving ~5 hours per week in manual checks.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Managed complex reconciliations for 50+ client accounts, implementing systematic verification processes that enhanced reporting accuracy by <strong>12%</strong>.</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <div class="timeline-date">May 2023 - Jun 2023</div>
-                        <h3 class="timeline-title">Research Associate</h3>
-                        <p class="timeline-company">Cambrian College, Sudbury, Ontario</p>
-                        <p class="timeline-desc">Conducted market trend analysis and evaluated financial metrics to provide actionable recommendations for strategic growth.</p>
-                        <ul class="timeline-achievements">
-                            <li>Contributed to a 7% revenue increase through strategic recommendations</li>
-                            <li>Assessed company performance using financial ratios</li>
-                            <li>Delivered weekly presentations to stakeholders</li>
-                        </ul>
+
+                <!-- Research Associate -->
+                <div class="card experience-card">
+                    <div class="experience-header">
+                        <div>
+                            <h4 class="experience-title">Research Associate</h4>
+                            <p class="experience-company">Cambrian College</p>
+                        </div>
+                        <div style="text-align: right;">
+                            <p class="experience-date">May 2023 - Jun 2023</p>
+                            <p class="experience-date">Sudbury, Ontario</p>
+                        </div>
                     </div>
+                    <ul class="experience-list-items">
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Conducted comprehensive market trend analysis using statistical methods, delivering actionable insights that increased client revenue by <strong>7%</strong>.</span>
+                        </li>
+                        <li>
+                            <div class="icon-wrapper">
+                                <i data-lucide="chevron-right"></i>
+                            </div>
+                            <span>Developed custom financial ratio framework to assess company performance, identifying key operational improvement opportunities.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
+    <section id="projects" class="bg-muted">
         <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
-                <p>Showcasing my analytical capabilities</p>
+            <div class="section-header">
+                <div class="section-label">Featured Projects</div>
+                <h3 class="section-title">Data-Driven Solutions for Financial Challenges</h3>
             </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="risk">Risk Management</button>
-                <button class="filter-btn" data-filter="financial">Financial Analysis</button>
-                <button class="filter-btn" data-filter="data">Data Visualization</button>
-            </div>
+
             <div class="projects-grid">
-                <div class="project-card" data-category="risk data">
-                    <div class="project-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bank_loan_project.jpg.png-apULay0gtefeEBpVgmZ3K15ck2RsD0.png" alt="Bank Loan Risk Assessment">
+                <div class="card project-card">
+                    <div class="card-icon">
+                        <i data-lucide="trending-up" style="width: 24px; height: 24px;"></i>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Bank Loan Risk Assessment</h3>
-                        <p class="project-desc">Developed a comprehensive risk assessment framework using Power BI to analyze loan data trends and provide actionable insights.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Power BI</span>
-                            <span class="project-tag">Risk Analysis</span>
-                        </div>
-                        <a href="https://github.com/SyedAbdulAhad1910/Bank-Loan-Report" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                    <h4 class="project-title">Customer Churn Prevention</h4>
+                    <div class="project-badges">
+                        <span class="badge badge-secondary">SQL</span>
+                        <span class="badge badge-secondary">Tableau</span>
+                        <span class="badge badge-secondary">Process Mapping</span>
                     </div>
-                </div>
-                <div class="project-card" data-category="data">
-                    <div class="project-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Customer_churn.jpg.png-lOlNaHpqmuOqbOogoyFy6zmNP3iYeh.png" alt="Customer Churn Prevention">
+                    <div class="project-section">
+                        <p class="project-section-title">Challenge:</p>
+                        <p>High customer attrition threatening revenue stability and growth potential</p>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Customer Churn Prevention</h3>
-                        <p class="project-desc">Performed detailed data analysis using SQL and visualized churn trends with Tableau to improve customer retention strategies.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">SQL</span>
-                            <span class="project-tag">Tableau</span>
-                            <span class="project-tag">Process Mapping</span>
-                        </div>
-                        <a href="https://github.com/SyedAbdulAhad1910/Customer-Churn-Project" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                    <div class="project-section">
+                        <p class="project-section-title">Impact:</p>
+                        <p>Reduced prediction errors by <strong>20%</strong> and improved portfolio stability through targeted retention strategies</p>
                     </div>
                 </div>
-                <div class="project-card" data-category="financial">
-                    <div class="project-image">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Financial_analysis_project.jpg.png-C7sBsngR4Y4k3oeiXcRzMMKX2mDdUl.png" alt="Financial Statement Analysis">
+
+                <div class="card project-card">
+                    <div class="card-icon">
+                        <i data-lucide="shield" style="width: 24px; height: 24px;"></i>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Financial Statement Analysis</h3>
-                        <p class="project-desc">Conducted detailed financial statement analysis to identify key profitability and liquidity trends and provided strategic insights.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Excel</span>
-                            <span class="project-tag">Financial Modeling</span>
-                            <span class="project-tag">Ratio Analysis</span>
-                        </div>
-                        <a href="https://github.com/SyedAbdulAhad1910/Financial_analysis" class="project-link" target="_blank">View Project <i class="fas fa-arrow-right"></i></a>
+                    <h4 class="project-title">Bank Loan Risk Assessment</h4>
+                    <div class="project-badges">
+                        <span class="badge badge-secondary">SQL</span>
+                        <span class="badge badge-secondary">Power BI</span>
+                    </div>
+                    <div class="project-section">
+                        <p class="project-section-title">Challenge:</p>
+                        <p>Inefficient credit risk evaluation leading to suboptimal lending decisions</p>
+                    </div>
+                    <div class="project-section">
+                        <p class="project-section-title">Impact:</p>
+                        <p>Designed comprehensive risk framework with weighted scoring system, improving default prevention models and portfolio quality</p>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="card-icon">
+                        <i data-lucide="bar-chart-3" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <h4 class="project-title">Financial Performance Optimization</h4>
+                    <div class="project-badges">
+                        <span class="badge badge-secondary">Advanced Excel</span>
+                        <span class="badge badge-secondary">Financial Modeling</span>
+                    </div>
+                    <div class="project-section">
+                        <p class="project-section-title">Challenge:</p>
+                        <p>Declining profitability despite revenue growth</p>
+                    </div>
+                    <div class="project-section">
+                        <p class="project-section-title">Impact:</p>
+                        <p>Conducted 5-year trend analysis identifying key cost drivers and delivered actionable recommendations for profitability improvements</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Achievements Section -->
-    <section class="achievements" id="achievements">
+    <!-- Skills Section -->
+    <section id="skills">
         <div class="container">
-            <div class="section-title">
-                <h2>Key Achievements</h2>
-                <p>Measurable impact across organizations</p>
+            <div class="section-header">
+                <div class="section-label">Technical Expertise</div>
+                <h3 class="section-title">Skills That Drive Results</h3>
             </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+
+            <div class="skills-grid">
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <h4 class="skill-title">AML & Compliance</h4>
                     </div>
-                    <h3 class="achievement-title">Enhanced Governance</h3>
-                    <p class="achievement-desc">Improved governance practices by 25% through implementation of enhanced risk controls and compliance frameworks at Protiviti.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">Risk Assessment</span>
+                        <span class="badge badge-outline">FINTRAC</span>
+                        <span class="badge badge-outline">KYC/CDD</span>
+                        <span class="badge badge-outline">AML Scenarios</span>
+                        <span class="badge badge-outline">Fraud Detection</span>
+                        <span class="badge badge-outline">STR Filing</span>
+                        <span class="badge badge-outline">Control Testing</span>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-bolt"></i>
+
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h4 class="skill-title">Analytical Tools</h4>
                     </div>
-                    <h3 class="achievement-title">Process Optimization</h3>
-                    <p class="achievement-desc">Engineered automation-driven financial workflows that reduced transaction processing time by 20% by integrating advanced risk analysis tools.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">SQL</span>
+                        <span class="badge badge-outline">Power BI</span>
+                        <span class="badge badge-outline">Tableau</span>
+                        <span class="badge badge-outline">Advanced Excel</span>
+                        <span class="badge badge-outline">VBA</span>
+                        <span class="badge badge-outline">Power Query</span>
+                        <span class="badge badge-outline">SAS</span>
+                        <span class="badge badge-outline">Oracle</span>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-shield-alt"></i>
+
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h4 class="skill-title">Finance & Analytics</h4>
                     </div>
-                    <h3 class="achievement-title">Risk Reduction</h3>
-                    <p class="achievement-desc">Developed data-driven credit risk models that optimized capital allocation and reduced exposure to credit defaults by 10%.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">Financial Modeling</span>
+                        <span class="badge badge-outline">Forecasting</span>
+                        <span class="badge badge-outline">Data Visualization</span>
+                        <span class="badge badge-outline">Ratio Analysis</span>
+                        <span class="badge badge-outline">Transaction Monitoring</span>
+                        <span class="badge badge-outline">Hypothesis Testing</span>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-coins"></i>
+
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h4 class="skill-title">Problem Solving</h4>
                     </div>
-                    <h3 class="achievement-title">Capital Efficiency</h3>
-                    <p class="achievement-desc">Enhanced liquidity risk analysis, increasing working capital efficiency by 15% through structured cash flow models.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">Hypothesis-Driven</span>
+                        <span class="badge badge-outline">Root Cause Analysis</span>
+                        <span class="badge badge-outline">MECE Frameworks</span>
+                        <span class="badge badge-outline">Structured Analysis</span>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-search-dollar"></i>
+
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <h4 class="skill-title">Client Communication</h4>
                     </div>
-                    <h3 class="achievement-title">Cost Reduction</h3>
-                    <p class="achievement-desc">Conducted financial variance analysis, advising on cost reduction strategies, leading to a 10% decrease in operational expenses.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">Executive Presentations</span>
+                        <span class="badge badge-outline">Stakeholder Management</span>
+                        <span class="badge badge-outline">Data Storytelling</span>
+                        <span class="badge badge-outline">Documentation</span>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
+
+                <div class="card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h4 class="skill-title">Governance & Risk</h4>
                     </div>
-                    <h3 class="achievement-title">Reporting Accuracy</h3>
-                    <p class="achievement-desc">Improved financial reporting accuracy by 12% through enhanced reconciliation processes and automated validation checks.</p>
+                    <div class="skill-badges">
+                        <span class="badge badge-outline">GRC Implementation</span>
+                        <span class="badge badge-outline">Regulatory Compliance</span>
+                        <span class="badge badge-outline">Risk Frameworks</span>
+                        <span class="badge badge-outline">Audit Support</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Leadership Section -->
+    <section class="bg-muted">
         <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-                <p>Let's discuss how I can contribute to your organization</p>
+            <div class="section-header">
+                <div class="section-label">Leadership Experience</div>
+                <h3 class="section-title">Building Teams & Sharing Knowledge</h3>
             </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Phone</h4>
-                            <p>(705) 988-4170</p>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Email</h4>
-                            <a href="mailto:abdulahad.syed19@outlook.com">abdulahad.syed19@outlook.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h4>Location</h4>
-                            <p>Toronto, Ontario, Canada</p>
-                        </div>
-                    </div>
-                    <div class="contact-social">
-                        <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/SyedAbdulAhad1910" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:syedabdulahad1910@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                    </div>
+
+            <div class="leadership-grid">
+                <div class="card">
+                    <h4 class="leadership-title">Project Coordinator</h4>
+                    <p class="leadership-meta">Armageddon • Riyadh, Saudi Arabia • Oct 2021 - Aug 2022</p>
+                    <p class="leadership-description">
+                        Directed cross-functional teams of <strong>15+ volunteers</strong> to execute large-scale finance events with <strong>500+ attendees</strong>, developing project plans that optimized resource allocation and stakeholder engagement.
+                    </p>
                 </div>
-                <div class="contact-form">
-                    <h3>Send Me a Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+
+                <div class="card">
+                    <h4 class="leadership-title">Finance Initiative Lead</h4>
+                    <p class="leadership-meta">Finance Student Association • Hyderabad, India • Jul 2018 - Feb 2019</p>
+                    <p class="leadership-description">
+                        Spearheaded student finance initiatives, collaborating with <strong>3 industry experts</strong> to develop and deliver <strong>5 risk management workshops</strong>, boosting financial literacy for 200+ students.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- Resume Section -->
-<section class="resume" id="resume">
-    <div class="container">
-        <div class="section-title">
-            <h2>Resume</h2>
-            <p>My professional background and qualifications</p>
-        </div>
-        
-    
-            <div class="resume-content">
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-graduation-cap"></i> Education
-                    </h3>
-                    <div class="resume-item">
-                        <h4>Postgraduate in Project Management (Major: Risk Management)</h4>
-                        <h5>George Brown College, Toronto, Ontario</h5>
-                        <p class="resume-date">Sept 2023 - May 2024</p>
-                        <p class="resume-achievement">Dean's List</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Postgraduate in International Business (Major: Finance)</h4>
-                        <h5>Cambrian College, Sudbury, Ontario</h5>
-                        <p class="resume-date">Sept 2022 - Jun 2023</p>
-                        <p class="resume-achievement">Dean's List</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Bachelor of Commerce in International Accounting and Finance</h4>
-                        <h5>Loyola College, Hyderabad, India</h5>
-                        <p class="resume-date">Jun 2018 - Aug 2021</p>
-                        <p class="resume-achievement">Merit Recipient</p>
-                    </div>
-                    <div class="resume-coursework">
-                        <h5>Key Coursework:</h5>
-                        <p>Financial Management, Risk Management, Financial Modeling, Data Analytics, Project Management</p>
-                    </div>
-                </div>
-                
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-briefcase"></i> Work Experience
-                    </h3>
-                    <div class="resume-item">
-                        <h4>Financial Risk Analyst</h4>
-                        <h5>Protiviti, Toronto, Ontario</h5>
-                        <p class="resume-date">Nov 2024 - Present</p>
-                        <ul class="resume-responsibilities">
-                            <li>Led cross-functional teams in conducting compliance risk assessments on financial transactions, advising senior leadership on regulatory adherence and optimizing internal controls, resulting in a 25% improvement in governance practices.</li>
-                            <li>Streamlined financial workflows by engineering automation tools, which reduced transaction processing time by 20% and increased operational efficiency.</li>
-                            <li>Developed data-driven credit risk models that optimized capital allocation, enhancing overall portfolio stability and reducing exposure to credit defaults by 10%.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Financial Analyst Intern</h4>
-                        <h5>Blue Bells Technical Services, Hyderabad, India</h5>
-                        <p class="resume-date">Jun 2024 - Aug 2024</p>
-                        <ul class="resume-responsibilities">
-                            <li>Designed and implemented risk-adjusted financial forecasting models, providing leadership with enhanced scenario planning and reducing variance errors by 25%.</li>
-                            <li>Increased working capital efficiency by 15% by conducting advanced liquidity risk analyses and recommending improvements to cash flow management.</li>
-                            <li>Conducted in-depth variance analysis on operational expenditures, leading to strategic cost reduction measures and achieving a 10% decrease in OPEX.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Staff Accountant Intern</h4>
-                        <h5>Metro Tax Solutions, Toronto, Ontario</h5>
-                        <p class="resume-date">Jan 2024 - Apr 2024</p>
-                        <ul class="resume-responsibilities">
-                            <li>Managed reconciliations for 50+ client accounts, enhancing reporting accuracy by 12% and minimizing financial discrepancies.</li>
-                            <li>Reviewed, processed, and analyzed financial transactions to ensure compliance with CRA regulations, resulting in error-free submissions for 30+ client tax filings.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Research Associate</h4>
-                        <h5>Cambrian College, Sudbury, Ontario</h5>
-                        <p class="resume-date">May 2023 - Jun 2023</p>
-                        <ul class="resume-responsibilities">
-                            <li>Conducted market trend analysis and financial performance evaluations, contributing to strategic recommendations that led to a 7% increase in client revenue.</li>
-                            <li>Assessed company performance through financial ratios and variance analysis, identifying actionable insights to improve client profitability and operational efficiency.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-laptop-code"></i> Projects
-                    </h3>
-                    <div class="resume-item">
-                        <h4>Customer Churn Prevention | SQL, Tableau, Process Mapping</h4>
-                        <p class="resume-date">Oct 2024</p>
-                        <ul class="resume-responsibilities">
-                            <li>Built a churn risk model using SQL and Tableau, advising on customer retention strategies, reducing churn prediction errors and improving customer portfolio stability.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Bank Loan Risk Assessment | SQL, Power BI</h4>
-                        <p class="resume-date">Jul 2024</p>
-                        <ul class="resume-responsibilities">
-                            <li>Designed a risk assessment framework using Power BI, advising on credit risk strategies, improving default prevention models, and supporting strategic lending decisions.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Financial Statement Analysis | Advanced Excel</h4>
-                        <p class="resume-date">Jun 2020</p>
-                        <ul class="resume-responsibilities">
-                            <li>Analyzed financial trends in revenue and cost over five years to provide actionable recommendations for profitability improvements and operational efficiency.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-tools"></i> Skills
-                    </h3>
-                    <div class="resume-skills">
-                        <div class="resume-skill-category">
-                            <h4>Strategic & Risk Analytics</h4>
-                            <p>Compliance Risk Assessment, Credit Risk Modeling, Operational Risk Analysis, Financial Risk Reviews</p>
-                        </div>
-                        <div class="resume-skill-category">
-                            <h4>Data Analytics & Visualization</h4>
-                            <p>SQL, SAS, Power BI, Tableau, Advanced Excel, IBM Cognos</p>
-                        </div>
-                        <div class="resume-skill-category">
-                            <h4>Financial & Business Modeling</h4>
-                            <p>Forecasting, Financial Modeling, Variance Analysis, Trend Analysis</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-certificate"></i> Certifications
-                    </h3>
-                    <ul class="resume-certifications">
-                        <li>Certified Risk Management Professional - Udemy</li>
-                        <li>Financial Analysis and Forecasting - Udemy</li>
-                        <li>Business Analytics for Decision Making - Udemy</li>
-                        <li>Data Analysis with SQL and Power BI - Udemy</li>
-                    </ul>
-                </div>
-                
-                <div class="resume-section">
-                    <h3 class="resume-section-title">
-                        <i class="fas fa-users"></i> Leadership Experience
-                    </h3>
-                    <div class="resume-item">
-                        <h4>Member</h4>
-                        <h5>Armageddon, Riyadh, Saudi Arabia</h5>
-                        <p class="resume-date">Oct 2021 - Aug 2022</p>
-                        <ul class="resume-responsibilities">
-                            <li>Directed cross-functional teams to coordinate large-scale finance events, managing resource allocation, stakeholder engagement, and logistics planning.</li>
-                        </ul>
-                    </div>
-                    <div class="resume-item">
-                        <h4>Member</h4>
-                        <h5>Finance Student Association, Hyderabad, India</h5>
-                        <p class="resume-date">Jul 2018 - Feb 2019</p>
-                        <ul class="resume-responsibilities">
-                            <li>Led student finance initiatives, collaborating with faculty and industry experts to host risk management workshops, engaging 50+ students on compliance best practices.</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container" style="max-width: 896px;">
+            <h2 class="cta-title">Let's Build Something Great Together</h2>
+            <p class="cta-description">
+                I'm always interested in new opportunities to apply my AML expertise and analytical skills to solve complex financial challenges.
+            </p>
+            <div class="cta-buttons">
+                <a href="mailto:abdulahad.syed19@outlook.com" class="btn btn-primary btn-lg">
+                    <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                    Get In Touch
+                </a>
+                <button onclick="downloadResume()" class="btn btn-outline btn-lg">
+                    <i data-lucide="download" style="width: 20px; height: 20px;"></i>
+                    Download Resume
+                </button>
             </div>
         </div>
-    </div>
-</section>
-    
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Syed<span>Ahad</span></div>
-                <p class="footer-text">Financial & Business Analyst specializing in risk management, data analysis, and financial modeling.</p>
+                <div>
+                    <p class="footer-text">© 2025 Syed Abdul Ahad. All rights reserved.</p>
+                </div>
                 <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/syed-abdul-ahad19/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/SyedAbdulAhad1910" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:syedabdulahad1910@gmail.com"><i class="fas fa-envelope"></i></a>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Syed Abdul Ahad. All Rights Reserved.</p>
+                    <a href="mailto:abdulahad.syed19@outlook.com">Email</a>
+                    <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/syedabdulahad" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const nav = document.getElementById('nav');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            mobileMenuBtn.innerHTML = nav.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav ul li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                nav.classList.remove('active');
-                mobileMenu.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Skill bar animation
-        const skillBars = document.querySelectorAll('.skill-progress');
-        
-        function animateSkillBars() {
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('style').match(/\d+/)[0];
-                bar.style.width = '0%';
-                setTimeout(() => {
-                    bar.style.width = width + '%';
-                }, 200);
-            });
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Resume download functionality
+        function downloadResume() {
+            // Create a simple text-based resume
+            const resumeContent = `SYED ABDUL AHAD
+AML & Financial Risk Analyst
+
+Contact:
+Phone: (705) 988-4170
+Email: abdulahad.syed19@outlook.com
+LinkedIn: linkedin.com/in/syed-abdul-ahad19
+GitHub: github.com/syedabdulahad
+
+PROFESSIONAL SUMMARY
+AML Financial Analyst with 1+ years of experience in financial crime investigations at a major financial institution. Specializes in leveraging SQL and Power BI for transaction monitoring, name screening, and STR filing to FINTRAC.
+
+WORK EXPERIENCE
+
+AML Analyst | Protiviti - TD Bank
+Toronto, ON | Nov 2024 - Present
+• Led cross-functional teams in structured compliance risk assessments, evaluating over $50M in corporate transactions
+• Utilized SQL to extract and analyze transactional data, developing complex queries that flagged high-risk patterns
+• Investigated 1000+ alerts from Transaction Monitoring and Name Screening systems
+• Interpreted and assessed the impact of new FINTRAC guidelines on existing frameworks
+
+Financial Analyst Intern | Blue Bells Technical Services
+Hyderabad, India | Jun 2024 - Aug 2024
+• Built risk-adjusted financial models simulating 3 distinct market scenarios
+• Conducted liquidity analysis using advanced ratio techniques on a $15M balance sheet
+
+Staff Accountant Intern | Metro Tax Solutions
+Toronto, ON | Jan 2024 - Apr 2024
+• Developed standardized MS Excel templates for reviewing financial transactions
+• Managed complex reconciliations for 50+ client accounts
+
+Research Associate | Cambrian College
+Sudbury, ON | May 2023 - Jun 2023
+• Conducted comprehensive market trend analysis using statistical methods
+• Developed custom financial ratio framework to assess company performance
+
+PROJECTS
+
+Customer Churn Prevention | SQL, Tableau, Process Mapping
+Built a churn risk model using SQL and Tableau, reducing churn prediction errors by 20%
+
+Bank Loan Risk Assessment | SQL, Power BI
+Designed a risk assessment framework improving default prevention models
+
+Financial Statement Analysis | Advanced Excel
+Analyzed financial trends over five years to provide actionable recommendations
+
+SKILLS
+
+AML & Compliance: Risk Assessment, Regulatory Compliance (FINTRAC), KYC/CDD, AML Scenarios, Fraud Detection
+Analytical Tools: Advanced MS Excel (VBA, Power Query), SQL, Oracle, SAS, Power BI, Tableau
+Finance & Analytics: Financial Modeling, Forecasting, Data Visualization, Transaction Monitoring
+
+LEADERSHIP EXPERIENCE
+
+Project Coordinator | Armageddon | Riyadh, Saudi Arabia
+Directed cross-functional teams of 15+ volunteers to execute large-scale finance events with 500+ attendees
+
+Finance Workshop Lead | Finance Student Association | Hyderabad, India
+Collaborated with 3 industry experts to develop and deliver 5 risk management workshops
+
+EDUCATION
+
+Postgraduate in Project Management (Risk Management) - Dean's List
+George Brown College | Toronto, ON | 2023-2024
+
+Postgraduate in International Business (Finance) - Dean's List
+Cambrian College | Sudbury, ON | 2022-2023
+
+Bachelor of Commerce in International Accounting and Finance - Merit Recipient
+Loyola College | Hyderabad, India | 2018-2021`;
+
+            // Create blob and download
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Syed_Abdul_Ahad_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            alert('Resume downloaded! Note: For the PDF version, please add your actual resume PDF file to the same directory as this HTML file and name it "resume.pdf"');
         }
-        
-        // Trigger skill bar animation when skills section is in view
-        const skillsSection = document.querySelector('.skills');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateSkillBars();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        
-        observer.observe(skillsSection);
-        
-        // Project filtering
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
-        
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterBtns.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-                
-                const filter = this.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else {
-                        if (card.getAttribute('data-category').includes(filter)) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-        
-        // Testimonial slider
-        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        const prevBtn = document.querySelector('.testimonial-arrow.prev');
-        const nextBtn = document.querySelector('.testimonial-arrow.next');
-        let currentSlide = 0;
-        
-        function showSlide(index) {
-            testimonialSlides.forEach(slide => slide.classList.remove('active'));
-            testimonialDots.forEach(dot => dot.classList.remove('active'));
-            
-            testimonialSlides[index].classList.add('active');
-            testimonialDots[index].classList.add('active');
-            currentSlide = index;
-        }
-        
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => showSlide(index));
-        });
-        
-        prevBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide - 1 + testimonialSlides.length) % testimonialSlides.length;
-            showSlide(currentSlide);
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-            showSlide(currentSlide);
-        });
-        
-        // Auto slide testimonials
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-            showSlide(currentSlide);
-        }, 5000);
-        
-        // Contact form submission
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Here you would typically send the form data to a server
-            // For now, we'll just show an alert
-            alert(`Thank you for your message, ${name}! I will get back to you soon.`);
-            
-            // Reset form
-            contactForm.reset();
-        });
     </script>
 </body>
 </html>
