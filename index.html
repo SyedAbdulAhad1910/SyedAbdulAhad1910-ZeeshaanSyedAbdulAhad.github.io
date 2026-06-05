@@ -1,1309 +1,1425 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed Abdul Ahad - AML & Financial Risk Analyst</title>
-    <meta name="description" content="AML Financial Analyst with 1+ years of experience in financial crime investigations at TD Bank. Specializing in compliance frameworks, transaction monitoring, and regulatory risk assessment.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --background: #fcfcfd;
-            --foreground: #1a1a2e;
-            --card: #ffffff;
-            --card-foreground: #1a1a2e;
-            --primary: #1e3a8a;
-            --primary-foreground: #ffffff;
-            --secondary: #f1f5f9;
-            --secondary-foreground: #1a1a2e;
-            --muted: #f8fafc;
-            --muted-foreground: #64748b;
-            --accent: #f1f5f9;
-            --accent-foreground: #1a1a2e;
-            --border: #e2e8f0;
-            --ring: #1e3a8a;
-            --radius: 0.75rem;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: var(--background);
-            color: var(--foreground);
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(252, 252, 253, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-        }
-
-        .nav-content {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 64px;
-        }
-
-        .nav-logo {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--foreground);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--foreground);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.625rem 1.25rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: calc(var(--radius) - 2px);
-            cursor: pointer;
-            transition: all 0.2s;
-            text-decoration: none;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--primary-foreground);
-        }
-
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            color: var(--foreground);
-            border: 1px solid var(--border);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--accent);
-        }
-
-        .btn-lg {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 1.5rem;
-        }
-
-        .section-header {
-            margin-bottom: 3rem;
-        }
-
-        .section-label {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--foreground);
-            line-height: 1.2;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 8rem;
-            padding-bottom: 5rem;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 0.75rem;
-            background-color: rgba(30, 58, 138, 0.1);
-            color: var(--primary);
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .pulse-dot {
-            position: relative;
-            display: inline-flex;
-            height: 8px;
-            width: 8px;
-        }
-
-        .pulse-dot::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: var(--primary);
-            border-radius: 50%;
-            animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-        }
-
-        .pulse-dot::after {
-            content: '';
-            position: relative;
-            display: inline-flex;
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary);
-            border-radius: 50%;
-        }
-
-        @keyframes ping {
-            75%, 100% {
-                transform: scale(2);
-                opacity: 0;
-            }
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-title {
-                font-size: 3.75rem;
-            }
-        }
-
-        .hero-description {
-            font-size: 1.25rem;
-            color: var(--muted-foreground);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: var(--muted-foreground);
-            transition: color 0.2s;
-        }
-
-        .social-links a:hover {
-            color: var(--foreground);
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .card {
-            background-color: var(--card);
-            border: 2px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1.5rem;
-            transition: all 0.2s;
-        }
-
-        .card-hover:hover {
-            border-color: var(--primary);
-        }
-
-        .card-icon {
-            height: 48px;
-            width: 48px;
-            border-radius: calc(var(--radius) - 4px);
-            background-color: rgba(30, 58, 138, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        .card-icon svg {
-            color: var(--primary);
-        }
-
-        .card-stat {
-            font-size: 1.875rem;
-            font-weight: 700;
-            color: var(--foreground);
-            margin-bottom: 0.25rem;
-        }
-
-        .card-label {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        @media (min-width: 1024px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .about-text {
-            color: var(--muted-foreground);
-            margin-bottom: 1rem;
-        }
-
-        .info-card {
-            border-left: 4px solid var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        .info-card h4 {
-            font-weight: 600;
-            color: var(--foreground);
-            margin-bottom: 0.5rem;
-        }
-
-        .info-list {
-            list-style: none;
-        }
-
-        .info-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-        }
-
-        .info-list svg {
-            flex-shrink: 0;
-            margin-top: 2px;
-            color: var(--primary);
-        }
-
-        /* Experience Section */
-        .experience-list {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .experience-card {
-            border: 2px solid var(--border);
-        }
-
-        .experience-card.current {
-            border-color: var(--primary);
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--foreground);
-            margin-bottom: 0.25rem;
-        }
-
-        .experience-company {
-            font-size: 1.125rem;
-            color: var(--muted-foreground);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            border-radius: calc(var(--radius) - 4px);
-        }
-
-        .badge-primary {
-            background-color: var(--primary);
-            color: var(--primary-foreground);
-        }
-
-        .badge-secondary {
-            background-color: var(--secondary);
-            color: var(--secondary-foreground);
-        }
-
-        .badge-outline {
-            background-color: transparent;
-            border: 1px solid var(--border);
-            color: var(--foreground);
-        }
-
-        .experience-date {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-            margin-top: 0.25rem;
-        }
-
-        .experience-list-items {
-            list-style: none;
-        }
-
-        .experience-list-items li {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            color: var(--muted-foreground);
-        }
-
-        .experience-list-items .icon-wrapper {
-            flex-shrink: 0;
-            height: 24px;
-            width: 24px;
-            border-radius: 50%;
-            background-color: rgba(30, 58, 138, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2px;
-        }
-
-        .experience-list-items .icon-wrapper svg {
-            color: var(--primary);
-            width: 12px;
-            height: 12px;
-        }
-
-        .experience-list-items strong {
-            color: var(--foreground);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .projects-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .project-card {
-            border: 2px solid var(--border);
-            transition: all 0.2s;
-        }
-
-        .project-card:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--foreground);
-            margin-bottom: 0.5rem;
-        }
-
-        .project-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-section {
-            margin-bottom: 0.75rem;
-        }
-
-        .project-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .project-section-title {
-            font-weight: 600;
-            color: var(--foreground);
-            margin-bottom: 0.25rem;
-        }
-
-        .project-section p {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .skills-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .skill-card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .skill-icon {
-            height: 40px;
-            width: 40px;
-            border-radius: calc(var(--radius) - 4px);
-            background-color: rgba(30, 58, 138, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .skill-icon svg {
-            color: var(--primary);
-            width: 20px;
-            height: 20px;
-        }
-
-        .skill-title {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--foreground);
-        }
-
-        .skill-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        /* Leadership Section */
-        .leadership-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        @media (min-width: 768px) {
-            .leadership-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        .leadership-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--foreground);
-            margin-bottom: 0.25rem;
-        }
-
-        .leadership-meta {
-            color: var(--muted-foreground);
-            margin-bottom: 1rem;
-        }
-
-        .leadership-description {
-            color: var(--muted-foreground);
-        }
-
-        .leadership-description strong {
-            color: var(--foreground);
-        }
-
-        /* CTA Section */
-        .cta {
-            text-align: center;
-        }
-
-        .cta-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--foreground);
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .cta-description {
-            font-size: 1.25rem;
-            color: var(--muted-foreground);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .cta-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 3rem 1.5rem;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        @media (min-width: 768px) {
-            .footer-content {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-
-        .footer-text {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .footer-links a {
-            font-size: 0.875rem;
-            color: var(--muted-foreground);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--foreground);
-        }
-
-        /* Background colors */
-        .bg-muted {
-            background-color: var(--muted);
-        }
-
-        /* Mobile menu */
-        @media (max-width: 767px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syed Abdul Ahad — Finance & Risk Professional</title>
+<meta name="description" content="Finance professional bridging AML compliance and strategic financial analysis. TD Bank · Protiviti · Toronto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & ROOT ─────────────────────────────── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#04060a;
+  --deep:#080c14;
+  --card:#0d1220;
+  --card2:#111827;
+  --line:#1e2840;
+  --line2:#243050;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --gold-dim:#7a6030;
+  --ice:#a8bfd8;
+  --ice2:#cddaec;
+  --white:#f0f4fc;
+  --muted:#4a5878;
+  --muted2:#6a7a9a;
+  --teal:#1a9e8a;
+  --teal-dim:#0d5c52;
+  --accent:#e05a30;
+  --r:6px;
+  --transition:0.45s cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Outfit',sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.6;
+  overflow-x:hidden;
+  cursor:none;
+}
+
+/* ── CUSTOM CURSOR ───────────────────────────── */
+#cursor{
+  position:fixed;z-index:9999;
+  width:10px;height:10px;
+  background:var(--gold);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:width 0.2s,height 0.2s,background 0.2s,opacity 0.2s;
+  mix-blend-mode:difference;
+}
+#cursor-ring{
+  position:fixed;z-index:9998;
+  width:36px;height:36px;
+  border:1px solid rgba(201,168,76,0.4);
+  border-radius:50%;
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+  transition:width 0.35s var(--transition),height 0.35s var(--transition),border-color 0.3s,transform 0.1s;
+}
+body:has(a:hover) #cursor{width:16px;height:16px;background:var(--gold2)}
+body:has(a:hover) #cursor-ring{width:52px;height:52px;border-color:rgba(201,168,76,0.6)}
+
+/* ── CANVAS BACKGROUND ───────────────────────── */
+#bg-canvas{
+  position:fixed;top:0;left:0;
+  width:100%;height:100%;
+  z-index:0;
+  pointer-events:none;
+  opacity:0.45;
+}
+
+/* ── NAV ─────────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 4rem;height:68px;
+  background:rgba(4,6,10,0.7);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(30,40,64,0.6);
+  transition:background 0.4s;
+}
+nav.scrolled{background:rgba(4,6,10,0.92)}
+.nav-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-weight:400;
+  letter-spacing:0.06em;
+  color:var(--white);
+  text-decoration:none;
+}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;align-items:center}
+.nav-links a{
+  font-size:0.75rem;font-weight:300;
+  color:var(--muted2);
+  text-decoration:none;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  transition:color 0.3s;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;right:0;
+  height:1px;background:var(--gold);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.3s;
+}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{
+  padding:0.45rem 1.25rem;
+  border:1px solid var(--gold-dim);
+  color:var(--gold) !important;
+  font-size:0.72rem !important;
+  border-radius:2px;
+  transition:all 0.3s !important;
+}
+.nav-cta:hover{background:var(--gold) !important;color:var(--black) !important;border-color:var(--gold) !important}
+.nav-cta::after{display:none !important}
+
+/* ── HERO ─────────────────────────────────────── */
+.hero{
+  position:relative;z-index:1;
+  min-height:100vh;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:120px 4rem 80px;
+  overflow:hidden;
+}
+.hero-bg-text{
+  position:absolute;
+  right:-2rem;top:50%;transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(8rem,16vw,18rem);
+  font-weight:300;
+  color:transparent;
+  -webkit-text-stroke:1px rgba(30,40,64,0.5);
+  line-height:1;
+  user-select:none;
+  pointer-events:none;
+  letter-spacing:-0.04em;
+}
+.hero-availability{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  font-size:0.7rem;font-weight:400;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:2.5rem;
+  opacity:0;animation:fadeUp 0.8s 0.2s var(--transition) forwards;
+}
+.avail-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 8px var(--teal);
+  animation:pulse-dot 2s infinite;
+}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 8px var(--teal)}50%{box-shadow:0 0 16px var(--teal),0 0 32px rgba(26,158,138,0.3)}}
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1rem,2vw,1.3rem);
+  font-weight:300;
+  color:var(--muted2);
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  opacity:0;animation:fadeUp 0.8s 0.35s var(--transition) forwards;
+}
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,7vw,7.5rem);
+  font-weight:300;
+  line-height:0.95;
+  letter-spacing:-0.02em;
+  margin-bottom:2rem;
+  opacity:0;animation:fadeUp 0.8s 0.5s var(--transition) forwards;
+}
+.hero-title .line1{display:block;color:var(--white)}
+.hero-title .line2{display:block;color:var(--gold);font-style:italic}
+.hero-title .line3{display:block;color:var(--ice);font-size:0.65em;font-weight:300;letter-spacing:0.02em;margin-top:0.3rem;font-style:normal}
+.hero-sub{
+  max-width:520px;
+  font-size:0.9375rem;font-weight:300;
+  color:var(--muted2);
+  line-height:1.8;
+  margin-bottom:3rem;
+  opacity:0;animation:fadeUp 0.8s 0.65s var(--transition) forwards;
+}
+.hero-actions{
+  display:flex;gap:1.25rem;flex-wrap:wrap;
+  opacity:0;animation:fadeUp 0.8s 0.8s var(--transition) forwards;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.85rem 2rem;
+  background:var(--gold);
+  color:var(--black);
+  font-size:0.8rem;font-weight:500;
+  letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;
+  transition:all 0.3s;
+  position:relative;overflow:hidden;
+}
+.btn-primary::before{
+  content:'';position:absolute;inset:0;
+  background:var(--gold2);
+  transform:translateX(-100%);
+  transition:transform 0.4s var(--transition);
+}
+.btn-primary:hover::before{transform:translateX(0)}
+.btn-primary span{position:relative;z-index:1}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.85rem 2rem;
+  background:transparent;
+  color:var(--ice);
+  font-size:0.8rem;font-weight:300;
+  letter-spacing:0.08em;text-transform:uppercase;
+  text-decoration:none;
+  border:1px solid var(--line2);
+  border-radius:2px;
+  transition:all 0.3s;
+}
+.btn-ghost:hover{border-color:var(--gold-dim);color:var(--gold)}
+.hero-scroll-hint{
+  position:absolute;bottom:3rem;left:4rem;
+  display:flex;align-items:center;gap:1rem;
+  font-size:0.7rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);
+  opacity:0;animation:fadeUp 0.8s 1.2s var(--transition) forwards;
+}
+.scroll-line{width:48px;height:1px;background:var(--muted);position:relative;overflow:hidden}
+.scroll-line::after{
+  content:'';position:absolute;inset:0;
+  background:var(--gold);
+  animation:scroll-sweep 2s 1.5s infinite;
+}
+@keyframes scroll-sweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.hero-social{
+  position:absolute;right:4rem;bottom:3rem;
+  display:flex;flex-direction:column;gap:1.25rem;
+  align-items:center;
+  opacity:0;animation:fadeUp 0.8s 1.2s var(--transition) forwards;
+}
+.hero-social::before{
+  content:'';width:1px;height:48px;
+  background:linear-gradient(to bottom,transparent,var(--line2));
+  display:block;
+}
+.hero-social a{
+  font-size:0.65rem;font-weight:300;
+  letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;
+  writing-mode:vertical-rl;
+  transition:color 0.3s;
+}
+.hero-social a:hover{color:var(--gold)}
+
+/* ── STATS BAR ───────────────────────────────── */
+.stats-bar{
+  position:relative;z-index:1;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--deep);
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.stat-item{
+  padding:2.5rem 3rem;
+  border-right:1px solid var(--line);
+  position:relative;overflow:hidden;
+  transition:background 0.3s;
+}
+.stat-item:last-child{border-right:none}
+.stat-item::before{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--teal));
+  transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s var(--transition);
+}
+.stat-item:hover::before{transform:scaleX(1)}
+.stat-item:hover{background:rgba(201,168,76,0.03)}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.2rem;font-weight:300;
+  color:var(--gold);
+  line-height:1;margin-bottom:0.5rem;
+  letter-spacing:-0.02em;
+}
+.stat-label{font-size:0.8rem;font-weight:300;color:var(--muted2);letter-spacing:0.04em}
+.stat-sub{font-size:0.7rem;color:var(--teal);margin-top:0.4rem;font-weight:300}
+
+/* ── SECTION SCAFFOLD ────────────────────────── */
+section{position:relative;z-index:1}
+.section-inner{max-width:1240px;margin:0 auto;padding:7rem 4rem}
+.section-eyebrow{
+  display:flex;align-items:center;gap:1.25rem;
+  margin-bottom:1.5rem;
+}
+.section-eyebrow::before{
+  content:'';display:block;
+  width:40px;height:1px;background:var(--gold);
+}
+.eyebrow-text{
+  font-size:0.68rem;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);
+}
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,4vw,3.5rem);
+  font-weight:300;
+  color:var(--white);
+  line-height:1.1;
+  margin-bottom:1rem;
+}
+.section-title em{font-style:italic;color:var(--gold)}
+.section-sub{
+  font-size:0.9375rem;font-weight:300;
+  color:var(--muted2);line-height:1.8;
+  max-width:540px;
+}
+
+/* ── NARRATIVE STRIP ─────────────────────────── */
+.narrative{
+  background:var(--deep);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.narrative-inner{
+  max-width:1240px;margin:0 auto;padding:6rem 4rem;
+  display:grid;grid-template-columns:5fr 4fr;
+  gap:6rem;align-items:center;
+}
+.narrative-quote{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.6rem,3vw,2.6rem);
+  font-weight:300;
+  line-height:1.35;
+  color:var(--white);
+  letter-spacing:-0.01em;
+}
+.narrative-quote em{font-style:italic;color:var(--gold)}
+.narrative-body{font-size:0.9rem;font-weight:300;color:var(--muted2);line-height:1.85}
+.narrative-body p{margin-bottom:1rem}
+.narrative-body p:last-child{margin-bottom:0}
+.narrative-body strong{color:var(--ice2);font-weight:400}
+.path-cards{display:flex;flex-direction:column;gap:0}
+.path-card{
+  display:flex;gap:1.5rem;
+  padding:1.5rem 0;
+  border-bottom:1px solid var(--line);
+  align-items:flex-start;
+  transition:background 0.2s;
+}
+.path-card:last-child{border-bottom:none}
+.path-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:300;
+  color:var(--gold-dim);line-height:1;
+  min-width:2rem;text-align:center;
+}
+.path-card.active .path-num{color:var(--gold)}
+.path-card-title{font-size:0.9rem;font-weight:400;color:var(--white);margin-bottom:0.2rem}
+.path-card.inactive .path-card-title{color:var(--muted2)}
+.path-card-sub{font-size:0.78rem;font-weight:300;color:var(--muted)}
+.path-badge{
+  display:inline-block;margin-left:0.5rem;
+  font-size:0.6rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;
+  padding:0.15rem 0.5rem;
+  background:rgba(26,158,138,0.15);color:var(--teal);
+  border:1px solid rgba(26,158,138,0.2);
+  border-radius:2px;
+}
+
+/* ── EXPERIENCE ───────────────────────────────── */
+.exp-section{background:var(--black)}
+.exp-list{display:flex;flex-direction:column;gap:1.5rem;margin-top:3.5rem}
+.exp-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  overflow:hidden;
+  transition:border-color var(--transition);
+}
+.exp-card:hover,.exp-card.open{border-color:var(--line2)}
+.exp-card.featured{border-color:rgba(201,168,76,0.3)}
+.exp-card.featured:hover{border-color:rgba(201,168,76,0.6)}
+.exp-trigger{
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  gap:2rem;
+  padding:2rem 2.5rem;
+  cursor:pointer;
+  align-items:center;
+  transition:background 0.2s;
+}
+.exp-trigger:hover{background:rgba(255,255,255,0.015)}
+.exp-monogram{
+  width:52px;height:52px;
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:400;
+  letter-spacing:0.05em;
+  flex-shrink:0;
+}
+.mono-td{background:rgba(168,191,216,0.1);color:var(--ice2)}
+.mono-bb{background:rgba(201,168,76,0.08);color:var(--gold)}
+.mono-mt{background:rgba(26,158,138,0.1);color:var(--teal)}
+.mono-cc{background:rgba(160,210,150,0.08);color:#8cc87a}
+.exp-info{flex:1}
+.exp-role{font-size:1.0625rem;font-weight:400;color:var(--white);margin-bottom:0.25rem}
+.exp-org{font-size:0.875rem;font-weight:300;color:var(--muted2)}
+.exp-meta-right{text-align:right;flex-shrink:0}
+.exp-pill{
+  display:inline-block;padding:0.2rem 0.65rem;
+  background:rgba(201,168,76,0.12);
+  color:var(--gold);
+  font-size:0.65rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;
+  border-radius:2px;margin-bottom:0.4rem;
+  border:1px solid rgba(201,168,76,0.2);
+}
+.exp-date{font-size:0.78rem;font-weight:300;color:var(--muted)}
+.exp-loc{font-size:0.72rem;font-weight:300;color:var(--muted);margin-top:0.2rem}
+.exp-chevron{
+  width:24px;height:24px;
+  border:1px solid var(--line2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-left:1rem;
+  transition:transform 0.4s var(--transition),border-color 0.3s,background 0.3s;
+}
+.exp-card.open .exp-chevron{transform:rotate(180deg);border-color:var(--gold-dim);background:rgba(201,168,76,0.08)}
+.exp-body{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.6s var(--transition);
+}
+.exp-body-inner{
+  padding:0 2.5rem 2rem 6.5rem;
+  border-top:1px solid var(--line);
+}
+.achv-list{list-style:none;display:flex;flex-direction:column;gap:1rem;padding-top:1.5rem}
+.achv-item{
+  display:flex;gap:1rem;align-items:flex-start;
+  font-size:0.9rem;font-weight:300;color:var(--muted2);line-height:1.7;
+}
+.achv-dot{
+  width:22px;height:22px;border-radius:50%;
+  flex-shrink:0;margin-top:2px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(201,168,76,0.08);
+  border:1px solid rgba(201,168,76,0.15);
+}
+.achv-dot svg{width:10px;height:10px;stroke:var(--gold);fill:none;stroke-width:2.5}
+.kpi{
+  display:inline-block;
+  padding:0.1rem 0.55rem;
+  background:rgba(201,168,76,0.1);
+  color:var(--gold2);
+  border-radius:2px;
+  font-size:0.8rem;font-weight:400;
+  white-space:nowrap;
+}
+.kpi.teal{background:rgba(26,158,138,0.1);color:var(--teal)}
+
+/* ── PROJECTS ─────────────────────────────────── */
+.projects-section{background:var(--deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proj-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5px;
+  margin-top:3.5rem;
+  background:var(--line);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  overflow:hidden;
+}
+.proj-cell{
+  background:var(--card);
+  padding:2.5rem;
+  position:relative;overflow:hidden;
+  transition:background var(--transition);
+}
+.proj-cell:hover{background:var(--card2)}
+.proj-cell::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:2px;
+  opacity:0;transition:opacity 0.3s;
+}
+.proj-cell.p1::after{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.proj-cell.p2::after{background:linear-gradient(90deg,var(--teal),#3dccb4)}
+.proj-cell.p3::after{background:linear-gradient(90deg,var(--ice),var(--ice2))}
+.proj-cell:hover::after{opacity:1}
+.proj-number{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4rem;font-weight:300;
+  color:rgba(30,40,64,0.8);
+  position:absolute;top:1rem;right:1.5rem;
+  line-height:1;user-select:none;
+  transition:color 0.3s;
+}
+.proj-cell:hover .proj-number{color:rgba(201,168,76,0.07)}
+.proj-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem}
+.proj-tag{
+  font-size:0.65rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;
+  padding:0.2rem 0.55rem;
+  border:1px solid var(--line2);
+  border-radius:2px;color:var(--muted2);
+  transition:border-color 0.3s,color 0.3s;
+}
+.proj-cell:hover .proj-tag{border-color:rgba(201,168,76,0.2);color:var(--ice)}
+.proj-title{font-size:1.0625rem;font-weight:400;color:var(--white);margin-bottom:0.6rem}
+.proj-problem{font-size:0.85rem;font-weight:300;color:var(--muted2);margin-bottom:1.25rem;line-height:1.65}
+.proj-result{
+  padding:0.9rem 1rem;
+  background:rgba(255,255,255,0.02);
+  border:1px solid var(--line);
+  border-radius:4px;
+  font-size:0.85rem;font-weight:300;color:var(--muted2);line-height:1.6;
+  transition:border-color 0.3s;
+}
+.proj-cell:hover .proj-result{border-color:var(--line2)}
+.proj-result strong{color:var(--gold2);font-weight:400}
+
+/* ── SKILLS ───────────────────────────────────── */
+.skills-section{background:var(--black)}
+.skills-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+  margin-top:3.5rem;
+}
+.skill-block{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:2rem;
+  transition:border-color 0.3s;
+}
+.skill-block:hover{border-color:var(--line2)}
+.skill-block-header{
+  display:flex;align-items:center;gap:1rem;
+  margin-bottom:1.25rem;
+  padding-bottom:1.25rem;
+  border-bottom:1px solid var(--line);
+}
+.skill-icon{
+  width:38px;height:38px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;
+}
+.si-gold{background:rgba(201,168,76,0.1);color:var(--gold)}
+.si-teal{background:rgba(26,158,138,0.1);color:var(--teal)}
+.si-ice{background:rgba(168,191,216,0.1);color:var(--ice)}
+.si-red{background:rgba(224,90,48,0.1);color:var(--accent)}
+.skill-block-title{font-size:0.9rem;font-weight:400;color:var(--white)}
+.skill-pills{display:flex;flex-wrap:wrap;gap:0.5rem}
+.skill-pill{
+  font-size:0.78rem;font-weight:300;
+  padding:0.3rem 0.7rem;
+  border:1px solid var(--line2);
+  border-radius:2px;
+  color:var(--muted2);
+  transition:all 0.2s;
+}
+.skill-pill:hover{border-color:var(--gold-dim);color:var(--gold);background:rgba(201,168,76,0.05)}
+.skill-pill.hero-pill{background:rgba(201,168,76,0.08);border-color:rgba(201,168,76,0.2);color:var(--gold)}
+.skill-pill.teal-pill{background:rgba(26,158,138,0.06);border-color:rgba(26,158,138,0.2);color:var(--teal)}
+
+/* ── ABOUT ────────────────────────────────────── */
+.about-section{background:var(--deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{
+  display:grid;grid-template-columns:2fr 3fr;
+  gap:6rem;align-items:start;
+}
+.about-id-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  overflow:hidden;
+}
+.id-card-top{
+  background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(26,158,138,0.06));
+  padding:2rem;
+  border-bottom:1px solid var(--line);
+}
+.id-initials{
+  font-family:'Cormorant Garamond',serif;
+  font-size:3.5rem;font-weight:300;
+  color:var(--gold);line-height:1;
+  margin-bottom:1rem;
+  letter-spacing:-0.02em;
+}
+.id-name{font-size:1.0625rem;font-weight:400;color:var(--white);margin-bottom:0.25rem}
+.id-title{font-size:0.8rem;font-weight:300;color:var(--muted2)}
+.id-body{padding:1.5rem 2rem}
+.id-row{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  padding:0.75rem 0;border-bottom:1px solid var(--line);
+  font-size:0.82rem;
+}
+.id-row:last-child{border-bottom:none}
+.id-key{font-weight:300;color:var(--muted);letter-spacing:0.04em}
+.id-val{font-weight:400;color:var(--ice2);text-align:right;max-width:55%}
+.edu-list{display:flex;flex-direction:column;gap:0.75rem;margin-top:2rem}
+.edu-item{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.1rem 1.25rem;
+  background:var(--card);border:1px solid var(--line);
+  border-radius:4px;
+  transition:border-color 0.3s;
+}
+.edu-item:hover{border-color:var(--line2)}
+.edu-year{
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.85rem;font-weight:400;
+  color:var(--gold-dim);white-space:nowrap;
+  min-width:52px;margin-top:1px;
+}
+.edu-details{flex:1}
+.edu-degree{font-size:0.875rem;font-weight:400;color:var(--white);margin-bottom:0.15rem}
+.edu-school{font-size:0.78rem;font-weight:300;color:var(--muted2)}
+.edu-honor{
+  font-size:0.65rem;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;
+  padding:0.15rem 0.5rem;
+  background:rgba(201,168,76,0.08);color:var(--gold);
+  border:1px solid rgba(201,168,76,0.15);border-radius:2px;
+  white-space:nowrap;margin-top:3px;
+}
+.about-text{font-size:0.95rem;font-weight:300;color:var(--muted2);line-height:1.9}
+.about-text p{margin-bottom:1.5rem}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--ice2);font-weight:400}
+
+/* ── LEADERSHIP ───────────────────────────────── */
+.lead-section{background:var(--black)}
+.lead-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.5rem}
+.lead-card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r);padding:2.5rem;
+  position:relative;overflow:hidden;
+  transition:border-color 0.3s;
+}
+.lead-card:hover{border-color:var(--line2)}
+.lead-card::before{
+  content:'';position:absolute;
+  top:-40px;right:-40px;
+  width:120px;height:120px;
+  border-radius:50%;
+  opacity:0.04;
+  transition:opacity 0.3s,transform 0.4s var(--transition);
+}
+.lead-card:nth-child(1)::before{background:var(--gold)}
+.lead-card:nth-child(2)::before{background:var(--teal)}
+.lead-card:hover::before{opacity:0.08;transform:scale(1.2)}
+.lead-tag{
+  font-size:0.65rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:1.5rem;
+}
+.lead-role{font-size:1.1rem;font-weight:400;color:var(--white);margin-bottom:0.3rem}
+.lead-org{font-size:0.85rem;font-weight:300;color:var(--muted2);margin-bottom:1.5rem}
+.lead-desc{font-size:0.875rem;font-weight:300;color:var(--muted2);line-height:1.75}
+.lead-desc strong{color:var(--ice2);font-weight:400}
+.lead-kpis{display:flex;gap:1.5rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+.lead-kpi-val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:300;color:var(--gold);line-height:1
+}
+.lead-kpi-label{font-size:0.72rem;font-weight:300;color:var(--muted);margin-top:0.2rem}
+
+/* ── CTA ──────────────────────────────────────── */
+.cta-section{
+  position:relative;overflow:hidden;
+  background:var(--deep);
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+.cta-section::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 100%,rgba(201,168,76,0.06),transparent),
+    radial-gradient(ellipse 40% 60% at 20% 0%,rgba(26,158,138,0.04),transparent);
+}
+.cta-inner{
+  position:relative;z-index:1;
+  max-width:800px;margin:0 auto;
+  padding:9rem 4rem;
+}
+.cta-eyebrow{
+  font-size:0.7rem;font-weight:300;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:2rem;
+  display:flex;align-items:center;justify-content:center;gap:1rem;
+}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';width:32px;height:1px;background:var(--gold-dim)}
+.cta-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,5rem);
+  font-weight:300;line-height:1.1;
+  color:var(--white);margin-bottom:1.5rem;
+  letter-spacing:-0.02em;
+}
+.cta-title em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:0.95rem;font-weight:300;color:var(--muted2);line-height:1.85;margin-bottom:3rem}
+.cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta-email{
+  display:block;
+  font-size:0.8rem;font-weight:300;
+  color:var(--muted);letter-spacing:0.04em;
+  margin-top:2rem;text-decoration:none;
+  transition:color 0.3s;
+}
+.cta-email:hover{color:var(--gold)}
+
+/* ── FOOTER ───────────────────────────────────── */
+footer{
+  background:#030508;
+  border-top:1px solid rgba(30,40,64,0.5);
+  padding:2rem 4rem;
+  display:flex;justify-content:space-between;align-items:center;
+  flex-wrap:wrap;gap:1rem;
+  position:relative;z-index:1;
+}
+.footer-logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-weight:300;
+  color:var(--muted);letter-spacing:0.08em;
+}
+.footer-logo span{color:var(--gold-dim)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a{
+  font-size:0.75rem;font-weight:300;
+  color:var(--muted);letter-spacing:0.06em;
+  text-decoration:none;transition:color 0.3s;
+}
+.footer-links a:hover{color:var(--gold)}
+.footer-copy{font-size:0.72rem;font-weight:300;color:rgba(74,88,120,0.6)}
+
+/* ── SCROLL REVEAL ────────────────────────────── */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.8s var(--transition),transform 0.8s var(--transition)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.1s}
+.reveal-delay-2{transition-delay:0.2s}
+.reveal-delay-3{transition-delay:0.3s}
+.reveal-delay-4{transition-delay:0.4s}
+
+/* ── ANIMATIONS ───────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media(max-width:1100px){
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(3){border-top:1px solid var(--line)}
+  .stat-item:nth-child(4){border-top:1px solid var(--line);border-right:none}
+  .narrative-inner{grid-template-columns:1fr;gap:3rem}
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .proj-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  nav{padding:0 1.5rem}
+  .nav-links a:not(.nav-cta){display:none}
+  .hero{padding:120px 1.5rem 80px}
+  .hero-bg-text{display:none}
+  .hero-social{display:none}
+  .section-inner{padding:5rem 1.5rem}
+  .stats-bar{grid-template-columns:1fr 1fr}
+  .stat-item{padding:2rem 1.5rem}
+  .narrative-inner{padding:4rem 1.5rem}
+  .lead-grid{grid-template-columns:1fr}
+  footer{padding:1.5rem}
+}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <div class="nav-logo">Syed Abdul Ahad</div>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-            </div>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+
+<nav id="nav">
+  <a class="nav-logo" href="#">S<span>.</span>A. Ahad</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="mailto:syedabdulahad1910@gmail.com" class="nav-cta">Open to Work</a>
+  </div>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-bg-text">FINANCE</div>
+  <div class="hero-availability">
+    <span class="avail-dot"></span>
+    Available for finance & risk roles · Toronto
+  </div>
+  <div class="hero-name">Syed Abdul Ahad</div>
+  <h1 class="hero-title">
+    <span class="line1">Financial</span>
+    <span class="line2">Risk Intelligence</span>
+    <span class="line3">AML · FP&A · Corporate Finance · Strategy</span>
+  </h1>
+  <p class="hero-sub">
+    Forensic understanding of capital flows meets strategic financial analysis. Currently protecting $50M+ in corporate transactions at TD Bank — building toward finance leadership where risk intelligence creates competitive advantage.
+  </p>
+  <div class="hero-actions">
+    <a href="#experience" class="btn-primary"><span>View Experience</span> <span>→</span></a>
+    <a href="mailto:syedabdulahad1910@gmail.com" class="btn-ghost">Get In Touch</a>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+    Scroll to explore
+  </div>
+  <div class="hero-social">
+    <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank">LinkedIn</a>
+    <a href="https://github.com/syedabdulahad" target="_blank">GitHub</a>
+  </div>
+</section>
+
+<!-- ── STATS ─────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num" data-count="1000">0</div>
+    <div class="stat-label">AML Alerts Investigated</div>
+    <div class="stat-sub">15% false positive reduction</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-num">$50M<span style="font-size:1.8rem">+</span></div>
+    <div class="stat-label">Corporate Transactions Evaluated</div>
+    <div class="stat-sub">25% governance improvement</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num" data-count="800">0</div>
+    <div class="stat-label">Client Accounts — 100% Compliant</div>
+    <div class="stat-sub">KYC · STR · FINTRAC</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num">$2.5M</div>
+    <div class="stat-label">Forecast Variance Reduced</div>
+    <div class="stat-sub">Risk-adjusted financial models</div>
+  </div>
+</div>
+
+<!-- ── NARRATIVE ─────────────────────────────── -->
+<section class="narrative">
+  <div class="narrative-inner">
+    <div>
+      <div class="section-eyebrow reveal"><span class="eyebrow-text">Career Direction</span></div>
+      <div class="narrative-quote reveal reveal-delay-1">
+        From compliance <em>gatekeeper</em> to financial <em>strategist</em> — the forensic edge that most analysts never develop.
+      </div>
+      <div style="margin-top:2rem" class="reveal reveal-delay-2">
+        <div class="narrative-body">
+          <p>AML investigation taught me something most finance analysts never learn: how money <strong>actually moves</strong>, who moves it, and precisely why systems fail. That forensic instinct — layered with financial modeling, SQL analytics, and executive communication — positions me to build risk-intelligent financial strategies, not just enforce rules.</p>
+          <p>I'm actively seeking roles in <strong>corporate finance, FP&A, risk management, or financial consulting</strong> where compliance insight and analytical rigor drive strategic advantage.</p>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div>
-                    <div class="hero-badge">
-                        <span class="pulse-dot"></span>
-                        Available for opportunities
-                    </div>
-                    <h1 class="hero-title">AML & Financial Risk Analyst</h1>
-                    <p class="hero-description">
-                        Specializing in compliance frameworks, transaction monitoring, and regulatory risk assessment. Currently protecting $50M+ in corporate transactions at TD Bank through data-driven AML investigations.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#experience" class="btn btn-primary btn-lg">
-                            View Experience
-                            <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                        </a>
-                        <a href="mailto:abdulahad.syed19@outlook.com" class="btn btn-outline btn-lg">
-                            <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-                            Contact Me
-                        </a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="linkedin" style="width: 20px; height: 20px;"></i>
-                        </a>
-                        <a href="https://github.com/syedabdulahad" target="_blank" rel="noopener noreferrer">
-                            <i data-lucide="github" style="width: 20px; height: 20px;"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="stats-grid">
-                    <div class="card card-hover">
-                        <div class="card-icon">
-                            <i data-lucide="shield" style="width: 24px; height: 24px;"></i>
-                        </div>
-                        <div class="card-stat">1000+</div>
-                        <div class="card-label">AML Alerts Investigated</div>
-                    </div>
-                    <div class="card card-hover">
-                        <div class="card-icon">
-                            <i data-lucide="trending-up" style="width: 24px; height: 24px;"></i>
-                        </div>
-                        <div class="card-stat">$50M+</div>
-                        <div class="card-label">Transactions Analyzed</div>
-                    </div>
-                    <div class="card card-hover">
-                        <div class="card-icon">
-                            <i data-lucide="bar-chart-3" style="width: 24px; height: 24px;"></i>
-                        </div>
-                        <div class="card-stat">25%</div>
-                        <div class="card-label">Governance Improvement</div>
-                    </div>
-                    <div class="card card-hover">
-                        <div class="card-icon">
-                            <i data-lucide="database" style="width: 24px; height: 24px;"></i>
-                        </div>
-                        <div class="card-stat">800+</div>
-                        <div class="card-label">Client Accounts Managed</div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div class="path-cards">
+        <div class="path-card active">
+          <div class="path-num">01</div>
+          <div>
+            <div class="path-card-title">AML Analyst · Protiviti × TD Bank <span class="path-badge">Current</span></div>
+            <div class="path-card-sub">Financial crime · FINTRAC · SQL · Power BI · 2024–present</div>
+          </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="bg-muted">
-        <div class="container">
-            <div class="about-grid">
-                <div>
-                    <div class="section-label">About Me</div>
-                    <h3 class="section-title">Turning Complex Financial Data Into Actionable Risk Intelligence</h3>
-                    <p class="about-text">
-                        I'm an AML Financial Analyst with over 1 year of hands-on experience in financial crime investigations at TD Bank through Protiviti. My expertise lies in leveraging advanced analytics tools like SQL, Power BI, and Excel to monitor transactions, screen for suspicious activities, and file STRs to FINTRAC.
-                    </p>
-                    <p class="about-text">
-                        With a strong foundation in compliance frameworks and regulatory requirements, I've successfully evaluated $50M+ in corporate transactions, investigated 1000+ alerts, and reduced false positive rates by 15% through data-driven analysis.
-                    </p>
-                    <p class="about-text">
-                        I hold postgraduate degrees in Project Management (Risk Management) and International Business (Finance) from George Brown College and Cambrian College, complemented by my Bachelor of Commerce from Loyola College.
-                    </p>
-                </div>
-                <div>
-                    <div class="card info-card">
-                        <h4>Core Competencies</h4>
-                        <ul class="info-list">
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>Risk Assessment Frameworks & Compliance Controls</span>
-                            </li>
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>AML/CTF Investigations & Transaction Monitoring</span>
-                            </li>
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>SQL, Power BI, Tableau & Advanced Excel Analytics</span>
-                            </li>
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>Financial Modeling & Forecasting</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card info-card">
-                        <h4>Education Highlights</h4>
-                        <ul class="info-list">
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>Postgraduate, Project Management (Risk) - George Brown</span>
-                            </li>
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>Postgraduate, International Business (Finance) - Cambrian</span>
-                            </li>
-                            <li>
-                                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
-                                <span>Bachelor of Commerce, Int'l Accounting - Loyola College</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="path-card inactive">
+          <div class="path-num">02</div>
+          <div>
+            <div class="path-card-title">Financial Analyst / FP&A / Risk Analyst</div>
+            <div class="path-card-sub">Strategic forecasting · portfolio analysis · cross-functional finance</div>
+          </div>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Work Experience</div>
-                <h3 class="section-title">Building Robust Financial Crime Defenses</h3>
-            </div>
-            
-            <div class="experience-list">
-                <!-- Current Role -->
-                <div class="card experience-card current">
-                    <div class="experience-header">
-                        <div>
-                            <h4 class="experience-title">AML Analyst</h4>
-                            <p class="experience-company">Protiviti - TD Bank</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <span class="badge badge-primary">Current</span>
-                            <p class="experience-date">Dec 2024 - Present</p>
-                            <p class="experience-date">Toronto, Ontario</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list-items">
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="shield"></i>
-                            </div>
-                            <span>Led cross-functional teams in structured compliance risk assessments, evaluating over <strong>$50M</strong> in corporate transactions and presenting findings to senior leadership, resulting in a <strong>25% improvement</strong> in governance practices.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="database"></i>
-                            </div>
-                            <span>Utilized <strong>SQL</strong> to extract and analyze transactional data, developing complex queries that flagged high-risk transaction patterns, leading to the identification of <strong>25+ suspicious activity cases</strong>.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="bar-chart-3"></i>
-                            </div>
-                            <span>Investigated <strong>1000+ alerts</strong> from Transaction Monitoring and Name Screening systems (PEPs, Adverse Media, Sanctions), using Power BI dashboards to identify money laundering patterns and reducing false positives by <strong>15%</strong>.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="file-text"></i>
-                            </div>
-                            <span>Interpreted and assessed the impact of new <strong>FINTRAC</strong> guidelines on existing frameworks, developing implementation strategies that ensured <strong>100% compliance</strong> for a portfolio of 800+ client accounts.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Financial Analyst Intern -->
-                <div class="card experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h4 class="experience-title">Financial Analyst Intern</h4>
-                            <p class="experience-company">Blue Bells Technical Services</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <p class="experience-date">Jun 2024 - Aug 2024</p>
-                            <p class="experience-date">Hyderabad, India</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list-items">
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Built risk-adjusted financial models in Excel simulating 3 distinct market scenarios, enabling leadership to make data-driven decisions that reduced forecast variance by <strong>$2.5M</strong>.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Conducted liquidity analysis using advanced ratio techniques on a $15M balance sheet, identifying inefficiencies and implementing solutions that improved working capital by <strong>15%</strong>.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Staff Accountant Intern -->
-                <div class="card experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h4 class="experience-title">Staff Accountant Intern</h4>
-                            <p class="experience-company">Metro Tax Solutions</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <p class="experience-date">Jan 2024 - Apr 2024</p>
-                            <p class="experience-date">Toronto, Ontario</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list-items">
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Developed standardized MS Excel templates with data validation rules to review financial transactions, ensuring error-free submissions for <strong>30+ client tax filings</strong> and saving ~5 hours per week in manual checks.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Managed complex reconciliations for 50+ client accounts, implementing systematic verification processes that enhanced reporting accuracy by <strong>12%</strong>.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Research Associate -->
-                <div class="card experience-card">
-                    <div class="experience-header">
-                        <div>
-                            <h4 class="experience-title">Research Associate</h4>
-                            <p class="experience-company">Cambrian College</p>
-                        </div>
-                        <div style="text-align: right;">
-                            <p class="experience-date">May 2023 - Jun 2023</p>
-                            <p class="experience-date">Sudbury, Ontario</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list-items">
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Conducted comprehensive market trend analysis using statistical methods, delivering actionable insights that increased client revenue by <strong>7%</strong>.</span>
-                        </li>
-                        <li>
-                            <div class="icon-wrapper">
-                                <i data-lucide="chevron-right"></i>
-                            </div>
-                            <span>Developed custom financial ratio framework to assess company performance, identifying key operational improvement opportunities.</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="path-card inactive">
+          <div class="path-num">03</div>
+          <div>
+            <div class="path-card-title">Finance Manager / Risk Lead</div>
+            <div class="path-card-sub">P&L ownership · organizational risk strategy · leadership</div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-muted">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Featured Projects</div>
-                <h3 class="section-title">Data-Driven Solutions for Financial Challenges</h3>
-            </div>
+<!-- ── EXPERIENCE ─────────────────────────────── -->
+<section id="experience" class="exp-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal"><span class="eyebrow-text">Work Experience</span></div>
+    <h2 class="section-title reveal reveal-delay-1">Where I've <em>built</em> the work</h2>
+    <p class="section-sub reveal reveal-delay-2">Click any role to expand the full detail. Quantified impact, real tools, real results.</p>
 
-            <div class="projects-grid">
-                <div class="card project-card">
-                    <div class="card-icon">
-                        <i data-lucide="trending-up" style="width: 24px; height: 24px;"></i>
-                    </div>
-                    <h4 class="project-title">Customer Churn Prevention</h4>
-                    <div class="project-badges">
-                        <span class="badge badge-secondary">SQL</span>
-                        <span class="badge badge-secondary">Tableau</span>
-                        <span class="badge badge-secondary">Process Mapping</span>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Challenge:</p>
-                        <p>High customer attrition threatening revenue stability and growth potential</p>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Impact:</p>
-                        <p>Reduced prediction errors by <strong>20%</strong> and improved portfolio stability through targeted retention strategies</p>
-                    </div>
-                </div>
+    <div class="exp-list">
 
-                <div class="card project-card">
-                    <div class="card-icon">
-                        <i data-lucide="shield" style="width: 24px; height: 24px;"></i>
-                    </div>
-                    <h4 class="project-title">Bank Loan Risk Assessment</h4>
-                    <div class="project-badges">
-                        <span class="badge badge-secondary">SQL</span>
-                        <span class="badge badge-secondary">Power BI</span>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Challenge:</p>
-                        <p>Inefficient credit risk evaluation leading to suboptimal lending decisions</p>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Impact:</p>
-                        <p>Designed comprehensive risk framework with weighted scoring system, improving default prevention models and portfolio quality</p>
-                    </div>
-                </div>
-
-                <div class="card project-card">
-                    <div class="card-icon">
-                        <i data-lucide="bar-chart-3" style="width: 24px; height: 24px;"></i>
-                    </div>
-                    <h4 class="project-title">Financial Performance Optimization</h4>
-                    <div class="project-badges">
-                        <span class="badge badge-secondary">Advanced Excel</span>
-                        <span class="badge badge-secondary">Financial Modeling</span>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Challenge:</p>
-                        <p>Declining profitability despite revenue growth</p>
-                    </div>
-                    <div class="project-section">
-                        <p class="project-section-title">Impact:</p>
-                        <p>Conducted 5-year trend analysis identifying key cost drivers and delivered actionable recommendations for profitability improvements</p>
-                    </div>
-                </div>
-            </div>
+      <!-- TD Bank -->
+      <div class="exp-card featured reveal" id="exp-td">
+        <div class="exp-trigger" onclick="toggleExp('exp-td')">
+          <div class="exp-monogram mono-td">TD</div>
+          <div class="exp-info">
+            <div class="exp-role">AML Analyst</div>
+            <div class="exp-org">Protiviti · TD Bank — Financial Crime Investigations</div>
+          </div>
+          <div class="exp-meta-right">
+            <div><span class="exp-pill">Current Role</span></div>
+            <div class="exp-date">Dec 2024 – Present</div>
+            <div class="exp-loc">Toronto, Ontario</div>
+          </div>
+          <div class="exp-chevron">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="2 3 5 7 8 3"/></svg>
+          </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Technical Expertise</div>
-                <h3 class="section-title">Skills That Drive Results</h3>
-            </div>
-
-            <div class="skills-grid">
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="shield"></i>
-                        </div>
-                        <h4 class="skill-title">AML & Compliance</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">Risk Assessment</span>
-                        <span class="badge badge-outline">FINTRAC</span>
-                        <span class="badge badge-outline">KYC/CDD</span>
-                        <span class="badge badge-outline">AML Scenarios</span>
-                        <span class="badge badge-outline">Fraud Detection</span>
-                        <span class="badge badge-outline">STR Filing</span>
-                        <span class="badge badge-outline">Control Testing</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="code"></i>
-                        </div>
-                        <h4 class="skill-title">Analytical Tools</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">SQL</span>
-                        <span class="badge badge-outline">Power BI</span>
-                        <span class="badge badge-outline">Tableau</span>
-                        <span class="badge badge-outline">Advanced Excel</span>
-                        <span class="badge badge-outline">VBA</span>
-                        <span class="badge badge-outline">Power Query</span>
-                        <span class="badge badge-outline">SAS</span>
-                        <span class="badge badge-outline">Oracle</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="trending-up"></i>
-                        </div>
-                        <h4 class="skill-title">Finance & Analytics</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">Financial Modeling</span>
-                        <span class="badge badge-outline">Forecasting</span>
-                        <span class="badge badge-outline">Data Visualization</span>
-                        <span class="badge badge-outline">Ratio Analysis</span>
-                        <span class="badge badge-outline">Transaction Monitoring</span>
-                        <span class="badge badge-outline">Hypothesis Testing</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="file-text"></i>
-                        </div>
-                        <h4 class="skill-title">Problem Solving</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">Hypothesis-Driven</span>
-                        <span class="badge badge-outline">Root Cause Analysis</span>
-                        <span class="badge badge-outline">MECE Frameworks</span>
-                        <span class="badge badge-outline">Structured Analysis</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="globe"></i>
-                        </div>
-                        <h4 class="skill-title">Client Communication</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">Executive Presentations</span>
-                        <span class="badge badge-outline">Stakeholder Management</span>
-                        <span class="badge badge-outline">Data Storytelling</span>
-                        <span class="badge badge-outline">Documentation</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="skill-card-header">
-                        <div class="skill-icon">
-                            <i data-lucide="database"></i>
-                        </div>
-                        <h4 class="skill-title">Governance & Risk</h4>
-                    </div>
-                    <div class="skill-badges">
-                        <span class="badge badge-outline">GRC Implementation</span>
-                        <span class="badge badge-outline">Regulatory Compliance</span>
-                        <span class="badge badge-outline">Risk Frameworks</span>
-                        <span class="badge badge-outline">Audit Support</span>
-                    </div>
-                </div>
-            </div>
+        <div class="exp-body" id="exp-td-body">
+          <div class="exp-body-inner">
+            <ul class="achv-list">
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Led cross-functional compliance risk assessments evaluating <span class="kpi">$50M+</span> in corporate transactions — findings presented directly to senior leadership, driving a <span class="kpi">25% governance improvement</span> across the division.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Wrote complex SQL queries to extract and analyze transactional datasets, flagging high-risk patterns that led to identification of <span class="kpi">25+ suspicious activity cases</span> and subsequent STR filings to FINTRAC.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Investigated <span class="kpi">1,000+ alerts</span> from Transaction Monitoring and Name Screening systems (PEPs, Adverse Media, Sanctions). Built Power BI dashboards to surface money laundering patterns, reducing false positives by <span class="kpi">15%</span>.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Assessed impact of updated FINTRAC guidelines on existing frameworks, developing implementation strategies that achieved <span class="kpi teal">100% compliance</span> across a portfolio of <span class="kpi">800+ client accounts</span>.</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Leadership Section -->
-    <section class="bg-muted">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Leadership Experience</div>
-                <h3 class="section-title">Building Teams & Sharing Knowledge</h3>
-            </div>
-
-            <div class="leadership-grid">
-                <div class="card">
-                    <h4 class="leadership-title">Project Coordinator</h4>
-                    <p class="leadership-meta">Armageddon • Riyadh, Saudi Arabia • Oct 2021 - Aug 2022</p>
-                    <p class="leadership-description">
-                        Directed cross-functional teams of <strong>15+ volunteers</strong> to execute large-scale finance events with <strong>500+ attendees</strong>, developing project plans that optimized resource allocation and stakeholder engagement.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h4 class="leadership-title">Finance Initiative Lead</h4>
-                    <p class="leadership-meta">Finance Student Association • Hyderabad, India • Jul 2018 - Feb 2019</p>
-                    <p class="leadership-description">
-                        Spearheaded student finance initiatives, collaborating with <strong>3 industry experts</strong> to develop and deliver <strong>5 risk management workshops</strong>, boosting financial literacy for 200+ students.
-                    </p>
-                </div>
-            </div>
+      <!-- Blue Bells -->
+      <div class="exp-card reveal" id="exp-bb">
+        <div class="exp-trigger" onclick="toggleExp('exp-bb')">
+          <div class="exp-monogram mono-bb">BB</div>
+          <div class="exp-info">
+            <div class="exp-role">Financial Analyst Intern</div>
+            <div class="exp-org">Blue Bells Technical Services</div>
+          </div>
+          <div class="exp-meta-right">
+            <div class="exp-date">Jun – Aug 2024</div>
+            <div class="exp-loc">Hyderabad, India</div>
+          </div>
+          <div class="exp-chevron">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="2 3 5 7 8 3"/></svg>
+          </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container" style="max-width: 896px;">
-            <h2 class="cta-title">Let's Build Something Great Together</h2>
-            <p class="cta-description">
-                I'm always interested in new opportunities to apply my AML expertise and analytical skills to solve complex financial challenges.
-            </p>
-            <div class="cta-buttons">
-                <a href="mailto:abdulahad.syed19@outlook.com" class="btn btn-primary btn-lg">
-                    <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
-                    Get In Touch
-                </a>
-            
-            </div>
+        <div class="exp-body" id="exp-bb-body">
+          <div class="exp-body-inner">
+            <ul class="achv-list">
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Built risk-adjusted financial models in Excel simulating 3 distinct market scenarios, enabling leadership decisions that reduced forecast variance by <span class="kpi">$2.5M</span>.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Conducted liquidity analysis using advanced ratio techniques on a $15M balance sheet, identifying structural inefficiencies and implementing solutions that improved working capital by <span class="kpi">15%</span>.</span>
+              </li>
+            </ul>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div>
-                    <p class="footer-text">© 2025 Syed Abdul Ahad. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="mailto:abdulahad.syed19@outlook.com">Email</a>
-                    <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://github.com/syedabdulahad" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-            </div>
+      <!-- Metro Tax -->
+      <div class="exp-card reveal" id="exp-mt">
+        <div class="exp-trigger" onclick="toggleExp('exp-mt')">
+          <div class="exp-monogram mono-mt">MT</div>
+          <div class="exp-info">
+            <div class="exp-role">Staff Accountant Intern</div>
+            <div class="exp-org">Metro Tax Solutions</div>
+          </div>
+          <div class="exp-meta-right">
+            <div class="exp-date">Jan – Apr 2024</div>
+            <div class="exp-loc">Toronto, Ontario</div>
+          </div>
+          <div class="exp-chevron">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="2 3 5 7 8 3"/></svg>
+          </div>
         </div>
-    </footer>
+        <div class="exp-body" id="exp-mt-body">
+          <div class="exp-body-inner">
+            <ul class="achv-list">
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Developed standardized Excel templates with data validation rules for <span class="kpi">30+ client tax filings</span>, eliminating manual errors and saving ~5 hours per week in review time.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Managed complex reconciliations for 50+ client accounts with systematic verification processes, improving reporting accuracy by <span class="kpi">12%</span>.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
+      <!-- Cambrian -->
+      <div class="exp-card reveal" id="exp-cc">
+        <div class="exp-trigger" onclick="toggleExp('exp-cc')">
+          <div class="exp-monogram mono-cc">CC</div>
+          <div class="exp-info">
+            <div class="exp-role">Research Associate</div>
+            <div class="exp-org">Cambrian College</div>
+          </div>
+          <div class="exp-meta-right">
+            <div class="exp-date">May – Jun 2023</div>
+            <div class="exp-loc">Sudbury, Ontario</div>
+          </div>
+          <div class="exp-chevron">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="2 3 5 7 8 3"/></svg>
+          </div>
+        </div>
+        <div class="exp-body" id="exp-cc-body">
+          <div class="exp-body-inner">
+            <ul class="achv-list">
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Conducted comprehensive market trend analysis using statistical methods, delivering actionable insights that increased client revenue by <span class="kpi">7%</span>.</span>
+              </li>
+              <li class="achv-item">
+                <div class="achv-dot"><svg viewBox="0 0 10 10"><polyline points="1 5 4 8 9 2"/></svg></div>
+                <span>Developed a custom financial ratio framework to assess company performance, identifying key operational improvement opportunities across the portfolio.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-     {
-            // Create a simple text-based resume
-            const resumeContent = `SYED ABDUL AHAD
-AML & Financial Risk Analyst
+    </div>
+  </div>
+</section>
 
-Contact:
-Phone: (705) 988-4170
-Email: abdulahad.syed19@outlook.com
-LinkedIn: linkedin.com/in/syed-abdul-ahad19
-GitHub: github.com/syedabdulahad
+<!-- ── PROJECTS ───────────────────────────────── -->
+<section id="projects" class="projects-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal"><span class="eyebrow-text">Featured Projects</span></div>
+    <h2 class="section-title reveal reveal-delay-1">Analytical work that <em>proves</em> the method</h2>
+    <p class="section-sub reveal reveal-delay-2">Three distinct dimensions of capability — data modeling, risk scoring, and financial analysis.</p>
+    <div class="proj-grid reveal reveal-delay-2">
+      <div class="proj-cell p1">
+        <div class="proj-number">01</div>
+        <div class="proj-tags">
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">Tableau</span>
+          <span class="proj-tag">Process Mapping</span>
+        </div>
+        <div class="proj-title">Customer Churn Prevention Model</div>
+        <div class="proj-problem">High customer attrition threatening revenue stability and forward-looking growth projections across the portfolio.</div>
+        <div class="proj-result"><strong>Result:</strong> Built a churn risk model in SQL and Tableau, reducing prediction errors by <strong>20%</strong> and enabling retention strategies that materially improved portfolio stability.</div>
+      </div>
+      <div class="proj-cell p2">
+        <div class="proj-number">02</div>
+        <div class="proj-tags">
+          <span class="proj-tag">SQL</span>
+          <span class="proj-tag">Power BI</span>
+          <span class="proj-tag">Risk Scoring</span>
+        </div>
+        <div class="proj-title">Bank Loan Risk Assessment Framework</div>
+        <div class="proj-problem">Inefficient credit risk evaluation producing suboptimal lending decisions and growing portfolio exposure to default.</div>
+        <div class="proj-result"><strong>Result:</strong> Designed a comprehensive weighted scoring framework that improved default prevention models and raised overall portfolio quality metrics.</div>
+      </div>
+      <div class="proj-cell p3">
+        <div class="proj-number">03</div>
+        <div class="proj-tags">
+          <span class="proj-tag">Advanced Excel</span>
+          <span class="proj-tag">Financial Modeling</span>
+          <span class="proj-tag">Trend Analysis</span>
+        </div>
+        <div class="proj-title">Financial Performance Optimization</div>
+        <div class="proj-problem">Declining profitability despite revenue growth — a signal of hidden structural cost issues not visible in surface-level reporting.</div>
+        <div class="proj-result"><strong>Result:</strong> 5-year trend analysis identified key cost drivers; recommendations delivered an actionable roadmap for sustainable profitability improvement.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-PROFESSIONAL SUMMARY
-AML Financial Analyst with 1+ years of experience in financial crime investigations at a major financial institution. Specializes in leveraging SQL and Power BI for transaction monitoring, name screening, and STR filing to FINTRAC.
+<!-- ── SKILLS ─────────────────────────────────── -->
+<section id="skills" class="skills-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal"><span class="eyebrow-text">Capabilities</span></div>
+    <h2 class="section-title reveal reveal-delay-1">The full <em>toolkit</em></h2>
+    <p class="section-sub reveal reveal-delay-2">Skills bridging AML compliance to broader finance and risk leadership roles.</p>
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <div class="skill-block-header">
+          <div class="skill-icon si-gold">⚖</div>
+          <div class="skill-block-title">AML & Regulatory Compliance</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill hero-pill">Risk Assessment</span>
+          <span class="skill-pill hero-pill">FINTRAC</span>
+          <span class="skill-pill hero-pill">KYC / CDD</span>
+          <span class="skill-pill hero-pill">STR Filing</span>
+          <span class="skill-pill">AML Scenarios</span>
+          <span class="skill-pill">Fraud Detection</span>
+          <span class="skill-pill">Control Testing</span>
+          <span class="skill-pill">Name Screening</span>
+          <span class="skill-pill">Sanctions</span>
+          <span class="skill-pill">PEP Screening</span>
+        </div>
+      </div>
+      <div class="skill-block reveal reveal-delay-1">
+        <div class="skill-block-header">
+          <div class="skill-icon si-teal">◈</div>
+          <div class="skill-block-title">Finance & Analytics</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill teal-pill">Financial Modeling</span>
+          <span class="skill-pill teal-pill">Forecasting</span>
+          <span class="skill-pill teal-pill">Ratio Analysis</span>
+          <span class="skill-pill teal-pill">Transaction Monitoring</span>
+          <span class="skill-pill">Data Visualization</span>
+          <span class="skill-pill">Hypothesis Testing</span>
+          <span class="skill-pill">Balance Sheet Analysis</span>
+          <span class="skill-pill">Liquidity Analysis</span>
+        </div>
+      </div>
+      <div class="skill-block reveal reveal-delay-2">
+        <div class="skill-block-header">
+          <div class="skill-icon si-ice">⬡</div>
+          <div class="skill-block-title">Analytical Tools</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill hero-pill">SQL</span>
+          <span class="skill-pill hero-pill">Power BI</span>
+          <span class="skill-pill hero-pill">Advanced Excel</span>
+          <span class="skill-pill">Tableau</span>
+          <span class="skill-pill">VBA</span>
+          <span class="skill-pill">Power Query</span>
+          <span class="skill-pill">SAS</span>
+          <span class="skill-pill">Oracle</span>
+          <span class="skill-pill">Python (basics)</span>
+        </div>
+      </div>
+      <div class="skill-block reveal reveal-delay-3">
+        <div class="skill-block-header">
+          <div class="skill-icon si-red">◆</div>
+          <div class="skill-block-title">Governance, Risk & Communication</div>
+        </div>
+        <div class="skill-pills">
+          <span class="skill-pill">GRC Implementation</span>
+          <span class="skill-pill">Regulatory Compliance</span>
+          <span class="skill-pill">Audit Support</span>
+          <span class="skill-pill">Executive Presentations</span>
+          <span class="skill-pill">Stakeholder Management</span>
+          <span class="skill-pill">MECE Frameworks</span>
+          <span class="skill-pill">Root Cause Analysis</span>
+          <span class="skill-pill">Data Storytelling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-WORK EXPERIENCE
+<!-- ── ABOUT ──────────────────────────────────── -->
+<section id="about" class="about-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal"><span class="eyebrow-text">About</span></div>
+    <h2 class="section-title reveal reveal-delay-1">The person <em>behind</em> the data</h2>
+    <div class="about-grid" style="margin-top:3.5rem">
+      <div class="reveal">
+        <div class="about-id-card">
+          <div class="id-card-top">
+            <div class="id-initials">S.A.</div>
+            <div class="id-name">Syed Abdul Ahad</div>
+            <div class="id-title">AML Analyst → Finance Professional</div>
+          </div>
+          <div class="id-body">
+            <div class="id-row">
+              <span class="id-key">Location</span>
+              <span class="id-val">Toronto, Ontario</span>
+            </div>
+            <div class="id-row">
+              <span class="id-key">Status</span>
+              <span class="id-val" style="color:var(--teal)">Open to opportunities</span>
+            </div>
+            <div class="id-row">
+              <span class="id-key">Target roles</span>
+              <span class="id-val">FP&A · Risk · Corporate Finance</span>
+            </div>
+            <div class="id-row">
+              <span class="id-key">Email</span>
+              <span class="id-val" style="color:var(--gold);font-size:0.75rem">syedabdulahad1910@gmail.com</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-year">23–24</div>
+            <div class="edu-details">
+              <div class="edu-degree">PG · Project Management (Risk)</div>
+              <div class="edu-school">George Brown College, Toronto</div>
+            </div>
+            <div class="edu-honor">Dean's List</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-year">22–23</div>
+            <div class="edu-details">
+              <div class="edu-degree">PG · International Business (Finance)</div>
+              <div class="edu-school">Cambrian College, Sudbury</div>
+            </div>
+            <div class="edu-honor">Dean's List</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-year">18–21</div>
+            <div class="edu-details">
+              <div class="edu-degree">BComm · International Accounting & Finance</div>
+              <div class="edu-school">Loyola College, Hyderabad</div>
+            </div>
+            <div class="edu-honor">Merit</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-1">
+        <p>I came to finance through an unusual door — <strong>financial crime</strong>. Investigating thousands of suspicious transactions at TD Bank gave me a forensic understanding of capital flows, institutional risk controls, and the human behaviors that undermine them. That lens doesn't leave you; it makes you a fundamentally better analyst.</p>
+        <p>Before that, I was building financial models to reduce forecast variance by $2.5M, reconciling multi-million dollar balance sheets, and conducting market research that drove measurable revenue growth. The throughline across every role is the same: <strong>I make ambiguous, complex data mean something useful and actionable.</strong></p>
+        <p>I hold two Canadian postgraduate degrees — one in Risk Management, one in Finance — plus a commerce degree specializing in international accounting, each earned with distinction. My academic foundation reinforces what I've built in practice: the ability to see financial systems holistically, identify where they're vulnerable, and communicate that clearly to decision-makers.</p>
+        <p>I'm most excited about roles where <strong>risk intelligence and financial strategy genuinely intersect</strong> — FP&A, corporate finance, risk management, or financial consulting in environments where analytical depth matters. If that's where you're building, I'd like to talk.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-AML Analyst | Protiviti - TD Bank
-Toronto, ON | Nov 2024 - Present
-• Led cross-functional teams in structured compliance risk assessments, evaluating over $50M in corporate transactions
-• Utilized SQL to extract and analyze transactional data, developing complex queries that flagged high-risk patterns
-• Investigated 1000+ alerts from Transaction Monitoring and Name Screening systems
-• Interpreted and assessed the impact of new FINTRAC guidelines on existing frameworks
+<!-- ── LEADERSHIP ─────────────────────────────── -->
+<section class="lead-section">
+  <div class="section-inner">
+    <div class="section-eyebrow reveal"><span class="eyebrow-text">Leadership</span></div>
+    <h2 class="section-title reveal reveal-delay-1">Beyond the <em>desk</em></h2>
+    <p class="section-sub reveal reveal-delay-2">Organizational leadership that built the communication and management skills finance demands.</p>
+    <div class="lead-grid">
+      <div class="lead-card reveal">
+        <div class="lead-tag">Volunteer Leadership · Oct 2021 – Aug 2022</div>
+        <div class="lead-role">Project Coordinator</div>
+        <div class="lead-org">Armageddon · Riyadh, Saudi Arabia</div>
+        <div class="lead-desc">Directed cross-functional teams to execute large-scale finance events — from proposal through delivery. Developed project plans that optimized resource allocation, stakeholder engagement, and logistics across every function.</div>
+        <div class="lead-kpis">
+          <div>
+            <div class="lead-kpi-val">15+</div>
+            <div class="lead-kpi-label">Volunteers led</div>
+          </div>
+          <div>
+            <div class="lead-kpi-val">500+</div>
+            <div class="lead-kpi-label">Event attendees</div>
+          </div>
+        </div>
+      </div>
+      <div class="lead-card reveal reveal-delay-1">
+        <div class="lead-tag">Student Leadership · Jul 2018 – Feb 2019</div>
+        <div class="lead-role">Finance Initiative Lead</div>
+        <div class="lead-org">Finance Student Association · Hyderabad, India</div>
+        <div class="lead-desc">Spearheaded student finance initiatives, collaborating with industry experts to design and deliver risk management workshops. Built curriculum, coordinated speakers, and managed logistics end-to-end.</div>
+        <div class="lead-kpis">
+          <div>
+            <div class="lead-kpi-val">5</div>
+            <div class="lead-kpi-label">Workshops delivered</div>
+          </div>
+          <div>
+            <div class="lead-kpi-val">200+</div>
+            <div class="lead-kpi-label">Students reached</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-Financial Analyst Intern | Blue Bells Technical Services
-Hyderabad, India | Jun 2024 - Aug 2024
-• Built risk-adjusted financial models simulating 3 distinct market scenarios
-• Conducted liquidity analysis using advanced ratio techniques on a $15M balance sheet
+<!-- ── CTA ────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-eyebrow reveal">Let's connect</div>
+    <h2 class="cta-title reveal reveal-delay-1">Ready to build <em>something</em><br>exceptional together</h2>
+    <p class="cta-sub reveal reveal-delay-2">I'm actively exploring finance, FP&A, and risk management roles where analytical depth and compliance insight create a genuine edge. If that sounds like your team, let's talk.</p>
+    <div class="cta-buttons reveal reveal-delay-3">
+      <a href="mailto:syedabdulahad1910@gmail.com" class="btn-primary"><span>Send an Email</span> <span>→</span></a>
+      <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank" class="btn-ghost">View LinkedIn</a>
+    </div>
+    <a href="mailto:syedabdulahad1910@gmail.com" class="cta-email reveal reveal-delay-4">syedabdulahad1910@gmail.com</a>
+  </div>
+</section>
 
-Staff Accountant Intern | Metro Tax Solutions
-Toronto, ON | Jan 2024 - Apr 2024
-• Developed standardized MS Excel templates for reviewing financial transactions
-• Managed complex reconciliations for 50+ client accounts
+<footer>
+  <div class="footer-logo">S<span>.</span>A. Ahad</div>
+  <div class="footer-links">
+    <a href="mailto:syedabdulahad1910@gmail.com">Email</a>
+    <a href="https://linkedin.com/in/syed-abdul-ahad19" target="_blank">LinkedIn</a>
+    <a href="https://github.com/syedabdulahad" target="_blank">GitHub</a>
+  </div>
+  <div class="footer-copy">© 2025 Syed Abdul Ahad</div>
+</footer>
 
-Research Associate | Cambrian College
-Sudbury, ON | May 2023 - Jun 2023
-• Conducted comprehensive market trend analysis using statistical methods
-• Developed custom financial ratio framework to assess company performance
+<script>
+/* ── CURSOR ─────────────────────────── */
+const cursor=document.getElementById('cursor');
+const ring=document.getElementById('cursor-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cursor.style.left=mx+'px';cursor.style.top=my+'px';
+});
+function animRing(){
+  rx+=(mx-rx)*0.12;ry+=(my-ry)*0.12;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animRing);
+}
+animRing();
 
-PROJECTS
+/* ── CANVAS PARTICLES ───────────────── */
+const canvas=document.getElementById('bg-canvas');
+const ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
+resize();window.addEventListener('resize',resize);
+class Particle{
+  constructor(){this.reset()}
+  reset(){
+    this.x=Math.random()*W;
+    this.y=Math.random()*H;
+    this.r=Math.random()*1.2+0.3;
+    this.vx=(Math.random()-0.5)*0.15;
+    this.vy=(Math.random()-0.5)*0.15;
+    this.life=Math.random();
+    this.maxLife=0.4+Math.random()*0.5;
+    this.gold=Math.random()<0.3;
+  }
+  update(){
+    this.x+=this.vx;this.y+=this.vy;
+    this.life+=0.002;
+    if(this.life>this.maxLife||this.x<0||this.x>W||this.y<0||this.y>H)this.reset();
+  }
+  draw(){
+    const t=this.life/this.maxLife;
+    const a=Math.sin(t*Math.PI)*0.5;
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.r,0,Math.PI*2);
+    ctx.fillStyle=this.gold?`rgba(201,168,76,${a})`:`rgba(168,191,216,${a*0.4})`;
+    ctx.fill();
+  }
+}
+for(let i=0;i<180;i++)particles.push(new Particle());
+function drawCanvas(){
+  ctx.clearRect(0,0,W,H);
+  particles.forEach(p=>{p.update();p.draw()});
+  // subtle grid lines
+  ctx.strokeStyle='rgba(30,40,64,0.3)';ctx.lineWidth=0.5;
+  const gs=80;
+  for(let x=0;x<W;x+=gs){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke()}
+  for(let y=0;y<H;y+=gs){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke()}
+  requestAnimationFrame(drawCanvas);
+}
+drawCanvas();
 
-Customer Churn Prevention | SQL, Tableau, Process Mapping
-Built a churn risk model using SQL and Tableau, reducing churn prediction errors by 20%
+/* ── NAV SCROLL ─────────────────────── */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>60);
+});
 
-Bank Loan Risk Assessment | SQL, Power BI
-Designed a risk assessment framework improving default prevention models
+/* ── SCROLL REVEAL ───────────────────── */
+const revealEls=document.querySelectorAll('.reveal');
+const revealObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}});
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+revealEls.forEach(el=>revealObs.observe(el));
 
-Financial Statement Analysis | Advanced Excel
-Analyzed financial trends over five years to provide actionable recommendations
+/* ── COUNTER ANIMATION ───────────────── */
+function animCount(el,target,suffix=''){
+  let start=null;
+  const dur=2000;
+  function step(ts){
+    if(!start)start=ts;
+    const prog=Math.min((ts-start)/dur,1);
+    const ease=1-Math.pow(1-prog,4);
+    el.textContent=Math.floor(ease*target).toLocaleString()+(prog<1?'':suffix);
+    if(prog<1)requestAnimationFrame(step);
+    else el.textContent=target.toLocaleString()+suffix;
+  }
+  requestAnimationFrame(step);
+}
+const counterObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const el=e.target;
+      const target=parseInt(el.dataset.count);
+      const suffix=el.dataset.suffix||'+';
+      animCount(el,target,suffix);
+      counterObs.unobserve(el);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterObs.observe(el));
 
-SKILLS
-
-AML & Compliance: Risk Assessment, Regulatory Compliance (FINTRAC), KYC/CDD, AML Scenarios, Fraud Detection
-Analytical Tools: Advanced MS Excel (VBA, Power Query), SQL, Oracle, SAS, Power BI, Tableau
-Finance & Analytics: Financial Modeling, Forecasting, Data Visualization, Transaction Monitoring
-
-VOLUNTEERING EXPERIENCE
-
-Project Coordinator | Armageddon | Riyadh, Saudi Arabia
-Directed cross-functional teams of 15+ volunteers to execute large-scale finance events with 500+ attendees
-
-Finance Workshop Lead | Finance Student Association | Hyderabad, India
-Collaborated with 3 industry experts to develop and deliver 5 risk management workshops
-
-EDUCATION
-
-Postgraduate in Project Management (Risk Management) - Dean's List
-George Brown College | Toronto, ON | 2023-2024
-
-Postgraduate in International Business (Finance) - Dean's List
-Cambrian College | Sudbury, ON | 2022-2023
-
-Bachelor of Commerce in International Accounting and Finance - Merit Recipient
-Loyola College | Hyderabad, India | 2018-2021`;
-
-            // Create blob and download
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'SyedAbdulAhad_AML_Resume.pdf';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-            
-        }
-    </script>
+/* ── EXPERIENCE TOGGLE ───────────────── */
+function toggleExp(id){
+  const card=document.getElementById(id);
+  const body=document.getElementById(id+'-body');
+  const isOpen=card.classList.contains('open');
+  // close all
+  document.querySelectorAll('.exp-card.open').forEach(c=>{
+    c.classList.remove('open');
+    const b=c.querySelector('.exp-body');
+    if(b)b.style.maxHeight='0';
+  });
+  if(!isOpen){
+    card.classList.add('open');
+    body.style.maxHeight=body.scrollHeight+'px';
+  }
+}
+// Open TD by default
+window.addEventListener('DOMContentLoaded',()=>{
+  const card=document.getElementById('exp-td');
+  const body=document.getElementById('exp-td-body');
+  card.classList.add('open');
+  body.style.maxHeight='600px';
+});
+</script>
 </body>
 </html>
